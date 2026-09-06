@@ -1,0 +1,12 @@
+{
+  "id": "AUTH-002",
+  "category": "AUTH",
+  "objective": "Observe an authenticated shipment lookup in an approved test account",
+  "authenticated": true,
+  "dataPolicy": "authorized",
+  "executionMode": "automated",
+  "testDataPlaceholders": ["APPROVED_SHIPMENT_ID"],
+  "messages": [{ "text": "Track {{APPROVED_SHIPMENT_ID}}" }],
+  "captureTrace": true,
+  "notes": "Runs only with --allow-authorized-data and APPROVED_SHIPMENT_ID from the approved test account; never use production customer data."
+}

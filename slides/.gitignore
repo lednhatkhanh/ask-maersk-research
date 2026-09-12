@@ -1,0 +1,6 @@
+node_modules/
+dist/
+ask-one-manager-proposal.pdf
+*.log
+
+.sync/

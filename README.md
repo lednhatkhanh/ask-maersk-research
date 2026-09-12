@@ -4,9 +4,17 @@ A local TypeScript CLI for capturing evidence from a researcher-controlled Ask M
 
 ## Ask ONE presentation
 
-- [Editable Google Slides](https://docs.google.com/presentation/d/1knHzzM91yvkAoxI2M55gq7JRWaIxpgf-Rf3duWitK5I/edit)
+- [Main plan and slide-generation checklist](PLAN.md)
+- [Last exported PDF snapshot](slides/ask-one-project-proposal.pdf) · [PowerPoint snapshot](slides/ask-one-project-proposal.pptx)
+- [Editable Google Slides deck](https://docs.google.com/presentation/d/1knHzzM91yvkAoxI2M55gq7JRWaIxpgf-Rf3duWitK5I/edit)
 - [Local deck and commands](slides/README.md)
 - [Google Slides sync workflow](slides/GOOGLE_SLIDES.md)
+
+The root `PLAN.md` is the source of truth for the next local slide revision. It defines the manager narrative, technical section, provisional roadmap and validation requirements. Slide generation updates the local Slidev deck by default. Google Slides sync requires an explicit request.
+
+Routine local slide updates use a Slidev build and browser visual checks. PDF and PowerPoint exports are opt-in under [AGENTS.md](AGENTS.md); existing exports may lag behind the source.
+
+The synchronized deck is a 22-slide preliminary project proposal: a manager overview and narrative first, then a technical overview, technical concepts and reference diagrams. PO/PPO-led business research and feature clarification remain required. The nine-month scenario is a rough estimate affected by content and wider delivery risks. Existing PDF/PowerPoint snapshots predate this revision. PowerPoint uses rasterized slide backgrounds; the Slidev and Google Slides narrative content remain editable. See [the narrative guide](slide-docs.md) and [the portable source archive](deliverables/ask-one-slides-source.zip). The earlier CLI implementation brief remains available as an [archived research-spike plan](docs/archive/maersk-research-spike-plan.md). `docs/plan.md` contains supporting proposal research rather than the active slide brief.
 
 ## Requirements
 

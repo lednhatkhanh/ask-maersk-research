@@ -1,0 +1,25 @@
+{
+  "name": "ask-one-manager-deck",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md --output ask-one-project-proposal.pdf",
+    "export:pptx": "slidev export slides.md --format pptx --scale 6 --output ask-one-project-proposal.pptx",
+    "diagrams": "node scripts/generate-diagrams.mjs",
+    "google:capture": "node scripts/capture-google-source.cjs",
+    "google:verify": "node scripts/verify-google-slides.mjs"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.1",
+    "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.63.0",
+    "vue": "^3.5.42"
+  }
+}

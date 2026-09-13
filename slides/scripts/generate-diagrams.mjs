@@ -109,13 +109,14 @@ function image(id, file, x, y, width = 54, height = 54) {
 }
 
 function service(id, file, title, detail, x, y, width = 175, height = 104, options = {}) {
+  height = Math.max(height, 135)
   const fill = options.fill ?? palette.white
   const stroke = options.stroke ?? palette.line
   return [
     rect(`${id}-box`, '', x, y, width, height, { fill, stroke, rounded: 14, dashed: options.dashed ?? false }),
-    image(`${id}-icon`, file, x + 14, y + 17, 48, 48),
-    text(`${id}-title`, title, x + 70, y + 10, width - 82, 44, { size: 16, bold: true, align: 'left' }),
-    text(`${id}-detail`, detail, x + 70, y + 52, width - 82, height - 60, { size: 12, font: palette.muted, align: 'left', valign: 'top' }),
+    image(`${id}-icon`, file, x + 14, y + 12, 32, 32),
+    text(`${id}-title`, title, x + 54, y + 5, width - 66, 40, { size: 16, bold: true, align: 'left' }),
+    text(`${id}-detail`, detail, x + 14, y + 64, width - 28, height - 64, { size: 16, font: palette.muted, align: 'left', valign: 'top' }),
   ].join('')
 }
 
@@ -162,7 +163,7 @@ function diagramXml(name, width, height, cells) {
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        ${orderedCells.join('\n        ')}
+        ${orderedCells.join('\n        ').replace(/(<mxGeometry|<mxPoint)([^>]+)/g, (match) => match.includes('relative="1"') ? match : match.replace(/\b(y)="([\d.]+)"/g, (_, key, value) => `${key}="${Number(value) * (name === 'Hub operating model' ? 1 : 0.78)}"`))}
       </root>
     </mxGraphModel>
   </diagram>
@@ -173,17 +174,17 @@ function diagramXml(name, width, height, cells) {
 function architecture() {
   const cells = []
   cells.push(text('title', 'Ask ONE on our GKE · managed AI through Vertex AI', 40, 20, 1120, 44, { size: 25, bold: true, align: 'left', font: palette.navy }))
-  cells.push(text('subtitle', 'Proposed delivery design · Phase 1 defines requirements, capacity, access and cost before any build decision', 40, 62, 1120, 28, { size: 14, align: 'left', font: palette.muted }))
+  cells.push(text('subtitle', 'Proposed design · Discovery and the PoC will validate requirements, access, capacity and cost', 40, 62, 1120, 28, { size: 14, align: 'left', font: palette.muted }))
   cells.push(text('request-label', 'CUSTOMER REQUEST / CHECKED RESPONSE', 40, 104, 560, 24, { size: 12, bold: true, align: 'left', font: palette.blue }))
   cells.push(service('web', 'WebMobile-512-color.svg', 'Customer', 'Browser / ONE website', 40, 145, 215, 115, { stroke: palette.cyan }))
   cells.push(service('edge', 'Cloudflare.svg', 'Cloudflare edge', 'Proposed WAF / CDN / DDoS controls', 340, 145, 215, 115, { stroke: '#F38020' }))
-  cells.push(service('gke', 'GKE-512-color.svg', 'Our GKE in GCP', 'Web + Node.js API + Hub; access and response checks', 640, 145, 235, 115, { stroke: palette.blue }))
+  cells.push(service('gke', 'GKE-512-color.svg', 'Our GKE in GCP', 'Web app and Node.js API; source access and answer checks', 640, 145, 235, 115, { stroke: palette.blue }))
   cells.push(service('vertex', 'VertexAI-512-color.svg', 'Vertex AI', 'Managed Gemini API; outside the GKE workload', 940, 145, 220, 115, { stroke: palette.cyan }))
   cells.push(text('knowledge-label', 'GOVERNED KNOWLEDGE · PROPOSED STORAGE AND SCREENING OPTIONS', 40, 314, 1000, 24, { size: 12, bold: true, align: 'left', font: palette.green }))
   cells.push(service('sources', 'WebMobile-512-color.svg', 'Approved sources', 'CMS + manuals + policies + document libraries', 40, 365, 235, 120, { stroke: palette.green }))
   cells.push(service('ingest', 'IntegrationServices-512-color.svg', 'Governed ingestion', 'Stage, validate, evaluate and approve before release', 340, 365, 235, 120, { stroke: palette.amber }))
-  cells.push(service('stores', 'CloudSQL-512-color.svg', 'Knowledge stores', 'Cloud Storage versions; Cloud SQL/pgvector option', 640, 365, 235, 120, { stroke: palette.green }))
-  cells.push(service('armor', 'SecurityIdentity-512-color.svg', 'Model Armor option', 'API screens input / output; GKE app enforces verdicts', 940, 365, 220, 120, { stroke: palette.coral }))
+  cells.push(service('stores', 'CloudSQL-512-color.svg', 'Knowledge stores', 'Source versions in Cloud Storage; candidate Cloud SQL/pgvector retrieval', 640, 365, 235, 120, { stroke: palette.green }))
+  cells.push(service('armor', 'SecurityIdentity-512-color.svg', 'Model Armor', 'Proposed screening service; the app enforces its verdicts', 940, 365, 220, 120, { stroke: palette.coral }))
   cells.push(text('api-label', 'CONDITIONAL LIVE LOOKUPS · OPERATING CONTROLS', 40, 535, 700, 24, { size: 12, bold: true, align: 'left', font: palette.coral }))
   cells.push(service('ecom', 'IntegrationServices-512-color.svg', 'ONE live APIs', 'Shipment / schedule access only if justified and authorized', 40, 590, 235, 120, { stroke: palette.coral, dashed: true }))
   cells.push(service('policy', 'SecurityIdentity-512-color.svg', 'API access in GKE', 'Identity, allowed fields, quotas and audit; no agent required', 340, 590, 235, 120, { stroke: palette.coral, dashed: true }))
@@ -193,13 +194,13 @@ function architecture() {
   cells.push(edge('e2', 'edge-box', 'gke-box', '', { both: true }))
   cells.push(edge('e3', 'gke-box', 'vertex-box', 'model API', { both: true }))
   cells.push(edge('e4', 'sources-box', 'ingest-box', '', { color: palette.green }))
-  cells.push(edge('e5', 'ingest-box', 'stores-box', 'approved', { color: palette.green }))
+  cells.push(edge('e5', 'ingest-box', 'stores-box', '', { color: palette.green }))
   cells.push(edge('e6', 'gke-box', 'stores-box', 'retrieve', { color: palette.green, both: true }))
   cells.push(edge('e7', 'gke-box', 'armor-box', 'screening API', { color: palette.coral, both: true, exitX: 0.85, exitY: 1, entryX: 0, entryY: 0.5, points: [{ x: 840, y: 290 }, { x: 910, y: 290 }, { x: 910, y: 425 }] }))
   cells.push(edge('e8', 'policy-box', 'ecom-box', 'read only', { color: palette.coral, dashed: true, both: true }))
-  cells.push(edge('e9', 'gke-box', 'policy-box', 'conditional', { color: palette.coral, dashed: true, both: true, exitX: 0, exitY: 0.8, entryX: 0.5, entryY: 0, points: [{ x: 610, y: 237 }, { x: 610, y: 550 }, { x: 457, y: 550 }] }))
+  cells.push(edge('e9', 'gke-box', 'policy-box', '', { color: palette.coral, dashed: true, both: true, exitX: 0, exitY: 0.8, entryX: 0.5, entryY: 0, points: [{ x: 610, y: 237 }, { x: 610, y: 550 }, { x: 457, y: 550 }] }))
   cells.push(edge('e10', 'stores-box', 'observe-box', 'source events', { color: palette.blue, dashed: true }))
-  cells.push(text('trace-note', 'Observability correlates application, retrieval, model and security events across the service.', 40, 744, 1120, 24, { size: 14, font: palette.muted }))
+  cells.push(text('trace-note', 'Observability correlates application, retrieval, model and security events across the service.', 40, 820, 1120, 24, { size: 14, font: palette.muted }))
   return diagramXml('Architecture', 1200, 800, cells)
 }
 
@@ -211,7 +212,7 @@ function securityChain() {
   const items = [
     ['s1', 'Cloudflare.svg', '1 · Cloudflare', 'DNS/CDN · WAF · DDoS · rate limit', '#F38020'],
     ['s2', 'GKE-512-color.svg', '2 · Authorize', 'identity / audience · schema · quotas', palette.blue],
-    ['s3', 'SecurityIdentity-512-color.svg', '3 · Screen input', 'injection / sensitive data checks; Armor option', palette.coral],
+    ['s3', 'SecurityIdentity-512-color.svg', '3 · Screen input', 'Check malicious instructions and sensitive data; proposed Model Armor', palette.coral],
     ['s4', 'CloudSQL-512-color.svg', '4 · Retrieve', 'approved sources; enforce audience and version', palette.green],
     ['s5', 'VertexAI-512-color.svg', '5 · Generate', 'Vertex AI / Gemini; instruct grounding in sources', palette.cyan],
     ['s6', 'ManagementTools-512-color.svg', '6 · Check answer', 'source support · citation validity · refusal', palette.amber],
@@ -235,7 +236,7 @@ function securityChain() {
   cells.push(edge('fail2', 's6-box', 'fallback', 'unsupported', { color: palette.coral, dashed: true }))
   cells.push(edge('fail3', 's7-box', 'fallback', 'block', { color: palette.coral, dashed: true }))
 
-  cells.push(text('monitor', 'Across all stages: redacted traces, denied access, suspicious activity and alerts to incident owners.', 40, 720, 1120, 28, { size: 14, font: palette.muted }))
+  cells.push(text('monitor', 'Across all stages: redacted traces, denied access, suspicious activity and alerts to incident owners.', 40, 790, 1120, 28, { size: 14, font: palette.muted }))
   return diagramXml('Security chain', 1200, 780, cells)
 }
 
@@ -246,23 +247,23 @@ function knowledgeQuality() {
   const nodes = [
     ['source', 'WebMobile-512-color.svg', '1 · Register', 'CMS + documents; owners, permissions and versions', 40, 135, palette.blue],
     ['stage', 'Cloud_Storage-512-color.svg', '2 · Stage + validate', 'Quarantine; malware, sensitive data and extraction checks', 330, 135, palette.coral],
-    ['process', 'IntegrationServices-512-color.svg', '3 · Prepare RAG', 'Chunk, embed and index in staging; preserve access metadata', 620, 135, palette.amber],
+    ['process', 'IntegrationServices-512-color.svg', '3 · Prepare content', 'Split into passages, embed and index in staging; retain permissions', 620, 135, palette.amber],
     ['review', 'ManagementTools-512-color.svg', '4 · Owner review', 'Content, audience, versions and retrieval samples', 910, 135, palette.blue],
     ['answer', 'VertexAI-512-color.svg', '5 · Test answers', 'Staged sources + candidate prompt / Gemini model', 910, 365, palette.cyan],
-    ['evaluate', 'ManagementTools-512-color.svg', '6 · Evaluate', 'Ragas option; reviewed test set; human + security checks', 620, 365, palette.blue],
+    ['evaluate', 'ManagementTools-512-color.svg', '6 · Evaluate', 'Proposed Phoenix + Ragas; human review and security tests', 620, 365, palette.blue],
     ['gate', 'SecurityIdentity-512-color.svg', '7 · Release decision', 'Owner reviews evidence; approve, remediate or stop', 330, 365, palette.green],
     ['publish', 'CloudSQL-512-color.svg', '8 · Publish', 'Approved version; update / remove; invalidate cache; rollback', 40, 365, palette.green],
     ['hub', 'ManagementTools-512-color.svg', 'Review + improve', 'Feedback and incidents → owner → approved fix → retest', 40, 610, palette.blue],
     ['golden', 'ManagementTools-512-color.svg', 'Reviewed test set', 'Questions, sources, expected answers / refusals; size agreed in discovery', 620, 610, palette.amber],
   ]
   for (const [id, icon, title, detail, x, y, stroke] of nodes) cells.push(service(id, icon, title, detail, x, y, 245, 135, { stroke }))
-  for (const [i, from, to] of [[1,'source','stage'],[2,'stage','process'],[3,'process','review'],[4,'review','answer'],[5,'answer','evaluate'],[6,'evaluate','gate'],[7,'gate','publish']]) cells.push(edge(`flow${i}`, `${from}-box`, `${to}-box`, i === 7 ? 'approved' : '', { color: palette.blue }))
+  for (const [i, from, to] of [[1,'source','stage'],[2,'stage','process'],[3,'process','review'],[4,'review','answer'],[5,'answer','evaluate'],[6,'evaluate','gate'],[7,'gate','publish']]) cells.push(edge(`flow${i}`, `${from}-box`, `${to}-box`, '', { color: palette.blue }))
   cells.push(edge('feedback', 'publish-box', 'hub-box', 'feedback / incidents', { color: palette.blue, dashed: true }))
   cells.push(edge('remediate', 'gate-box', 'hub-box', 'remediate', { color: palette.coral, dashed: true, exitX: 0.5, exitY: 1, entryX: 1, entryY: 0.25, points: [{ x: 452, y: 644 }] }))
   cells.push(edge('fix', 'hub-box', 'source-box', '', { color: palette.coral, dashed: true, exitX: 0, exitY: 0.5, entryX: 0, entryY: 0.5, points: [{ x: 15, y: 677 }, { x: 15, y: 202 }] }))
   cells.push(edge('reference', 'golden-box', 'evaluate-box', 'expected outcomes', { color: palette.amber }))
   cells.push(edge('newcase', 'hub-box', 'golden-box', 'review new cases', { color: palette.amber, dashed: true }))
-  cells.push(text('scope', 'Later implementation concept · live operational data uses authorized APIs if justified; no fixed release sequence.', 40, 775, 1120, 28, { size: 14, font: palette.muted }))
+  cells.push(text('scope', 'Proposed MVP content workflow. A custom review hub remains conditional.', 40, 835, 1120, 28, { size: 14, font: palette.muted }))
   return diagramXml('Knowledge quality loop', 1200, 830, cells)
 }
 

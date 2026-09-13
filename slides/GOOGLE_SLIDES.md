@@ -2,11 +2,11 @@
 
 [Open the editable Ask ONE deck](https://docs.google.com/presentation/d/1knHzzM91yvkAoxI2M55gq7JRWaIxpgf-Rf3duWitK5I/edit).
 
-`google-slides.json` records the presentation ID and native slide IDs in local presentation order. Native IDs are stable identifiers, not current slide numbers. `minimumTextWidthsPt` records the eight label widths verified in the live editor; maintain these checks when replacing those elements. Update this mapping when slides are added, removed or reordered.
+`google-slides.json` records the presentation ID and native slide IDs in local presentation order. Native IDs are stable identifiers, not current slide numbers. `minimumTextWidthsPt` records the two label widths verified in the live editor; maintain these checks when replacing those elements. Update this mapping when slides are added, removed or reordered.
 
 ## Completion rule
 
-A presentation change includes both the local deck and this existing Google Slides deck. Sync visible content, speaker notes, slide order, styling and changed diagram images. Keep text and tables native and editable; diagrams may remain images. Routine sync is authorized by the project owner. An explicit local-only request takes precedence. Documentation or helper-code changes that do not affect the presentation do not require a deck mutation.
+Update and verify the local deck by default. Sync this existing Google Slides deck only when the user explicitly requests a Google Drive or Google Slides sync, as required by the root AGENTS.md. When requested, sync visible content, speaker notes, slide order, styling and changed diagram images. Keep text and tables native and editable; diagrams may remain images. Documentation or helper-code changes that do not affect the presentation do not require a deck mutation.
 
 If authentication or connector access prevents syncing, complete the local work and report the Google Slides update as blocked. Never report both versions as updated without checking the remote result.
 
@@ -28,3 +28,7 @@ If authentication or connector access prevents syncing, complete the local work 
 These are capture and verification helpers, not an automatic publisher. Native layout adjustments and authenticated writes still run through the connector. The one-off request generator from the initial conversion was not retained as a publisher: it recreated objects, relied on a fixed mapping, and required manual repairs. Replaying those requests would conflict with existing IDs and later edits.
 
 Keep API snapshots, rendered assets and downloaded thumbnail URLs in ignored `.sync/`; keep credentials out of the repository. Slidev's standard PPTX export rasterizes slides and does not satisfy the editable-content requirement.
+
+## Latest verified sync — 13 September 2026
+
+The existing deck now matches all 29 local slides, including the separate PoC timeline, expanded technical section and removal of internal learning content. Existing slide IDs and editable objects were retained wherever practical. All native slide thumbnails were visually reviewed, with targeted live-editor checks and repairs to roadmap columns, table spacing and cost-assumption placement. The final content, notes, slide-order and media-count checks passed. Readbacks and QA images are in ignored `.sync/sync29/`. PDF and PowerPoint remain earlier snapshots.

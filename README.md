@@ -14,7 +14,7 @@ The root `PLAN.md` is the source of truth for the next local slide revision. It 
 
 Routine local slide updates use a Slidev build and browser visual checks. PDF and PowerPoint exports are opt-in under [AGENTS.md](AGENTS.md); existing exports may lag behind the source.
 
-The synchronized deck is a 22-slide preliminary project proposal: a manager overview and narrative first, then a technical overview, technical concepts and reference diagrams. PO/PPO-led business research and feature clarification remain required. The nine-month scenario is a rough estimate affected by content and wider delivery risks. Existing PDF/PowerPoint snapshots predate this revision. PowerPoint uses rasterized slide backgrounds; the Slidev and Google Slides narrative content remain editable. See [the narrative guide](slide-docs.md) and [the portable source archive](deliverables/ask-one-slides-source.zip). The earlier CLI implementation brief remains available as an [archived research-spike plan](docs/archive/maersk-research-spike-plan.md). `docs/plan.md` contains supporting proposal research rather than the active slide brief.
+The local deck and the existing Google Slides deck contain the same 29-slide preliminary project proposal: a manager overview and narrative first, then a technical overview, technical concepts and reference diagrams. PO/PPO-led business research and feature clarification remain required. Nine months remains the implementation proposal after the separate PoC, subject to content and wider delivery risks. The local update adds a PoC timeline with draft achievements marked TBC / to be discussed, and uses TBC for PoC and implementation headcounts. Existing PDF/PowerPoint snapshots predate this revision. PowerPoint uses rasterized slide backgrounds; the Slidev and Google Slides narrative content remain editable. See [the narrative guide](slide-docs.md) and [the portable source archive](deliverables/ask-one-slides-source.zip). The earlier CLI implementation brief remains available as an [archived research-spike plan](docs/archive/maersk-research-spike-plan.md). `docs/plan.md` contains supporting proposal research rather than the active slide brief.
 
 ## Requirements
 
@@ -200,3 +200,17 @@ The default output is `reports/maersk-research.md`. Use `--output <path>` or `RE
 pnpm typecheck
 pnpm test
 ```
+
+The proposal includes a separate two-month PoC, followed by nine months of implementation after review and agreement to proceed. Discovery and approval timing remain additional and TBC. Internal team preparation is outside the presentation.
+
+## Proposed tools and metrics — 13 September 2026
+
+The local deck adds Phoenix as a proposed self-hosted review workspace, Ragas evaluation jobs and Promptfoo Community security tests alongside GCP. Two editable draw.io diagrams explain telemetry and test evidence. Three scorecards name quality, latency, reliability, safety, freshness and service-cost measures. All targets and adoption decisions remain TBC / to be discussed. The manager outcomes retain comparison with existing search/help.
+
+The existing monthly service envelopes are baseline estimates. Additional tooling workloads must be sized and reconciled against existing allowances before publishing a revised total. No Enterprise subscription is assumed. The subsequent Google Slides sync includes this revision; PDF/PowerPoint snapshots remain unchanged. See [tool comparison](reports/ask-one-llm-tool-comparison.md) and [measurement checklist](reports/ask-one-metrics-and-gcp-baseline.md).
+
+## Feasible measurement and GCP refinement
+
+The current 29-slide deck folds the self-hosting option into the single service-cost slide (27). The two new workflow diagrams use embedded GCP service icons and generic activity icons for evaluation tools. The technical content explicitly identifies Vertex AI, Model Armor, Cloud Trace, Cloud Monitoring and Cloud Logging.
+
+The metric slides now state collection methods: app timings/errors/token metadata and periodic service billing; reviewed answer/fallback cases and Ragas faithfulness on a versioned sample; Promptfoo attack tests, reviewed false blocks, source propagation timestamps and unresolved blocking findings. Pilot task observation and participant feedback support customer outcomes. There is no assumed automatic measurement of customer resolution, exhaustive retrieval recall or cost per successful production answer. Broader metric research remains a reference checklist, not the proposed collection commitment. Thresholds remain TBC.

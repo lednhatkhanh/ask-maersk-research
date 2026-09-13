@@ -217,3 +217,54 @@
 
 /* Keep the expanded roadmap readable above the footer. */
 .timeline-table td { padding-top:8px; padding-bottom:8px; }
+
+/* Phase discussion tables preserve the existing deck typography. */
+.phase-resources th:first-child { width:28%; }
+.phase-resources th:nth-child(2), .phase-resources th:nth-child(3) { width:13%; }
+.phase-resources th { font-size:19px; }
+.phase-resources td:nth-child(3) { font-weight:600; color:var(--one-magenta); }
+.poc-plan-table th:first-child { width:15%; }
+.poc-plan-table th:nth-child(2) { width:28%; }
+.poc-plan-table td { font-size:20px; padding:8px 14px; }
+.poc-plan-table td:first-child { font-weight:600; }
+.poc-timeline-slide .intro { margin-bottom:14px; }
+.poc-timeline-slide .takeaway { margin-top:18px; }
+.implementation-plan td { padding-top:8px; padding-bottom:8px; }
+
+/* Allow the full implementation label without reducing body text. */
+.phase-resources th:nth-child(2) { width:10%; }
+.phase-resources th:nth-child(3) { width:18%; }
+
+/* Proposed tooling and measurement section. */
+.metrics-table th:first-child { width:24%; }
+.metrics-table th:nth-child(2) { width:46%; }
+.metrics-table th:nth-child(3) { width:30%; }
+.metrics-table.two-col th:first-child { width:34%; }
+.metrics-table.two-col th:nth-child(2) { width:66%; }
+.metrics-table td { font-size:21px; padding:15px 14px; line-height:1.35; }
+.metrics-slide .metrics-table td { padding:13px 14px; }
+.tooling-diagram { height:425px; display:flex; align-items:center; justify-content:center; }
+.tooling-diagram img { width:100%; height:100%; object-fit:contain; }
+.tooling-diagram-slide .takeaway { margin-top:16px; }
+.tooling-cost-slide .metrics-table th:first-child { width:25%; }
+.tooling-cost-slide .metrics-table th:nth-child(2) { width:32%; }
+.tooling-cost-slide .metrics-table th:nth-child(3) { width:43%; }
+.tooling-slide .metrics-table td { padding:11px 14px; }
+.tooling-slide .takeaway { margin-top:18px; }
+.metrics-slide .metrics-table td { padding:10px 14px; }
+.metrics-slide .takeaway { margin-top:18px; }
+.metrics-slide .caption, .tooling-slide .caption { margin-top:12px; }
+.tooling-slide .metrics-table td { padding:8px 14px; }
+.tooling-diagram { height:395px; }
+.outcomes-slide .outcomes-table td { font-size:21px; padding:7px 14px; }
+.outcomes-slide .takeaway { margin-top:14px; }
+.outcomes-slide .caption { margin-top:10px; }
+.service-roles-table th:first-child { width:35%; }
+.service-roles-table th:nth-child(2) { width:65%; }
+.tooling-slide .service-roles-table td { padding:10px 14px; }
+.tooling-slide .service-roles-table td { padding:6px 14px; }
+
+/* Preserve footer clearance after spelling out the resource role and cost caveats. */
+.resources-slide .phase-resources td { padding-top:9px; padding-bottom:9px; }
+.service-costs-slide .caption { margin-top:12px; }
+.service-costs-slide .service-costs-table td { padding-top:6px; padding-bottom:6px; }

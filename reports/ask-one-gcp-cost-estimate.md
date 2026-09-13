@@ -8,7 +8,13 @@ For an English, public-content, single-question MVP, allow approximately **US$60
 
 This is **SERVICE COSTS ONLY**. It excludes every salary, contractor, staffing allocation and content-owner effort. It is neither the total project cost nor a nine-month implementation budget. Existing ONE application platform spending is not charged again. Additional capacity, database resources and usage attributable to Ask ONE are included as allowances.
 
-The current technical proposal includes GKE application workloads, managed Gemini inference through Vertex AI, Cloud Storage (GCS) source versions, candidate Cloud SQL PostgreSQL/pgvector retrieval, optional Model Armor screening, and evaluation/monitoring. Counting only model tokens would materially understate the service budget.
+The current technical proposal includes GKE application workloads, managed Gemini inference through Vertex AI, Cloud Storage (GCS) source versions, candidate Cloud SQL PostgreSQL/pgvector retrieval, proposed Model Armor screening, and evaluation/monitoring. Counting only model tokens would materially understate the service budget.
+
+## Self-hosted tooling option — 13 September 2026
+
+The slide proposal now includes self-hosted Phoenix in GCP, Ragas evaluation jobs and Promptfoo Community test runners. No Enterprise licence fee is assumed. Phoenix uses ELv2 and Ragas uses Apache 2.0. Promptfoo Community currently lists 10,000 red-team probes/month. Sources: [Phoenix self-hosting](https://arize.com/docs/phoenix/self-hosting), [Ragas licence](https://github.com/vibrantlabsai/ragas/blob/main/LICENSE), [Promptfoo pricing](https://www.promptfoo.dev/pricing/).
+
+**The envelopes below remain baseline estimates, not revised totals including these new workloads.** Additional monthly service costs are TBC / to be discussed. Size Phoenix compute, database, retained traces and backups; evaluation/test runner compute; model and embedding calls; storage and network usage. Reconcile the existing telemetry/routine-evaluation allowance before adding incremental costs so the same workload is charged only once. Free licensing does not imply spare capacity or free inference. Hosting operations require effort, which remains outside this service-only estimate.
 
 ## Scenario assumptions
 
@@ -31,7 +37,7 @@ All amounts are USD. Rounded model/screening values deliberately simplify the ma
 | Additional GKE application capacity | $100–300 | $200–600 | **Allowance** for application/API and ingestion workloads across production and small non-production usage. |
 | Cloud SQL retrieval database and backups | $250–650 | $350–1,000 | **Allowance** for a modest database footprint, backups and small non-production use; edition, HA, sizing and reuse need validation. |
 | GCS source versions and operations | $5–20 | $10–30 | **Allowance** for a small retained corpus and requests; bulk public downloads are not assumed. |
-| Optional Model Armor screening | $4 | $35 | Gross token-rate calculation below, before free allotments. |
+| Proposed Model Armor screening | $4 | $35 | Gross token-rate calculation below, before free allotments. |
 | Embeddings and routine re-indexing | $5–15 | $10–30 | **Allowance** pending selected embedding model, corpus and update rate. |
 | Logging, monitoring, networking and routine evaluation | $50–150 | $100–350 | **Allowance** for modest telemetry, networking and additional test/model calls; not a priced enterprise evaluation subscription. |
 | Subtotal | $436–1,161 | $920–2,260 | Sum of the rows above. |
@@ -51,7 +57,7 @@ Per question = (3,000 × $0.30 + 500 × $2.50) / 1,000,000
 
 For sensitivity, an additional 1,000 billed output tokens per question adds $25/month at 10,000 questions or $250/month at 100,000 questions under that rate. More expensive models and multiple generation calls can increase this further; measure actual token use, not just the visible answer length.
 
-Model Armor lists $0.10 per million tokens above a two-million-token monthly free tier. Conservatively ignoring the free tier, screening 3,500 tokens per question gives $3.50 or $35/month. The input/output mix actually screened and available account entitlements must be checked. Screening is optional in this estimate and does not replace application controls or security review. [Model Armor pricing](https://cloud.google.com/security/products/model-armor).
+Model Armor lists $0.10 per million tokens above a two-million-token monthly free tier. Conservatively ignoring the free tier, screening 3,500 tokens per question gives $3.50 or $35/month. The input/output mix actually screened and available account entitlements must be checked. Model Armor is the proposed screening service, subject to PoC validation. Screening does not replace application controls or security review. [Model Armor pricing](https://cloud.google.com/security/products/model-armor).
 
 ### Infrastructure pricing evidence and limits
 

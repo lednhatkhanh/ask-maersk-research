@@ -16,6 +16,23 @@ This is the authoritative plan for the next slide revision. Use it for slide con
 
 Repository note (verified 13 September 2026): slide source and assets are now ordinary files in the root Git index. Earlier generation records describe the former gitlink. Keep the portable source archive current alongside the tracked source.
 
+## Current planning update — 13 September 2026
+
+This update implements the latest user direction and supersedes older staffing displays and slide-number references below. Keep **nine months as the proposed implementation duration, excluding discovery and the PoC**. Implementation Month 1 starts after the separate PoC review and agreement to proceed. Calendar kickoff remains TBC, and discovery/PoC findings can revise the forecast. Discovery and PoC durations are additional and TBC / to be discussed. Do not replace the proposal with an unspecified implementation duration.
+
+- Slide 9: suggested roles for PoC and implementation, with every headcount and allocation **TBC / to be discussed**. No numerical team-size recommendation appears in the slides or notes.
+- New Slide 10: a separate proposed eight-week PoC after discovery. Every proposed achievement, duration, sequence and exit criterion is **TBC / to be discussed**. Weeks 1–2: journey, permitted sample and evaluation plan. Weeks 3–4: sample answers, citations, service links and fallback. Weeks 5–6: quality/search comparison, content changes, safety, response time and service costs. Weeks 7–8: demo, gaps, backlog and a revised implementation recommendation. The eight-week breakdown is discussion material, not a validated estimate.
+- Slide 11: preserve nine months for implementation only: Months 1–4 core development, Months 5–6 hardening/demo, Month 7 pilot, Month 8 conditional production release and Month 9 stabilization. Retain the known implementation outcomes and separate readiness gates. Detailed requirements and acceptance criteria remain subject to PO/PPO-led agreement.
+- Adapt the staged evidence structure from `../payloadcms-poc/apps/slides/slides.md`, without importing its staffing assumptions.
+- Current deck: 29 slides. Manager section 1–14, technical overview 15, core technical slides 16–27, reference diagrams 28–29. Resource quantities and role allocations appear only on Slide 9. Service costs remain separate on Slide 27.
+- Local update only. The existing Google Slides deck remains at the earlier 22-slide revision until explicitly requested to sync. Preserve PDF/PowerPoint snapshots.
+
+## Phase sequence and presentation boundary
+
+Present discovery, a separate proposed two-month PoC (approximately eight weeks), and nine months of implementation after the PoC review and agreement to proceed. Discovery duration, PoC timing and calendar kickoff remain TBC / to be discussed. Do not present the team's internal learning, training or self-study process in slides or speaker notes, or include a separate learning month in the project timeline.
+
+Current order: resource Slide 9, PoC Slide 10, implementation Slide 11 and risks Slide 12. The manager section ends at Slide 14. Technical overview 15, core technical 16–27, references 28–29.
+
 ## Goal
 
 Restructure the Ask ONE deck so managers can understand the proposal without a presenter. The opening section will follow the logic of a concise executive proposal: opportunity, solution, execution, business case and decision. A compact manager overview will map that reading path immediately after the cover. A separate technical section will follow it, introduced by its own overview.
@@ -24,7 +41,7 @@ The deck will propose approval to begin the Ask ONE project through the first MV
 
 Do not create a dedicated approval or call-to-action slide. Use “Project proposal: first MVP” on the cover and a short statement on the roadmap: “Proposed first-MVP project. Further PO/PPO-led research and the PoC must inform scope, cost and schedule.” Close the manager section with expected outcomes and how success will be measured, then transition to the technical section.
 
-Project approval is not an unconditional promise to release or an assertion that budget has already been approved. The nine-month estimate remains provisional. Discovery and the PoC are review gates within the proposed project; their findings may require a scope change, revised funding or schedule, or a pause/stop decision. Pilot and production gates remain mandatory. The deck should support a whole-project decision without inventing a finalized budget or suggesting that a PoC result guarantees delivery.
+Project approval is not an unconditional promise to release or an assertion that budget has already been approved. The nine-month implementation proposal excludes discovery and the PoC and remains provisional. Discovery and the PoC are review gates within the proposed project; their findings may require a scope change, revised funding or schedule, or a pause/stop decision. Pilot and production gates remain mandatory. The deck should support a whole-project decision without inventing a finalized budget or suggesting that a PoC result guarantees delivery.
 
 ## Required PO/PPO involvement before finalizing the project definition
 
@@ -49,15 +66,15 @@ The slides may describe this required PO/PPO business collaboration, as explicit
 ## Decisions already made
 
 - The manager section comes first and includes a compact overview after the cover. It groups the proposal into customer case, evidence, first-release planning, and outcomes.
-- The technical section starts after a clear section break that also acts as a technical overview. Six core slides explain the system in sequence, with detailed controls in notes and two reference diagrams.
-- The revised target is 22 slides: 13 manager slides including the new overview, one technical overview, six core technical slides and two reference diagrams. Include a dedicated resource placeholder and a separate monthly service-cost estimate. Keep the roadmap and risks on adjacent slides. Readability takes priority over an exact count.
+- The technical section starts after a clear section break that also acts as a technical overview. Twelve core slides explain the system in sequence, with detailed controls in notes and two reference diagrams.
+- The revised target is 29 slides: 14 manager slides including the new overview, one technical overview, twelve core technical slides and two reference diagrams. Include a dedicated resource placeholder and a separate monthly service-cost estimate. Keep the roadmap and risks on adjacent slides. Readability takes priority over an exact count.
 - Frame the proposal around beginning the whole first-MVP project, with evidence-based review gates. Do not reduce the request to one month of discovery or add a standalone approval slide.
-- Nine months is a rough estimation scenario only, not a concluded delivery plan. Further PO/PPO-led business research and technical investigation may change it before or after the PoC. All month numbers are relative to discovery kickoff and assume timely decisions between stages.
+- Nine months is a rough estimation scenario only, not a concluded delivery plan. Further PO/PPO-led business research and technical investigation may change it before or after the PoC. All implementation month numbers are relative to implementation kickoff after the PoC review and assume timely decisions between stages.
 - A working product preview is targeted for the end of Month 4.
 - The formal manager demo is targeted for the end of Month 6. A separate readiness review determines whether the service can enter the pilot. A successful demo alone does not establish readiness.
 - A limited user pilot is targeted for Month 7.
 - The controlled production release is tentatively targeted for Month 8. Month 9 covers planned stabilization and priority fixes. It is not a full month of spare capacity.
-- The Markdown plan retains the internal staffing assumption: six developers, one technical architect or technical lead, one product owner, two QA engineers and one UI/UX designer. A second UI/UX designer can join during research, prototyping and user testing if available. Show the baseline only on the dedicated resource slide as a placeholder for the team to revise. Do not repeat staffing in other slides or their notes.
+- The Markdown plan retains the internal staffing assumption: six developers, one technical architect or technical lead, one product owner, two QA engineers and one UI/UX designer. A second UI/UX designer can join during research, prototyping and user testing if available. Keep these earlier quantities internal only. The resource slide now uses TBC / to be discussed for both phase headcounts. Do not repeat staffing in other slides or their notes.
 - The technical architect owns the day-to-day security and privacy design as part of the technical leadership role. The resource slide may summarize this role. Detailed assignments remain internal.
 - The Markdown plan records the established working relationships with the GCP and Drupal teams. Their organizational involvement does not appear in the slides.
 - The first MVP supports English only. It uses public content and handles one question at a time.
@@ -68,7 +85,7 @@ The slides may describe this required PO/PPO business collaboration, as explicit
 
 ## Success criteria
 
-The first thirteen slides must work as a standalone management proposal. Slide 2 should provide a short thematic map rather than repeat every slide title. A reader should be able to identify:
+The first fourteen slides must work as a standalone management proposal. Slide 2 should provide a short thematic map rather than repeat every slide title. A reader should be able to identify:
 
 - the customer opportunity;
 - what the feature does, with a concrete example and clear limits;
@@ -87,7 +104,7 @@ Read the rendered manager section without notes: a reader must be able to explai
 
 ## Current slide order
 
-The revised deck has 22 slides. The manager section ends at Slide 13, followed by a technical overview, six core technical slides and two appendix diagrams.
+The revised deck has 29 slides. The manager section ends at Slide 14, followed by a technical overview, twelve core technical slides and two appendix diagrams.
 
 ### Manager proposal
 
@@ -98,14 +115,15 @@ The revised deck has 22 slides. The manager section ends at Slide 13, followed b
 | 3 | Easier access to trusted ONE guidance | Explain the customer difficulty to investigate: finding the right guidance and understanding what to do next. Do not present unmeasured ONE customer problems as established facts. |
 | 4 | What Ask ONE would do for customers | Explain the feature in plain English: ask a question, receive a short explanation based on approved public ONE guidance, open the source and follow a relevant service link. Explain its limits and fallback. |
 | 5 | From a question to a useful next step | Use a clearly fictional enquiry-preparation example that summarizes guidance rather than merely directing the customer to a guide. Show the question, answer, source and service link. Distinguish explaining a process from carrying it out. |
-| 6 | Why this could help customers and ONE | Separate customer benefits from ONE benefits, using the benefit guidance below. Describe value, not testing machinery. Label benefits as expected, not measured. |
+| 6 | Expected value for customers and ONE | Separate customer benefits from ONE benefits, using the benefit guidance below. Describe value, not testing machinery. Label benefits as expected, not measured. |
 | 7 | Further business research is required | Retain the Ask Maersk evidence boundary. State visibly that PO/PPO must help validate customer needs and clarify business requirements and feature priorities before the proposal can be finalized. |
 | 8 | Proposed first-release scope | Present the English-only, public-content, single-question MVP, visible sources and service links. Summarize exclusions. Show the detailed business specification as unfinished. Discovery, PO/PPO collaboration and the PoC define and validate this proposed release. |
-| 9 | Proposed delivery resources | Show one placeholder team: 6 developers, 1 TA, 1 PO, 1 UI/UX and 2 QA. The team will revise it. No additional ML engineer is planned. Staffing appears on this slide only. |
-| 10 | Rough delivery estimate, still under research | Show the whole-project scope and rough nine-month roadmap. Include discovery, PoC reassessment, Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 conditional release and Month 9 stabilization. Make all month labels tentative and state that research and risk findings can revise them before or after the PoC. Use the whole-project framing without an approval banner. |
-| 11 | Several risks can change scope and dates | Cover business decisions, content readiness, technical feasibility/integration and readiness testing. Pair each risk with further work or a response. Retain the permitted sample before the PoC, approved minimum content before the pilot and separate pilot/production gates. |
-| 12 | Potential extensions after the first MVP | Retain the seven customer-facing options and the visible statement that they are outside the nine-month estimate and subject to separate assessment and approval. |
-| 13 | What success would look like | Close with useful outcomes for customers and ONE and a concise measurement approach. Compare with existing search/help, include operating cost and explain when evidence will become available. No separate approval request or invented ROI. |
+| 9 | Proposed delivery resources | Show suggested roles for PoC and implementation, with all counts and allocations TBC / to be discussed. No numerical headcount. Staffing appears on this slide only. |
+| 10 | PoC timeline and expected evidence | Eight proposed weeks with draft exit evidence, all TBC / to be discussed. Secure sample permission before kickoff. |
+| 11 | Nine-month proposal and delivery outcomes | Show the whole-project scope and rough nine-month roadmap. Include separate discovery and PoC before implementation, Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 conditional release and Month 9 stabilization. Make all month labels tentative and state that research and risk findings can revise them before or after the PoC. Use the whole-project framing without an approval banner. |
+| 12 | Several risks can change scope and dates | Cover business decisions, content readiness, technical feasibility/integration and readiness testing. Pair each risk with further work or a response. Retain the permitted sample before the PoC, approved minimum content before the pilot and separate pilot/production gates. |
+| 13 | Potential extensions after the first MVP | Retain the seven customer-facing options and the visible statement that they are outside the nine-month estimate and subject to separate assessment and approval. |
+| 14 | What success would look like | Close with useful outcomes for customers and ONE and a concise measurement approach. Compare with existing search/help, include operating cost and explain when evidence will become available. No separate approval request or invented ROI. |
 
 ## Manager explanation: what the feature does
 
@@ -128,7 +146,7 @@ Keep the example explicitly fictional unless approved real source material is su
 
 ## Expected benefits for customers and ONE
 
-The manager section needs an explicit value explanation before the roadmap. Measures alone do not explain why the feature is worth considering. Use three clear benefit pairs on Slide 6; keep detailed measurement reasoning here and on Slide 13.
+The manager section needs an explicit value explanation before the roadmap. Measures alone do not explain why the feature is worth considering. Use three clear benefit pairs on Slide 6; keep detailed measurement reasoning here and on Slide 14.
 
 | Customer benefit | Potential benefit for ONE | What would demonstrate value |
 |---|---|---|
@@ -138,7 +156,7 @@ The manager section needs an explicit value explanation before the roadmap. Meas
 
 Use “Expected benefits to validate” as a short qualification. Do not claim measured savings, support reduction, revenue growth, staffing reductions or guaranteed answer accuracy. Sources make an answer checkable; they do not automatically make it correct.
 
-Slide 6 explains **why it matters**. Slide 13 explains **how we will know it works**. Avoid repeating the same benefit statements across both slides. Slide 13 should connect outcomes to representative comparisons, pilot evidence and cost per successful answer, including content maintenance and support effort. Total project budget and ROI remain unfinalized. The dedicated service-cost slide may show source-backed illustrative monthly service budgets with assumptions and exclusions. Do not confuse these with staffing costs, total implementation cost or proven returns.
+Slide 6 explains **why it matters**. Slide 14 explains **how we will know it works**. Avoid repeating the same benefit statements across both slides. Slide 14 should connect outcomes to representative comparisons, observed pilot tasks, service cost per admitted question and separately recorded content maintenance and support effort. Total project budget and ROI remain unfinalized. The dedicated service-cost slide may show source-backed illustrative monthly service budgets with assumptions and exclusions. Do not confuse these with staffing costs, total implementation cost or proven returns.
 
 ### Technical focus
 
@@ -146,15 +164,18 @@ For each substantive technical slide, explain the proposed approach and why it f
 
 | Slide | Working title | Purpose and required content |
 |---:|---|---|
-| 14 | Technical overview | Introduce the implementation reasoning through five themes: answer flow and boundaries; content approval and freshness; security and usage protection; quality, operations and service costs; technical reference diagrams. |
-| 15 | How a question becomes an answer | Bring the existing architecture overview forward and combine it with platform direction. Define GKE and explain retrieval, managed inference and the MVP/future boundary. |
-| 16 | How approved content stays current | Combine the source lifecycle and minimum review workflow. Existing tools come first; a custom Hub remains conditional. |
-| 17 | Answer safety and data protection | Distinguish deterministic citation/source eligibility checks from imperfect semantic assessment and human evaluation. Keep traffic quotas on the next slide. |
-| 18 | Protection against bots and excessive use | Retain the dedicated CAPTCHA, rolling quota, concurrency, spending and origin-access slide. Explain enforced pilot participation separately from anonymous public release. |
-| 19 | Quality and production readiness | Combine evaluation evidence with monitoring, regression testing, rollback and release readiness. Preserve detailed operations and evaluation-tool notes without repeating them on the core slide. |
-| 20 | Estimated monthly service costs | End the technical argument with the services just explained. Separate token calculations from infrastructure allowances. Show exclusions and unconfirmed Cloudflare coverage. |
-| 21 | Security flow | Preserve the existing technical reference diagram. |
-| 22 | Knowledge and quality workflow | Preserve the existing technical reference diagram. |
+| 15 | Technical overview | Introduce the implementation reasoning through five themes: answer flow and boundaries; content approval and freshness; security and usage protection; quality, operations and service costs; technical reference diagrams. |
+| 16 | How a question becomes an answer | Bring the existing architecture overview forward and combine it with platform direction. Define GKE and explain retrieval, managed inference and the MVP/future boundary. |
+| 17 | How approved content stays current | Combine the source lifecycle and minimum review workflow. Existing tools come first; a custom Hub remains conditional. |
+| 18 | Answer safety and data protection | Distinguish deterministic citation/source eligibility checks from imperfect semantic assessment and human evaluation. Keep traffic quotas on the next slide. |
+| 19 | Protection against bots and excessive use | Retain the dedicated CAPTCHA, rolling quota, concurrency, spending and origin-access slide. Explain enforced pilot participation separately from anonymous public release. |
+| 20 | Quality and production readiness | Combine evaluation evidence with monitoring, regression testing, rollback and release readiness. Preserve detailed operations and evaluation-tool notes without repeating them on the core slide. |
+| 21 | Tools with distinct responsibilities | GCP baseline, self-hosted Phoenix, Ragas jobs and Promptfoo Community. Proposed adoption TBC. |
+| 22–23 | Tracing and evaluation diagrams | Editable draw.io workflows, asynchronous evidence and human review. |
+| 24–26 | Proposed metric scorecards | Quality, performance/reliability, safety/cost/freshness. Targets TBC before formal testing. |
+| 27 | Estimated monthly service costs | End the technical argument with the services just explained. Separate token calculations from infrastructure allowances. Show exclusions and unconfirmed Cloudflare coverage. |
+| 28 | Security flow | Preserve the existing technical reference diagram. |
+| 29 | Knowledge and quality workflow | Preserve the existing technical reference diagram. |
 
 
 ## Bot, access and usage protection
@@ -171,15 +192,15 @@ Official references: [Turnstile server validation](https://developers.cloudflare
 
 ## Resource placeholder and ML support
 
-Slide 9 is the only slide that may show staffing quantities or role allocations. Show one team of **6 developers, 1 TA, 1 PO, 1 UI/UX and 2 QA (11 people)**. Label it as a placeholder that the team will update later. Do not imply confirmed availability, a finalized allocation or proof that the schedule is safe. Keep the optional second designer and detailed developer split in the internal assumptions only.
+Slide 9 is the only slide that may show staffing quantities or role allocations. Show suggested developer, technical architect, PO/PPO, user interface/experience and quality assurance roles for both PoC and implementation. All headcounts, members and allocations are **TBC / to be discussed**. Do not display numerical staffing quantities. Do not imply confirmed availability, a finalized allocation or proof that the schedule is safe. Keep the optional second designer and detailed developer split in the internal assumptions only.
 
 No additional machine-learning engineer is planned for the first MVP. Present managed inference as an architectural choice, not proof that delivery capacity is adequate. Allocate learning, implementation experiments and evaluation work during discovery and the PoC. Managed inference avoids custom model training, but reliable retrieval, source handling and answer evaluation still need evidence. Use PoC findings to reassess scope and time rather than treating the learning effort as free or already complete. Do not add a specialist-support recommendation to the slides.
 
 ## Estimated monthly service costs
 
-Place this slide last in the core technical section, after Quality and production readiness. The resource placeholder remains in the manager section. Do not duplicate the service-cost table in the manager section.
+Place the baseline estimate after the tooling and metrics slides, with a concise self-hosted tooling cost note on the same slide. The resource placeholder remains in the manager section. Do not duplicate the service-cost table in the manager section.
 
-Slide 20 must use the title **Estimated monthly service costs**. These estimates cover incremental cloud/service running costs only, not resource costs, salaries, contractors, content-owner effort, one-time implementation or total project funding.
+Slide 27 must use the title **Estimated monthly service costs**. These estimates cover incremental cloud/service running costs only, not resource costs, salaries, contractors, content-owner effort, one-time implementation or total project funding.
 
 Use [the dated GCP service-cost estimate](reports/ask-one-gcp-cost-estimate.md) as the auditable source. Read it before revising the figures. It records official pricing links, token calculations, infrastructure allowances, exclusions and decisions to confirm after the PoC.
 
@@ -194,15 +215,15 @@ The illustrative Gemini 2.5 Flash calculation is $21.50/$215 monthly at these vo
 
 Reuse existing GKE/GCP without charging unrelated baseline spending again. Additional capacity is not free. Confirm region, availability requirements, existing headroom, database size, environment count, source volumes and actual model usage after the PoC. New service requirements, higher traffic, lengthy reasoning, extra calls or major architecture changes can exceed these ranges. Do not multiply the monthly examples by nine to present a project budget.
 
-## Rough nine-month delivery estimate
+## Proposed nine-month implementation timeline
 
-Nine months is an initial scenario for discussion only. Neither the phase durations nor the end date have been validated. Business requirements, feature priorities and further research with PO/PPO remain open. The Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 release and Month 9 stabilization are tentative scenario markers, not commitments or evidence that those dates are safe. Reassess at the business-research review, after the PoC and whenever a material assumption changes. Provisionally place a bounded PoC in Month 2 after the discovery review. A representative sample with permission for the intended PoC use must be available before the PoC begins. Confirm its scope and duration during discovery, then reassess the remaining schedule using the PoC findings. If business decisions, the sample, feasibility work or readiness testing take longer, revise downstream dates rather than compressing validation and stabilization. More content alone does not resolve the other dependencies.
+Nine months is the proposed implementation scenario after the PoC review. Discovery and PoC time are additional, with durations TBC / to be discussed. Neither the phase durations nor the end date have been validated. Business requirements, feature priorities and further research with PO/PPO remain open. The Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 release and Month 9 stabilization are tentative scenario markers, not commitments or evidence that those dates are safe. Reassess at the business-research review, after the PoC and whenever a material assumption changes. Schedule a separate bounded PoC after discovery, with its timing and achievements TBC / to be discussed. A representative sample with permission for the intended PoC use must be available before the PoC begins. Confirm its scope and duration during discovery, then reassess the remaining schedule using the PoC findings. If business decisions, the sample, feasibility work or readiness testing take longer, revise downstream dates rather than compressing validation and stabilization. More content alone does not resolve the other dependencies.
 
 | Tentative period | Focus | Evidence or review point |
 |---|---|---|
-| Month 1 | Discovery and definition | PO/PPO must guide research into customer needs, clarify business requirements and prioritize the first journey and features. Identify the minimum useful content set and initial MVP scope. Secure a representative sample with permission for PoC use. Draft representative questions, the evaluation approach, acceptance criteria, security/privacy requirements and operating assumptions. Review the proposed PoC with management. |
-| Month 2 | Bounded PoC and foundations | Test ingestion, retrieval, grounded answers and citations with a permitted sample. Begin instrumentation, regression checks and security testing. Assess Drupal synchronization and existing content-review tools. Use the results to revise the MVP scope, architecture, costs and delivery estimate before committing to the build. |
-| Months 3–4 | Core product development | Build the customer journey, Drupal synchronization, feedback and minimum content-review capability. Run evaluation and security checks throughout development. Aim for a working preview at the end of Month 4. |
+| Before implementation; duration TBC | Discovery and definition | PO/PPO must guide research into customer needs, clarify business requirements and prioritize the first journey and features. Identify the minimum useful content set and initial MVP scope. Secure a representative sample with permission for PoC use. Draft representative questions, the evaluation approach, acceptance criteria, security/privacy requirements and operating assumptions. Review the proposed PoC with management. |
+| Before implementation; two months TBC | Bounded PoC and foundations | Test ingestion, retrieval, grounded answers and citations with a permitted sample. Begin instrumentation, regression checks and security testing. Assess Drupal synchronization and existing content-review tools. Use the results to revise the MVP scope, architecture, costs and delivery estimate before committing to the build. |
+| Months 1–4 | Core product development | Build the customer journey, Drupal synchronization, feedback and minimum content-review capability. Run evaluation and security checks throughout development. Aim for a working preview at the end of Month 4. |
 | Months 5–6 | Hardening and manager demo | Expand the evaluation set, test failures and access controls, and tune performance and cost. Validate monitoring, screening, rate limits, caching and rollback. Aim for a formal manager demo at the end of Month 6, followed by a separate pilot-readiness review. |
 | Month 7 | Controlled user pilot | The team releases the service to a limited group of users. QA, content owners and platform specialists measure quality, usability, reliability and cost against the agreed criteria. |
 | Month 8 | Controlled production release | The team resolves the pilot findings, completes the production-readiness review and releases the service to production users in controlled stages. |
@@ -280,8 +301,8 @@ Development and illustrative demos can continue with permitted samples, clearly 
 
 These are proposed dependency dates to agree with PO/PPO and content owners, not commitments already received:
 
-- During Month 1, jointly define the minimum useful content set for the first journey, identify sources and owners, and agree the approval path and review dates.
-- Before the PoC begins, provisionally by the end of Month 1, secure a representative sample with permission for the intended development and evaluation use. If it is unavailable, revise the PoC start date. Permission to use a sample in the PoC does not establish approval for public release.
+- During discovery, jointly define the minimum useful content set for the first journey, identify sources and owners, and agree the approval path and review dates.
+- Before the PoC begins, provisionally by the end of discovery, secure a representative sample with permission for the intended development and evaluation use. If it is unavailable, revise the PoC start date. Permission to use a sample in the PoC does not establish approval for public release.
 - Before the Month 6 manager demo, approve the content used in the end-to-end experience.
 - Before the Month 7 pilot, confirm the pilot content set, its audience and its owners.
 - Before the Month 8 release, confirm that production content is current, approved and covered by an ongoing maintenance process.
@@ -292,7 +313,7 @@ On the roadmap, use plain wording: “Content scope and approval require PO/PPO 
 
 ## Pilot and production gates
 
-During Month 1, define the evaluation method, initial acceptance criteria and required evidence. Refine these using the PoC, then agree thresholds before formal readiness testing. Do not select thresholds after seeing the results. Before the pilot, agree its audience, duration and minimum evidence needed for a release decision. These details remain discovery outputs rather than invented percentages in this slide brief.
+During discovery, define the evaluation method, initial acceptance criteria and required evidence. Refine these using the PoC, then agree thresholds before formal readiness testing. Do not select thresholds after seeing the results. Before the pilot, agree its audience, duration and minimum evidence needed for a release decision. These details remain discovery outputs rather than invented percentages in this slide brief.
 
 ### Pilot-readiness review, tentatively Month 6
 
@@ -321,7 +342,7 @@ If a gate does not pass, assess the remediation work and publish a revised forec
 
 ## Internal delivery assumptions
 
-Retain detailed delivery assumptions here. Only the dedicated resource slide may show the baseline staffing placeholder. GCP/Drupal-team involvement stays out of all slides and notes.
+Retain detailed delivery assumptions here. Only the dedicated resource slide may show staffing, with quantities TBC / to be discussed. The numerical assumptions below are historical internal discussion material, not the current staffing proposal. GCP/Drupal-team involvement stays out of all slides and notes.
 
 ### Core team
 
@@ -347,7 +368,7 @@ The timeline assumes that the GCP team, Drupal team and content owners can revie
 
 ## Final-review clarity requirements
 
-- Preserve the existing 12 manager slides and add the manager overview, producing 13 manager slides. Use PO/PPO without expansion. Spell out quality assurance, user interface/experience and machine learning on the resource slide.
+- Preserve all 14 manager slides, including the overview, resource and PoC slides. Use PO/PPO without expansion. Spell out quality assurance, user interface/experience and machine learning on the resource slide.
 - The example must show a useful explanation, a checkable source and a next step. Its enquiry guidance is explicitly fictional, not ONE policy. Forms integration remains future scope; an ordinary service link does not submit data.
 - Explain content-delay responses in natural English: defer optional topics, and revise pilot/release dates if essential content remains unapproved.
 - Distinguish overall operating cost (including human content/support effort) from the service-only running-cost estimate.
@@ -374,16 +395,16 @@ The timeline assumes that the GCP team, Drupal team and content owners can revie
 
 Two-part navigation revision complete. The 12 existing manager slides are retained behind a new manager overview, and the technical divider is now an editable technical overview. Earlier generation records remain historical.
 
-- [x] Add the resource placeholder only on Slide 9 and the service-cost estimate on Slide 20.
+- [x] Add the resource placeholder only on Slide 9 and the service-cost estimate on Slide 27.
 - [x] Verify service-cost arithmetic, assumptions and official pricing sources.
 - [x] Add a manager overview after the cover and convert the technical divider into a technical overview.
-- [x] Review the full 22-slide deck in the browser, update documentation and refresh the source archive.
+- [x] Review the full 29-slide deck in the browser, update documentation and refresh the source archive.
 
 - [x] Retain the existing manager proposal and insert the overview as Slide 2; retain the future-features slide.
 - [x] Remove the dedicated approval slide and replace discovery-only wording in the cover, narrative and notes. Retain the post-PoC reassessment and readiness gates.
-- [x] Convert the technical section break into the Technical overview at Slide 14.
-- [x] Retain the existing technical content as Slides 15–20 without repeating the manager narrative.
-- [x] Retain the architecture diagram on Slide 15 and the two appendix diagrams as Slides 21–22.
+- [x] Convert the technical section break into the Technical overview at Slide 15.
+- [x] Retain the existing technical content as Slides 16–27 without repeating the manager narrative.
+- [x] Retain the architecture diagram on Slide 16 and the two appendix diagrams as Slides 28–29.
 - [x] Confine the staffing placeholder to the dedicated resource slide. Keep partner-team involvement out of all slide content and notes.
 - [x] Review all speaker notes and keep the evidence boundaries and source references that still apply.
 - [x] Update the local deck documentation with the new narrative and slide count.
@@ -399,7 +420,7 @@ Two-part navigation revision complete. The 12 existing manager slides are retain
 The work is complete when:
 
 - the local Slidev build succeeds;
-- the affected slides pass browser visual inspection, with the complete 22-slide deck checked for shared style or structural changes;
+- the affected slides pass browser visual inspection, with the complete 29-slide deck checked for shared style or structural changes;
 - any explicitly requested exports succeed and pass format-specific visual inspection; otherwise no PDF or PowerPoint export is required;
 - the manager section answers the questions listed under Success criteria, including feature behavior and distinct customer/ONE benefits;
 - the timeline shows provisional milestones for a Month 4 working preview, Month 6 manager demo and separate pilot-readiness review, Month 7 limited user pilot, Month 8 controlled production release and Month 9 stabilization;
@@ -419,7 +440,7 @@ The work is complete when:
 - the technical section remains detailed and starts only after the manager outcomes and measurement slide;
 - both audiences pass the reading checks in Success criteria, and repeated caveats do not obscure the customer value or technical reasoning;
 - the local documentation matches the final slide order and count;
-- the existing Google Slides deck matches the 22-slide local order, keeps narrative content editable and keeps the diagrams as images;
+- only when sync is explicitly requested, the existing Google Slides deck matches the 29-slide local order, keeps narrative content editable and keeps the diagrams as images;
 - a fresh remote readback, native slide render and live-editor review show no unresolved clipping, wrapping or layout defects.
 
 ## Historical generation record — 12 September 2026
@@ -502,3 +523,89 @@ Added Other ONE services and Forms integration to Slide 10, bringing the list to
 - Updated the existing Google Slides deck in place, retaining native text, tables, object identities and speaker notes. A complete final readback passed the text, notes, order and media checks for all 22 slides.
 - Inspected every native slide rendering and the live editor grid. Corrected native table spacing on Slides 10, 16, 18 and 20, then re-rendered and inspected those slides in the editor. No unresolved clipping or overlap remains in the reviewed renderings.
 - Updated local documentation and the portable source archive. PDF and PowerPoint snapshots remain unchanged. Temporary browser and native QA images are under `/tmp/ask-one-wording-final/` and `/tmp/ask-one-wording-google/`. Ignored `.sync/` files retain the connector readbacks.
+
+## Local validation — separate PoC and implementation, 13 September 2026
+
+- Local deck: 23 slides. Added proposed PoC achievements and timing, all TBC / to be discussed. Team quantities are TBC for both phases.
+- Nine implementation months begin after the separate PoC review. Discovery and PoC time are additional. Retained the Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 conditional release and Month 9 stabilization.
+- Slidev build passed. Reviewed all 23 browser renders and corrected timeline footer collisions. Final changed slides fit above the footer and all images loaded. Temporary QA: `/tmp/ask-one-poc-final/`.
+- Updated documentation and the portable source archive. No Google Slides sync or PDF/PowerPoint export. Existing remote deck and exports remain earlier snapshots.
+
+## Local validation — learning preparation, 13 September 2026
+
+- Added learning Slide 10 and expanded the PoC to a proposed two months (about eight weeks). The 24-slide deck shows one month learning, two months PoC and nine months implementation, excluding extra discovery and approval gaps. Learning may overlap discovery.
+- TA training preparation and developer self-learning are on resource Slide 9 only. All staffing allocations remain TBC / to be discussed. Learning activities, outcomes and PoC timing remain discussion proposals.
+- Local Slidev build passed. Browser captures covered all 24 slides, with visual review and no content/footer crossings or missing images. QA: `/tmp/ask-one-learning-qa/`. Updated documentation and the source archive. No remote sync or PDF/PowerPoint export.
+
+## Editorial review — 13 September 2026
+
+Reviewed all 24 slides and speaker notes for plain English, consistent proposal language and terminology. Clarified source-backed answers, feedback, content approval, PoC evidence and implementation milestones. Removed repeated notes while retaining technical qualifications and source references. The one-month learning phase, two-month PoC and separate nine-month implementation proposal are unchanged. All staffing allocations and learning/PoC proposals remain TBC / to be discussed.
+
+Validation: Slidev build passed. Reviewed all 24 browser renders, corrected crowded wording and resource-table spacing, and rechecked the final outcomes and service-cost slides. No unresolved footer collisions or missing images were found. Source archive refreshed. QA images: `/tmp/ask-one-editorial-final/`. Google Slides and PDF/PowerPoint snapshots remain unchanged.
+
+## Resource wording update
+
+Remove the sentence stating that no additional machine learning engineer is planned from the resource slide, as requested. This supersedes earlier instructions to display that assumption. Keep the learning and evaluation allowance and all headcounts TBC.
+
+## Superseded — TA-led team learning
+
+The resource slide must clearly state that the TA will prepare and lead team training, guide practical exercises and review learning progress. Developer self-study reinforces the TA-led programme. Training timing, availability and allocations remain TBC / to be discussed. Keep role assignments on the dedicated resource slide.
+
+## Current local revision — tools and measurement
+
+The 31-slide deck adds seven technical slides: tool responsibilities (22), tracing and evaluation diagrams (23–24), metric scorecards (25–27), and self-hosting costs (29). Baseline service costs move to 28 and reference diagrams to 30–31. Preserve the 15-slide manager section, with named success measures on Slide 15. This revision supersedes prior instructions to keep tool choices only in notes.
+
+Propose self-hosted Phoenix, Ragas jobs and Promptfoo Community alongside GCP. Tool adoption, hosting configuration and metric thresholds are TBC / to be discussed. The original service envelopes exclude unpriced increases from the new tools. Measure incremental capacity and evaluator usage, reconcile existing allowances once, and then revise the total. No paid Enterprise licence is assumed.
+
+Validation: Slidev build passed. Captured all 31 local browser slides, visually reviewed the deck and rechecked adjusted outcomes, tooling and metric layouts. All images loaded and no content crossed the footer boundary. Two new SVGs contain embedded editable draw.io XML. Updated narrative documentation and refreshed the portable source archive. QA captures: `/tmp/ask-one-tools-verified/`. No Google Slides sync or PDF/PowerPoint export.
+
+## Current revision — feasible metrics and GCP involvement
+
+User direction supersedes the preceding 31-slide revision: remove the dedicated self-hosting cost slide and retain a short option/cost note on Slide 28. The current deck has 30 slides, with references at 29–30. Diagram icons identify GCP services or generic activities, without substituting unrelated product logos.
+
+Explicit technical roles: Vertex AI generation, embeddings and evaluation model calls; Model Armor screening enforced by the app; Cloud Trace request timings; Cloud Monitoring health/alerts; Cloud Logging errors; Phoenix selected answer review; Ragas sample evaluation and Promptfoo scoped tests. Keep native GCP evaluation as a comparison option and avoid duplicate paid scoring.
+
+Only commit to useful, collectable measures on slides and notes. Use browser/server timings, app error counts, provider token metadata and periodically allocated service billing. Use reviewed sample questions for answer/citation passes, useful evidence, faithfulness and fallback. Use labeled security tests for attack successes/false blocks and content timestamps for update/removal delays. Track blocking findings. Pilot outcomes require observed tasks and participant reports. Do not imply automated production truth, complete attack detection, exhaustive recall, support-ticket attribution or cost per successful answer. Targets remain TBC / to be discussed.
+
+Validation: local Slidev build passed. Captured and visually reviewed all 30 browser slides, including both icon diagrams and the revised collection-method tables. No missing images or footer crossings were found. Updated slide references and documentation and refreshed the source archive. QA: `/tmp/ask-one-refined-qa/`. No Google Slides sync or PDF/PowerPoint export.
+
+## Diagram style reference
+
+Use the supplied architecture diagram as the visual reference: an adaptive canvas (white in light mode, dark in dark mode), rounded outlined nodes, contrasting headings, muted descriptions, prominent icons and coloured connectors. Author diagrams with the same light-base palette as the originals so draw.io does not invert a dark base to gray. The tracing and evaluation diagrams on Slides 23–24 now follow this style and retain embedded editable draw.io data. Slide content and the 30-slide order are unchanged. Local build passed and both affected browser slides were visually checked. Theme correction verified in light and dark browser modes: backgrounds match the original (`#FFFFFF` / `#121212`). Build and Slides 23–24 visual checks passed. QA: `/tmp/ask-one-theme-qa/`.
+
+## Final standalone wording review
+
+Reviewed the full 30-slide deck and notes for reading without a presenter. Defined abbreviations, explained tool responsibilities and metric collection in plain English, clarified pilot evidence, and simplified diagram labels. Updated the architecture diagram to refer to discovery and the PoC and removed the implied commitment to a custom hub. Scope, the separate learning/PoC phases, proposed nine implementation months, staffing TBC and service-cost assumptions remain unchanged.
+
+Final validation: Slidev build passed. Reviewed all 30 slides as a standalone narrative and inspected browser captures. Corrected crowded content and rechecked the affected slides. All images loaded, with no body text crossing the footer. QA: `/tmp/ask-one-standalone-final/`. Documentation and source archive refreshed. No Google Slides sync or PDF/PowerPoint export.
+
+
+## Combined evaluation tools
+
+Phoenix + Ragas are grouped as one proposed quality-evaluation flow on Slides 22 and 24. Promptfoo security results join the same human review before release. The deck remains 30 slides; integration mechanics stay out of the visible proposal.
+
+Validation: Slidev build passed. Visually checked browser renders of Slides 22–24 with no clipping or overlaps. The evaluation SVG retains embedded editable draw.io data. Portable source archive refreshed. No Google Slides sync or PDF/PowerPoint export. QA: `/tmp/ask-one-tools-22.png` through `/tmp/ask-one-tools-24.png`.
+
+
+## Full-deck review corrections — 13 September 2026
+
+The local deck retains all 30 slides and the existing manager/technical order. Corrected rate denominators, checked-answer timing and percentile wording, content-removal propagation, resource-role wording and PoC sample prerequisites. Cloud SQL is a candidate retrieval database and Model Armor is the proposed screening service, subject to PoC validation. The service-cost slide explicitly identifies infrastructure allowances and excludes unpriced additional tooling workloads. The three reference diagrams use larger labels, retain editable draw.io data and identify content review as MVP scope with a conditional custom hub.
+
+Validation: Slidev build passed. Visually reviewed all 30 browser renders and rechecked the adjusted resource, cost and reference-diagram slides. No unresolved clipping or footer overlaps were found. Verified embedded draw.io XML in the three revised SVGs. Updated the portable source archive. Browser QA: `/tmp/ask-one-fixes-qa/`. Google Slides and PDF/PowerPoint snapshots remain unchanged.
+
+
+## Current revision — internal learning removed
+
+User direction supersedes all earlier learning-phase instructions and historical slide counts. Remove the learning slide and all team-learning, training and self-study references from slides and notes. The current deck has 29 slides: manager proposal 1–14, technical overview 15, core technical slides 16–27, reference diagrams 28–29. Resource roles stay on Slide 9. The two-month PoC and nine-month implementation proposal remain separate, with discovery and approval timing additional and TBC.
+
+
+## Learning process removed — 13 September 2026
+
+Removed the dedicated learning slide and all internal team-learning references from the resource slide, overview, timeline and speaker notes. The deck now has 29 slides: manager proposal 1–14, technical overview 15, technical detail 16–27 and references 28–29. The proposed two-month PoC and nine-month implementation remain separate. Updated slide references, footers and the portable source archive. Slidev build passed, and all 29 browser renderings were visually checked. QA: `/tmp/ask-one-no-learning-qa/`. Google Slides and PDF/PowerPoint snapshots remain unchanged.
+
+
+## Google Slides sync completed — 13 September 2026
+
+Synchronized all 29 slides to the existing editable Google Slides deck, including visible content, speaker notes, slide order and diagram images. The internal learning process remains excluded. Preserved the existing deck and sharing, all original slide IDs and nearly all original native element IDs. Added seven slides using the existing native layouts.
+
+Validation: the fresh local 29-slide browser capture matches the final native readback with no content, notes, order or media-count failures. Reviewed all native slide thumbnails and checked the live editor. Fixed roadmap header wrapping, table spacing and the cost table covering its assumptions; retained text sizes. The layout checker reports no errors; its small-text advisories reflect the existing dense presentation design. Saved verification evidence under ignored `slides/.sync/sync29/` and refreshed the source archive. PDF and PowerPoint snapshots remain unchanged. Future slide work remains local by default unless another sync is explicitly requested.

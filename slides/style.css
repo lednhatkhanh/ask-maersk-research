@@ -214,3 +214,6 @@
 .quality-readiness-table td { font-size:21px; padding:8px 14px; }
 .quality-readiness-table td:first-child { font-weight:600; }
 .lifecycle-table td { padding-top:11px; padding-bottom:11px; }
+
+/* Keep the expanded roadmap readable above the footer. */
+.timeline-table td { padding-top:8px; padding-bottom:8px; }

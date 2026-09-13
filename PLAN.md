@@ -14,7 +14,7 @@ This is the authoritative plan for the next slide revision. Use it for slide con
 4. Update the narrative and final count in `slides/README.md` and `slide-docs.md`. Remove any instruction there that requires automatic Google Slides sync, following the local-only default in `AGENTS.md`.
 5. Mark the implementation checklist as work completes, and record the output paths and any unresolved verification limitations here.
 
-Repository note: `slides/` currently appears in the root Git index as a gitlink without local nested Git metadata. Verify how slide changes will be preserved before claiming they are tracked in a commit. Do not change the repository structure as part of slide generation without resolving this separately.
+Repository note (verified 13 September 2026): slide source and assets are now ordinary files in the root Git index. Earlier generation records describe the former gitlink. Keep the portable source archive current alongside the tracked source.
 
 ## Goal
 
@@ -487,10 +487,18 @@ Added Other ONE services and Forms integration to Slide 10, bringing the list to
 - Reviewed all slides in the browser. Corrected crowding on the combined lifecycle and readiness slides and rechecked them. No missing images were found. Local build passed.
 - Updated supporting documentation, the cost-report placement and the portable source archive. No PDF/PowerPoint export or Google Slides sync was performed.
 
-## Current revision — two-part navigation and Google Slides sync
+## Earlier revision — two-part navigation and Google Slides sync
 
 - Added an editable manager overview after the cover and converted the former technical divider into an editable technical overview. The deck now has 22 slides: manager Slides 1–13, technical overview Slide 14, core technical Slides 15–20 and reference diagrams Slides 21–22.
 - Kept narrative content native and editable in Google Slides. The architecture and reference diagrams remain image assets.
 - The local Slidev build passed. A fresh 22-slide browser capture and structural verification passed with no failures; the new overview slides and the manager-to-technical transition were visually inspected.
 - Synchronized the existing Google Slides presentation in place. A fresh remote readback confirmed the 22-slide order, and live-editor checks of both overview slides plus a complete grid review found no unresolved clipping, wrapping, collision, alignment or missing-image defects.
 - Updated the plan, both READMEs and the narrative guide, and refreshed the portable source archive. Existing PDF and PowerPoint snapshots remain unchanged and predate this revision.
+
+## Current revision — wording and standalone reading review, 13 September 2026
+
+- Reviewed all 22 slides and their notes against this brief. Simplified headings and sentences, defined MVP near the start, clarified the dated Ask Maersk evidence, and replaced compressed technical wording with explicit explanations. Preserved the scope, staffing boundary, provisional schedule, service-cost figures and existing diagrams.
+- Built the local Slidev deck and visually inspected all 22 browser renders. Shortened crowded copy and adjusted roadmap row spacing. The manager section and technical section were read without speaker notes.
+- Updated the existing Google Slides deck in place, retaining native text, tables, object identities and speaker notes. A complete final readback passed the text, notes, order and media checks for all 22 slides.
+- Inspected every native slide rendering and the live editor grid. Corrected native table spacing on Slides 10, 16, 18 and 20, then re-rendered and inspected those slides in the editor. No unresolved clipping or overlap remains in the reviewed renderings.
+- Updated local documentation and the portable source archive. PDF and PowerPoint snapshots remain unchanged. Temporary browser and native QA images are under `/tmp/ask-one-wording-final/` and `/tmp/ask-one-wording-google/`. Ignored `.sync/` files retain the connector readbacks.

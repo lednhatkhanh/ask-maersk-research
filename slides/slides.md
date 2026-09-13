@@ -24,7 +24,7 @@ defaults:
 <div class="hero-copy">
 <p class="hero-name">Ask ONE</p>
 <h1>Answers from<br>trusted ONE guidance</h1>
-<p class="hero-description">Help customers find useful answers and reach the right service.</p>
+<p class="hero-description">Help customers understand ONE guidance and find the right service.</p>
 </div>
 <p class="hero-subtitle">Project proposal: first MVP</p>
 
@@ -40,14 +40,14 @@ class: deck-slide manager-slide overview-slide
 
 <p class="kicker">Manager overview</p>
 <h1>The proposal in four parts</h1>
-<p class="intro">The manager section explains the customer case, the evidence still needed and the proposed route to a first release.</p>
+<p class="intro">The proposal covers the customer experience and expected benefits, followed by the plan for a first release.</p>
 <div class="feature-list feature-steps overview-list">
-<div><h2>01 &nbsp; Opportunity and experience</h2><p>The customer problem to investigate and the experience Ask ONE could provide.</p></div>
-<div><h2>02 &nbsp; Value and evidence</h2><p>Expected benefits, current observations and the business research still required.</p></div>
-<div><h2>03 &nbsp; First-release planning</h2><p>Proposed scope, resources, delivery estimate and risks that can change it.</p></div>
-<div><h2>04 &nbsp; Options and success</h2><p>Potential later extensions and the evidence needed to judge the first release.</p></div>
+<div><h2>01 &nbsp; Customer experience</h2><p>What customers need help with and how Ask ONE could help.</p></div>
+<div><h2>02 &nbsp; Benefits and research</h2><p>What we hope to improve, what we have observed and what we still need to learn.</p></div>
+<div><h2>03 &nbsp; First-release planning</h2><p>What the first release would include, the resources it may need and the proposed schedule.</p></div>
+<div><h2>04 &nbsp; Options and success</h2><p>How we would measure success and which features could follow later.</p></div>
 </div>
-<p class="takeaway">The manager section ends with outcomes and measurement. A separate technical section follows.</p>
+<p class="takeaway">MVP means minimum viable product: the first release with enough capability to test customer value. Technical detail follows on Slide 14.</p>
 
 <!--
 Navigation slide. The four themes group the proposal without repeating every slide title.
@@ -60,21 +60,21 @@ class: deck-slide manager-slide
 ---
 
 <p class="kicker">The opportunity</p>
-<h1>Finding guidance should lead to a clear next step</h1>
-<p class="intro">We want to test whether customers can reach useful ONE guidance more easily by asking a question.</p>
+<h1>Easier access to ONE guidance</h1>
+<p class="intro">Could asking a question help customers find and understand the right ONE guidance more easily?</p>
 <div class="comparison">
 <section>
-<h2>The journey to investigate</h2>
+<h2>The customer problem to investigate</h2>
 <p class="big-question">“Which guide applies<br>to my question?”</p>
 <p>A customer may need to search several pages, interpret the guidance and decide which service to use next.</p>
 </section>
 <section>
-<h2>The experience we propose</h2>
+<h2>How Ask ONE could help</h2>
 <p class="big-question accent">An answer, its source<br>and a useful next step</p>
-<p>Ask ONE would explain approved guidance and link to the relevant ONE service when the task needs more information.</p>
+<p>Ask ONE would explain the relevant guidance and link to the ONE service where the customer can take the next step.</p>
 </section>
 </div>
-<p class="takeaway">Discovery will test this opportunity against existing search and help journeys. ONE customer demand and benefits are still unmeasured.</p>
+<p class="takeaway">During discovery, we will compare this approach with existing search and help. We have not yet measured demand or benefits among ONE customers.</p>
 
 <!--
 The current journey is a hypothesis to investigate, not a measured finding about ONE customers.
@@ -87,7 +87,7 @@ class: deck-slide manager-slide feature-explanation
 ---
 
 <p class="kicker">What the feature does</p>
-<h1>Ask ONE would explain guidance and help customers act</h1>
+<h1>What customers could do with Ask ONE</h1>
 <p class="intro">A customer asks a question in everyday English. Ask ONE would explain approved public ONE guidance and show where to read more.</p>
 <div class="feature-list feature-steps">
 <div><h2>01 &nbsp; Ask</h2><p>Ask one question about a supported public topic.</p></div>
@@ -95,7 +95,7 @@ class: deck-slide manager-slide feature-explanation
 <div><h2>03 &nbsp; Check</h2><p>Open the original ONE page or document to check the details.</p></div>
 <div><h2>04 &nbsp; Continue</h2><p>Follow a link to the relevant ONE service or support channel.</p></div>
 </div>
-<p class="takeaway">If the approved content cannot support an answer, Ask ONE should say so and offer guidance or support instead of guessing.</p>
+<p class="takeaway">If approved content does not answer the question, Ask ONE should say so and offer a guidance or support link.</p>
 <p class="caption">The first release does not access accounts, provide live tracking or shipment-specific answers, or complete bookings and transactions.</p>
 
 <!--
@@ -111,7 +111,7 @@ class: deck-slide manager-slide
 ---
 
 <p class="kicker">Proposed customer experience</p>
-<h1>A useful answer with a source the customer can open</h1>
+<h1>Example: preparing an enquiry</h1>
 <div class="experience">
 <section class="answer-example">
 <div class="example-header"><h2>Ask ONE</h2><span>Fictional example</span></div>
@@ -121,9 +121,9 @@ class: deck-slide manager-slide
 <div class="example-links"><span>Open guide</span><span>Enquiry service</span></div>
 </section>
 <section class="explanation">
-<div><h2>Explain the guidance</h2><p>Use approved public content to answer the question in plain English.</p></div>
-<div><h2>Make the source visible</h2><p>Let the customer check the guidance and read further.</p></div>
-<div><h2>Point to the next action</h2><p>Open the enquiry service to continue. Ask ONE does not fill in or submit the form.</p></div>
+<div><h2>A short explanation</h2><p>Use approved public content to answer the question in plain English.</p></div>
+<div><h2>A source to check</h2><p>Let the customer check the guidance and read further.</p></div>
+<div><h2>A link to continue</h2><p>Open the enquiry service to continue. Ask ONE does not fill in or submit the form.</p></div>
 </section>
 </div>
 <p class="caption">Fictional answer and source, created only to demonstrate the experience. This is not actual ONE policy or a live service.</p>
@@ -140,13 +140,13 @@ class: deck-slide manager-slide benefits-slide
 
 <p class="kicker">Expected benefits to validate</p>
 <h1>Why this could help customers and ONE</h1>
-<p class="intro">The opportunity is to make routine guidance easier to use and help customers reach the right service.</p>
+<p class="intro">Customers could get routine help more easily and make better use of ONE’s digital services.</p>
 <table class="benefits-table">
 <thead><tr><th>For ONE customers</th><th>For ONE</th></tr></thead>
 <tbody>
 <tr><td><strong>Less effort finding answers</strong><br>Understand relevant guidance without piecing together several pages.</td><td><strong>More useful public content</strong><br>Help customers use the guidance ONE already publishes.</td></tr>
-<tr><td><strong>A clearer next step</strong><br>Find the service that fits the task more easily.</td><td><strong>Better routes to digital services</strong><br>Reduce avoidable navigation and misdirected enquiries.</td></tr>
-<tr><td><strong>Help with routine questions</strong><br>Read an explanation and check its original source.</td><td><strong>Potentially fewer repetitive enquiries</strong><br>Leave more room for support to handle issues that need human help.</td></tr>
+<tr><td><strong>A clearer next step</strong><br>Find the service that fits the task more easily.</td><td><strong>Easier access to digital services</strong><br>Help customers reach the right service with fewer detours.</td></tr>
+<tr><td><strong>Help with routine questions</strong><br>Read an explanation and check its original source.</td><td><strong>Potentially fewer repetitive enquiries</strong><br>Give support more time for issues that need human help.</td></tr>
 </tbody>
 </table>
 <p class="caption">These are expected benefits, not measured results. Visible sources help customers check an answer but do not guarantee accuracy.</p>
@@ -164,16 +164,16 @@ class: deck-slide manager-slide
 
 <p class="kicker">Research starting point</p>
 <h1>Further business research is required</h1>
-<p class="intro">Ask Maersk research provides examples of the experience. ONE customer needs and business requirements still need validation.</p>
+<p class="intro">August 2026 recordings of Ask Maersk illustrate the experience. They do not establish what ONE customers need or whether Ask ONE would help.</p>
 <table class="evidence-table">
-<thead><tr><th>What the recordings show</th><th>What ONE still needs to prove</th></tr></thead>
+<thead><tr><th>What the recordings show</th><th>Questions for ONE research</th></tr></thead>
 <tbody>
-<tr><td>Answers explain shipping topics and surface related content.</td><td>Can approved ONE content support accurate, useful answers?</td></tr>
-<tr><td>A schedule-related response refers customers to official tools or local offices.</td><td>Do service links help customers complete their next step?</td></tr>
-<tr><td>Some recorded turns are incomplete.</td><td>Does the proposed experience work reliably on representative ONE questions?</td></tr>
+<tr><td>Answers explain shipping topics and show related content.</td><td>Can approved ONE content support accurate, useful answers?</td></tr>
+<tr><td>An answer about schedules directs customers to official tools or local offices.</td><td>Do service links help customers complete their next step?</td></tr>
+<tr><td>Some recordings do not capture a complete response.</td><td>Can Ask ONE answer a representative set of customer questions reliably?</td></tr>
 </tbody>
 </table>
-<p class="takeaway">PO/PPO must clarify customer needs, business requirements and feature priorities. These decisions remain open.</p>
+<p class="takeaway">PO/PPO must guide customer research and agree business requirements and feature priorities. The proposal is still preliminary.</p>
 
 <!--
 Dated August 2026 observations, not a current audit of Ask Maersk. The benchmark does not establish demand, correctness, production reliability or business return.
@@ -192,10 +192,10 @@ class: deck-slide manager-slide
 <h1>Proposed first-release scope</h1>
 <div class="discovery-layout">
 <section>
-<h2>Capabilities to define and validate</h2>
+<h2>Proposed capabilities</h2>
 <ol class="numbered-list">
 <li><strong>Answers from approved guidance</strong><p>Short explanations with sources customers can open.</p></li>
-<li><strong>Links to the relevant service</strong><p>Help customers find their next step and give feedback.</p></li>
+<li><strong>Links to the relevant service</strong><p>Show where to continue and let customers rate the answer.</p></li>
 <li><strong>Content and quality controls</strong><p>Keep sources current, review answers and monitor the service.</p></li>
 </ol>
 </section>
@@ -206,7 +206,7 @@ class: deck-slide manager-slide
 <p class="scope-later"><strong>Outside this release:</strong> more languages, account or shipment data, transactions, follow-up conversation and complex integrations.</p>
 </section>
 </div>
-<p class="caption">MVP means minimum viable product. PO/PPO must refine the business specification and feature priorities. The proof of concept (PoC) tests feasibility. The detailed scope remains open.</p>
+<p class="caption">Discovery with PO/PPO will define requirements and priorities within these limits. A proof of concept (PoC) will test technical feasibility. The detailed scope remains open.</p>
 
 <!--
 Discovery and the PoC are the first phases of the whole project, not the entire proposal.
@@ -222,20 +222,20 @@ class: deck-slide manager-slide resources-slide
 ---
 
 <p class="kicker">Proposed resources</p>
-<h1>One delivery team: placeholder for discussion</h1>
-<p class="intro">An initial team of 11 people. Roles and allocations remain open for the team to revise.</p>
+<h1>Proposed delivery team</h1>
+<p class="intro">Placeholder: 11 people. The team will revise the roles and allocations after discovery.</p>
 <table class="resources-table">
 <thead><tr><th>Role</th><th>People</th><th>Main contribution</th></tr></thead>
 <tbody>
-<tr><td>Developers</td><td>6</td><td>Build the customer experience, retrieval and application services.</td></tr>
-<tr><td>Technical architect (TA)</td><td>1</td><td>Guide architecture, security and technical quality.</td></tr>
+<tr><td>Developers</td><td>6</td><td>Build the customer interface, content search and application services.</td></tr>
+<tr><td>Technical architect (TA)</td><td>1</td><td>Guide architecture, security, privacy and technical quality.</td></tr>
 <tr><td>Product owner (PO)</td><td>1</td><td>Clarify business needs, priorities and acceptance criteria.</td></tr>
 <tr><td>User interface / experience designer</td><td>1</td><td>Research customer journeys and test usability.</td></tr>
 <tr><td>Quality assurance engineers</td><td>2</td><td>Test functionality, answer quality and release readiness.</td></tr>
 </tbody>
 </table>
-<p class="takeaway">No additional machine-learning engineer is planned. Managed AI inference is the proposed approach. Delivery capacity still needs validation.</p>
-<p class="caption">Placeholder only. Confirm availability and allocations after discovery. Headcount alone does not validate the nine-month estimate.</p>
+<p class="takeaway">No additional machine learning engineer is planned. The proposal uses a managed AI service without custom model training. Allow time for learning and evaluation.</p>
+<p class="caption">Availability is unconfirmed. Discovery and the PoC must test whether this team can deliver the agreed scope and schedule.</p>
 
 <!--
 User-supplied resource placeholder: one team, 6 developers, 1 TA, 1 PO, 1 UI/UX, 2 QA. No allocation or staffing approval is asserted.
@@ -251,21 +251,21 @@ class: deck-slide manager-slide timeline-slide
 ---
 
 <p class="kicker">Planning scenario, not a commitment</p>
-<h1>Rough nine-month estimate: further research required</h1>
-<p class="intro">Proposed first-MVP project. Business scope, costs and dates remain open pending research.</p>
+<h1>Rough nine-month delivery estimate</h1>
+<p class="intro">Proposed first-MVP project. Further PO/PPO-led research and the PoC must inform scope, cost and schedule.</p>
 <table class="timeline-table">
-<thead><tr><th>Tentative period</th><th>Focus</th><th>Illustrative milestone</th></tr></thead>
+<thead><tr><th>Tentative period</th><th>Focus</th><th>Target outcome</th></tr></thead>
 <tbody>
-<tr><td>Month 1</td><td>Discovery</td><td>PO/PPO-led business research, content sample and PoC scope</td></tr>
-<tr><td>Month 2</td><td>Bounded PoC</td><td>Test feasibility and revise scope, costs and dates</td></tr>
-<tr><td>Months 3–4</td><td>Core development</td><td>Working preview in Month 4</td></tr>
-<tr><td>Months 5–6</td><td>Hardening</td><td>Manager demo in Month 6</td></tr>
-<tr class="milestone"><td>Month 7</td><td>Limited user pilot</td><td>Evidence from a controlled audience and content set</td></tr>
-<tr class="milestone"><td>Month 8</td><td>Target production release</td><td>Controlled rollout if readiness criteria pass</td></tr>
+<tr><td>Month 1</td><td>Discovery</td><td>Business research, permitted sample and PoC scope</td></tr>
+<tr><td>Month 2</td><td>Focused PoC</td><td>Test feasibility and revise scope, costs and dates</td></tr>
+<tr><td>Months 3–4</td><td>Core development</td><td>Working product preview by the end of Month 4</td></tr>
+<tr><td>Months 5–6</td><td>Testing and refinement</td><td>End of Month 6: manager demo, then pilot review</td></tr>
+<tr class="milestone"><td>Month 7</td><td>Limited user pilot</td><td>Test with invited users and approved content</td></tr>
+<tr class="milestone"><td>Month 8</td><td>Target production release</td><td>Release in stages if the pilot and readiness review pass</td></tr>
 <tr><td>Month 9</td><td>Stabilization</td><td>Monitor use, fix priority issues and improve operations</td></tr>
 </tbody>
 </table>
-<p class="caption">Months run from discovery kickoff. Business, content, technical and readiness findings can change every date, before or after the PoC. Evaluation and security begin during discovery.</p>
+<p class="caption">All months are tentative and start from discovery kickoff. Research or testing may change any date, before or after the PoC. Evaluation and security work begin in discovery.</p>
 
 <!--
 This is an unvalidated estimation scenario, not a concluded delivery plan. PO/PPO-led research must clarify business needs and feature priorities. Review the schedule after business clarification, after the PoC and whenever a material dependency changes.
@@ -280,17 +280,17 @@ class: deck-slide manager-slide
 ---
 
 <p class="kicker">Unresolved delivery risks</p>
-<h1>Several risks can change scope and dates</h1>
+<h1>Risks to scope and schedule</h1>
 <table class="delivery-risks">
 <thead><tr><th>Risk</th><th>Further work required</th><th>If it remains unresolved</th></tr></thead>
 <tbody>
 <tr><td>Business decisions</td><td>PO/PPO must clarify requirements and feature priorities through research.</td><td>Continue research or narrow scope, then revise dates.</td></tr>
-<tr><td>Content readiness</td><td>PO/PPO and content owners must secure a permitted PoC sample and approve minimum pilot content.</td><td>Defer optional topics. If essential content is not approved, revise pilot and release dates.</td></tr>
-<tr><td>Technical feasibility</td><td>Test answer quality, content synchronization, integration and access dependencies.</td><td>Revise the design or extend the PoC and update the estimate.</td></tr>
-<tr><td>Release readiness</td><td>Validate security, reliability, usability, cost and operating support.</td><td>Resolve blocking findings before pilot or production release.</td></tr>
+<tr><td>Content readiness</td><td>PO/PPO and content owners must permit sample use before the PoC and approve essential content before the pilot.</td><td>Defer optional topics. If essential content is not approved, revise pilot and release dates.</td></tr>
+<tr><td>Technical feasibility</td><td>Test answer quality and content updates. Confirm access to the required systems.</td><td>Revise the design or extend the PoC and update the estimate.</td></tr>
+<tr><td>Release readiness</td><td>Test security, reliability and usability. Confirm operating costs and support procedures.</td><td>Fix critical issues before starting the pilot or releasing to production.</td></tr>
 </tbody>
 </table>
-<p class="takeaway">A demo does not establish readiness. Separate reviews govern the limited pilot and production release. Delays can extend beyond Month 9, with stabilization after the actual release.</p>
+<p class="takeaway">Pilot and production each need a readiness review, even after a successful demo. Content approval delays can move both dates. The project may extend beyond Month 9, including stabilization.</p>
 
 <!--
 Content approval remains a critical-path risk but is not the only schedule dependency. No listed risk is a confirmed failure.
@@ -316,11 +316,11 @@ class: deck-slide manager-slide
 <div><h2>eCommerce integrations</h2><p>Connect to eCommerce services for current schedules and supported tasks.</p></div>
 <div><h2>Other ONE services</h2><p>Connect with additional ONE services to help customers complete more tasks.</p></div>
 <div><h2>Forms integration</h2><p>Help prepare enquiry or service-request forms for customer review before submission.</p></div>
-<div><h2>Signed-in customer features</h2><p>Apply customer-specific permissions to account and shipment information.</p></div>
+<div><h2>Signed-in customer features</h2><p>View permitted account and shipment information after signing in.</p></div>
 <div><h2>Follow-up questions</h2><p>Clarify a question and continue the same task without starting again.</p></div>
-<div><h2>Connected customer support</h2><p>Share an unresolved question and relevant context with support, with consent.</p></div>
+<div><h2>Connected customer support</h2><p>With the customer’s consent, pass the question and relevant details to support.</p></div>
 </div>
-<p class="takeaway">These options sit outside the nine-month estimate. Priorities and dates depend on customer demand, feasibility and separate approval.</p>
+<p class="takeaway">These options are outside the nine-month estimate. Customer demand, feasibility and separate approval will determine priorities and dates.</p>
 
 <!--
 The order is for reading, not a committed release sequence.
@@ -341,14 +341,14 @@ class: deck-slide manager-slide outcomes-slide
 <table class="outcomes-table">
 <thead><tr><th>Outcome to test</th><th>Evidence to collect</th></tr></thead>
 <tbody>
-<tr><td><strong>Useful, correct guidance</strong></td><td>Reviewed answers, working sources and the right next action.</td></tr>
+<tr><td><strong>Useful, correct guidance</strong></td><td>Check answer accuracy, sources and the customer’s next action.</td></tr>
 <tr><td><strong>Less customer effort</strong></td><td>Time to useful guidance, task completion and customer feedback.</td></tr>
-<tr><td><strong>Fewer routine support needs</strong></td><td>Resolution of supported questions and whether customers still need help.</td></tr>
+<tr><td><strong>Fewer routine support enquiries</strong></td><td>Check whether customers resolve supported questions without contacting support.</td></tr>
 <tr><td><strong>Acceptable overall operating cost</strong></td><td>Service charges plus content maintenance and support effort, measured per successful answer.</td></tr>
 </tbody>
 </table>
 <p class="takeaway">PO/PPO-led research defines needs and success criteria. The PoC informs scope and cost. The pilot tests outcomes before production release.</p>
-<p class="caption">Total project budget and return remain unfinalized. A source click or an abandoned session does not prove successful resolution.</p>
+<p class="caption">Budget and return on investment remain open. A click or abandoned session does not prove that a question was resolved.</p>
 
 <!--
 Whole-project proposal, with evidence-based scope, cost and readiness reviews.
@@ -367,16 +367,16 @@ class: deck-slide section-slide technical-overview
 <h1>Technical design and controls</h1>
 <div class="technical-toc">
 <div>
-<section><span class="technical-toc-number">01</span><h2>Answer flow and system boundaries</h2><p>The proposed route from a customer question to a grounded answer.</p></section>
-<section><span class="technical-toc-number">02</span><h2>Content approval and freshness</h2><p>Source approval, synchronization, updates and removals.</p></section>
-<section><span class="technical-toc-number">03</span><h2>Security and usage protection</h2><p>Answer checks, data protection and controls for public traffic.</p></section>
+<section><span class="technical-toc-number">01</span><h2>Answer flow and system boundaries</h2><p>How the system would answer a question using approved source content.</p></section>
+<section><span class="technical-toc-number">02</span><h2>Content approval and updates</h2><p>How the service would approve sources and apply updates.</p></section>
+<section><span class="technical-toc-number">03</span><h2>Security and usage protection</h2><p>Answer checks, data protection and usage limits.</p></section>
 </div>
 <div>
-<section><span class="technical-toc-number">04</span><h2>Quality, operations and service costs</h2><p>Evidence for release and the expected monthly running costs.</p></section>
-<section><span class="technical-toc-number">05</span><h2>Technical reference diagrams</h2><p>Detailed security and knowledge-quality workflows.</p></section>
+<section><span class="technical-toc-number">04</span><h2>Quality, operations and service costs</h2><p>How we would assess release readiness and estimate service costs.</p></section>
+<section><span class="technical-toc-number">05</span><h2>Technical reference diagrams</h2><p>The security checks and content review process in detail.</p></section>
 </div>
 </div>
-<p class="section-detail">These are proposals to validate during the PoC and later readiness testing.</p>
+<p class="section-detail">The PoC will test the proposed design. Further testing must establish readiness for production.</p>
 
 <!--
 Section overview. Technical slides distinguish proposed requirements, candidate components and later production validation.
@@ -390,7 +390,7 @@ class: deck-slide appendix-slide architecture-overview
 <p class="kicker">Technical approach</p>
 <h1>How a question becomes an answer</h1>
 <div class="reference-image"><img src="/diagrams/ask-one-gcp-architecture.drawio.svg" alt="Proposed architecture: Cloudflare protects the GKE application, governed content supplies retrieval, and Vertex AI generates answers. Dashed live APIs are future options." /></div>
-<p class="reference-caption">GKE (Google Kubernetes Engine) runs the app. Cloud SQL retrieves source passages for Vertex AI. Dashed live APIs are outside the MVP. The PoC validates retrieval and capacity.</p>
+<p class="reference-caption">GKE (Google Kubernetes Engine) would run the app. Cloud SQL is a candidate for finding source passages, which Vertex AI would use to draft answers. The PoC will test retrieval and response time. Dashed live API links are future scope.</p>
 
 <!--
 
@@ -420,17 +420,17 @@ class: deck-slide technical-slide
 
 <p class="kicker">Approved content and review</p>
 <h1>How approved content stays current</h1>
-<p class="intro">Track each passage's source, version and approval so content changes reach the answer service.</p>
+<p class="intro">Track the source and approved version of each passage so answers use current guidance.</p>
 <table class="lifecycle-table">
-<thead><tr><th>Stage</th><th>Required capability</th><th>PoC evidence</th></tr></thead>
+<thead><tr><th>Stage</th><th>What the service needs to do</th><th>What the PoC will test</th></tr></thead>
 <tbody>
-<tr><td>Collect and approve</td><td>Register permitted public sources and their owners. Exclude drafts and restricted content.</td><td>The sample supports the selected questions.</td></tr>
-<tr><td>Prepare and index</td><td>Extract passages with source IDs, versions and links.</td><td>Tables and attachments remain useful and traceable.</td></tr>
-<tr><td>Review and release</td><td>Record approval, test results and release history.</td><td>A reviewed source version reproduces the expected behavior.</td></tr>
-<tr><td>Update and remove</td><td>Synchronize Drupal changes and retire stale index and cache entries.</td><td>Changed or removed content stops serving obsolete guidance.</td></tr>
+<tr><td>Collect and approve</td><td>Register permitted public sources and their owners. Exclude drafts and restricted content.</td><td>Does the sample contain enough guidance to answer the test questions?</td></tr>
+<tr><td>Prepare and index</td><td>Extract passages with source IDs, versions and links.</td><td>Can we extract useful text from tables and attachments and retain source links?</td></tr>
+<tr><td>Review and release</td><td>Record approval, test results and release history.</td><td>Can we repeat an answer test using the same approved source version?</td></tr>
+<tr><td>Update and remove</td><td>Apply Drupal updates and removals to searchable passages and saved answers.</td><td>Do updates and removals stop the service from using outdated guidance?</td></tr>
 </tbody>
 </table>
-<p class="takeaway">Use existing review tools where possible. A custom Knowledge and Quality Hub needs a demonstrated gap. Scale and recovery require later validation.</p>
+<p class="takeaway">Use existing review tools if they meet the requirements. Build a custom review Hub only if needed. Test scale and recovery before release.</p>
 
 <!--
 
@@ -455,18 +455,18 @@ class: deck-slide technical-slide
 
 <p class="kicker">Security controls</p>
 <h1>Answer safety and data protection</h1>
-<p class="intro">Public access still needs source restrictions, protected administration and controls against unsafe inputs and outputs.</p>
+<p class="intro">The service must use approved sources, protect administration and check questions and answers for unsafe content.</p>
 <div class="security-content">
 <section class="control-list">
 <div><h2>Before retrieval</h2><p>Select only approved public sources. Protect administrative actions with access controls.</p></div>
-<div><h2>During generation</h2><p>Treat retrieved text as untrusted input. Keep restricted content outside the model context.</p></div>
-<div><h2>Before the response</h2><p>Verify citation links and source eligibility. Assess answer support and screen the response. Fall back when checks fail.</p></div>
+<div><h2>During generation</h2><p>Treat source text as reference material, not instructions. Never send restricted content to the model.</p></div>
+<div><h2>Before the response</h2><p>Check source permissions and citation links. Assess whether the sources support the answer. Withhold answers that fail the checks.</p></div>
 </section>
 <section class="security-tests">
 <h2>Test from the PoC onward</h2>
-<p>Test source restrictions, malicious instructions and unsupported claims.</p>
-<p>Model Armor is a candidate input/output screening layer. Test false positives and response-time impact.</p>
-<p class="test-conclusion">Semantic checks can miss unsupported claims. Human review and evaluation remain necessary.</p>
+<p>Test attempts to bypass source restrictions, inject malicious instructions or produce unsupported claims.</p>
+<p>Model Armor could screen questions and answers. Test whether it blocks legitimate content or slows responses.</p>
+<p class="test-conclusion">A valid citation does not prove an answer is correct. Automated checks can miss errors, so human evaluation remains necessary.</p>
 </section>
 </div>
 
@@ -484,18 +484,18 @@ class: deck-slide technical-slide abuse-protection-slide
 
 <p class="kicker">Proposed access and usage protection</p>
 <h1>Protection against bots and excessive use</h1>
-<p class="intro">Check requests before paid AI processing. Combine edge protection with limits enforced by the backend.</p>
+<p class="intro">Filter traffic through Cloudflare and enforce application limits before paid AI processing.</p>
 <table class="abuse-protection-table">
 <thead><tr><th>Protection</th><th>Proposed behavior</th></tr></thead>
 <tbody>
-<tr><td>Bot and traffic filtering</td><td>Use Cloudflare firewall and DDoS protection. Validate CAPTCHA / Turnstile on the server.</td></tr>
+<tr><td>Bot and traffic filtering</td><td>Use Cloudflare to filter attacks. Verify bot challenges, such as Turnstile, on the server.</td></tr>
 <tr><td>Burst and rolling limits</td><td>Limit requests per minute and questions over the preceding hour and 24 hours. Combine session and IP controls.</td></tr>
 <tr><td>Concurrency and spending</td><td>Limit active answers, tokens and retries. Enforce a service-wide usage ceiling before starting more AI work.</td></tr>
-<tr><td>Backend access</td><td>Restrict origin access to the approved gateway. Keep model credentials and administration protected.</td></tr>
+<tr><td>Backend access</td><td>Allow backend traffic only through the approved gateway. Protect model credentials and administration.</td></tr>
 </tbody>
 </table>
-<p class="takeaway">PoC: test direct API calls, challenge replay and parallel requests. Tune limits using real usage.</p>
-<p class="caption">CAPTCHA does not prove identity. Restrict the pilot to invited participants. The intended public release remains anonymous. Offer retry timing and guidance links.</p>
+<p class="takeaway">The PoC will test gateway bypass, reused bot challenges and simultaneous requests. Tune limits as usage evidence becomes available.</p>
+<p class="caption">Enforce access for invited pilot users. Public access would need no sign-in. Bot checks do not prove identity. When limits apply, show when to retry and link to guidance.</p>
 
 <!--
 This slide addresses automated abuse, access and service consumption. The preceding Security controls slide addresses source restrictions, prompt injection and answer screening.
@@ -522,14 +522,14 @@ class: deck-slide technical-slide quality-readiness-slide
 
 <p class="kicker">Evidence for release and continued operation</p>
 <h1>Quality and production readiness</h1>
-<p class="intro">Compare against existing search. Agree acceptance criteria before formal testing.</p>
+<p class="intro">Compare Ask ONE with existing search. Agree what counts as a passing result before formal testing.</p>
 <table class="quality-readiness-table">
 <thead><tr><th>Evidence</th><th>How to establish it</th></tr></thead>
 <tbody>
-<tr><td>Correct, useful answers</td><td>Combine source/access checks, automated assessment and human review. Test supported questions and safe fallback.</td></tr>
-<tr><td>Reliable operation</td><td>Test response time, failures and recovery. Monitor errors and usage with privacy-conscious tracing.</td></tr>
-<tr><td>Safe changes</td><td>Version sources and releases. Repeat regression tests before changes and keep rollback ready.</td></tr>
-<tr><td>Readiness to release</td><td>Review pilot evidence, current content and support procedures. Resolve blocking findings before production.</td></tr>
+<tr><td>Correct, useful answers</td><td>Check sources and permissions, then assess answers automatically and through human review. Test when the service should decline to answer.</td></tr>
+<tr><td>Reliable operation</td><td>Test response time and recovery from failures. Monitor errors and usage while protecting sensitive data in logs.</td></tr>
+<tr><td>Safe changes</td><td>Track source and release versions. Repeat tests before each change and keep a way to restore the previous version.</td></tr>
+<tr><td>Readiness to release</td><td>Review pilot results, content approval and support procedures. Fix critical issues before production.</td></tr>
 </tbody>
 </table>
 <p class="takeaway">The PoC supplies early evidence. Release depends on readiness tests and a successful limited pilot.</p>
@@ -569,11 +569,11 @@ class: deck-slide technical-slide service-costs-slide
 <tr><td>Vertex AI (Gemini 2.5 Flash example)</td><td>$22</td><td>$215</td></tr>
 <tr><td>Additional GKE capacity</td><td>$100–300</td><td>$200–600</td></tr>
 <tr><td>Cloud SQL retrieval and backups</td><td>$250–650</td><td>$350–1,000</td></tr>
-<tr><td>GCS, screening, embeddings and operations</td><td>$64–189</td><td>$155–445</td></tr>
+<tr><td>Storage, screening and other operations</td><td>$64–189</td><td>$155–445</td></tr>
 <tr class="cost-total"><td>Planning budget, with contingency</td><td>$600–1,500 / month</td><td>$1,200–3,000 / month</td></tr>
 </tbody>
 </table>
-<p class="cost-assumptions">Assumes one answer call per question, 3,000 input and 500 billed output tokens, plus a small non-production environment. Volumes are examples, not demand forecasts.</p>
+<p class="cost-assumptions">Assumes one AI call per question with 3,000 input and 500 billed output tokens, plus a small test environment. Tokens are units of text billed by the model. Usage volumes are illustrative.</p>
 <p class="takeaway">Excludes staffing and one-time implementation. Infrastructure amounts are planning allowances. Confirm usage, configuration and the service budget after the PoC.</p>
 <p class="caption">Google Cloud pricing checked 12 Sep 2026. Includes 25% contingency and rounding. Cloudflare coverage needs confirmation. New plan fees are excluded.</p>
 
@@ -603,7 +603,7 @@ class: deck-slide appendix-slide
 <p class="kicker">Technical reference</p>
 <h1>Security flow</h1>
 <div class="reference-image"><img src="/diagrams/ask-one-security-chain.drawio.svg" alt="Proposed request flow with authorization, screening, retrieval, generation, answer checks and safe fallback" /></div>
-<p class="reference-caption">Test enforcement and failure paths during the PoC. Source checks and screening complement each other. See Answer safety and data protection for the validation approach.</p>
+<p class="reference-caption">The application must enforce every check and withhold an answer if a required check fails. The PoC will test these failure paths. See Slide 17 for answer checks and Slide 18 for traffic limits.</p>
 
 <!--
 Existing diagram retained with embedded editable draw.io source. The application enforces access and screening verdicts.
@@ -619,7 +619,7 @@ class: deck-slide appendix-slide
 <p class="kicker">Technical reference</p>
 <h1>Knowledge and quality workflow</h1>
 <div class="reference-image"><img src="/diagrams/ask-one-knowledge-quality-loop.drawio.svg" alt="Proposed governed source lifecycle connecting registration, staging, evaluation, approval, release and improvement" /></div>
-<p class="reference-caption">Use the PoC to test a sample update and removal. Production lifecycle automation needs later validation. See How approved content stays current and Quality and production readiness.</p>
+<p class="reference-caption">Content changes must pass review before they affect answers. The PoC will test an update and a removal. See Slide 16 for content handling and Slide 19 for release checks.</p>
 
 <!--
 Existing diagram retained with embedded editable draw.io source.

@@ -39,8 +39,8 @@ Open the URL printed by Slidev. Press `p` for presenter mode and notes. Exports 
 - `public/` — local logo, fonts, product icons and existing diagrams.
 - `public/diagrams/*.drawio.svg` — diagrams with embedded editable draw.io data.
 
-The source archive in `../deliverables/` preserves the local presentation independently of the existing root Git gitlink. It excludes dependencies and research captures.
+The source archive in `../deliverables/` is a portable copy of the local presentation. Source files and assets are also tracked as ordinary files in the root repository. The archive excludes dependencies and research captures.
 
 ## Google Slides
 
-The [editable Google Slides deck](https://docs.google.com/presentation/d/1knHzzM91yvkAoxI2M55gq7JRWaIxpgf-Rf3duWitK5I/edit) is synchronized with this 22-slide revision. Narrative content remains native and editable; diagrams remain images. Future local revisions still follow the local-only default in [AGENTS.md](../AGENTS.md) unless the user explicitly requests another sync.
+The [editable Google Slides deck](https://docs.google.com/presentation/d/1knHzzM91yvkAoxI2M55gq7JRWaIxpgf-Rf3duWitK5I/edit) is synchronized with the 13 September 2026 wording review of all 22 slides. Narrative content remains native and editable; diagrams remain images. Future local revisions still follow the local-only default in [AGENTS.md](../AGENTS.md) unless the user explicitly requests another sync.

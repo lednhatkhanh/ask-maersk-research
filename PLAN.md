@@ -16,22 +16,90 @@ This is the authoritative plan for the next slide revision. Use it for slide con
 
 Repository note (verified 13 September 2026): slide source and assets are now ordinary files in the root Git index. Earlier generation records describe the former gitlink. Keep the portable source archive current alongside the tracked source.
 
-## Current planning update — 13 September 2026
+## Current local revision — proposal-focused technical section, 27 September 2026
 
-This update implements the latest user direction and supersedes older staffing displays and slide-number references below. Keep **nine months as the proposed implementation duration, excluding discovery and the PoC**. Implementation Month 1 starts after the separate PoC review and agreement to proceed. Calendar kickoff remains TBC, and discovery/PoC findings can revise the forecast. Discovery and PoC durations are additional and TBC / to be discussed. Do not replace the proposal with an unspecified implementation duration.
+This update supersedes earlier technical slide counts and orders below. The local and Google Slides decks have **23 slides**: manager proposal 1–14, seven technical proposal slides 15–21, and two detailed architecture references 22–23. The manager narrative and the provisional eight-month implementation scenario remain intact.
+
+**Google Slides sync, 27 September 2026:** The user explicitly requested an in-place sync. The existing editable deck now matches all 23 local slides, including both service-map images and speaker notes. Six retired technical slides were removed. A fresh native readback passed text, table, image-count, notes and order verification with zero failures. All 23 native thumbnails were reviewed; Slide 19's callout was repositioned below its table and checked again in the live editor. The live editor also confirmed the RAG Engine diagram and slide text. Readbacks and QA images are in ignored `slides/.sync/sync23/`. PDF and PowerPoint exports remain older snapshots.
+
+**Service-map update:** Slides 22–23 are now two full, icon-led service maps: (22) the custom workflow using GKE, Cloud Storage, Vertex AI embeddings, standalone Agent Retrieval, integrated VertexRanker, Gemini, Model Armor and Cloud Observability; and (23) direct RAG Engine with managed Spanner Scaled, Ranking API, Gemini, Model Armor and the same app/operating services. Both show ONE/Drupal, Cloudflare, ONE-owned publishing/API/evaluation, and optional Document AI OCR. Model Armor and reranking are required in the proposed design. Google Gen AI Evals is not listed for Singapore, so the default evaluation is reviewed cases and locally run checks. Slide 21's service budgets include one reranking pass per question; pricing, ranking location and the regional security gate remain provisional.
+
+| Slide | Subject | Decision purpose |
+|---:|---|---|
+| 15 | Two retrieval paths for Ask ONE | State the custom Agent Retrieval working default, direct RAG Engine alternative, ownership and trade-offs. |
+| 16 | What ONE builds in either path | Use one icon-led diagram for ONE publishing, customer API, selected retrieval, Gemini and answer checks. |
+| 17 | Approved content and withdrawal | Show the ONE-owned publication and removal contract for either path. |
+| 18 | Answer safety and traffic protection | Combine answer, screening, abuse, spending and access controls. |
+| 19 | Evidence that selects a retrieval path | Set comparable PoC gates for quality, withdrawal, regional security, performance, cost and owned work. |
+| 20 | Signals and response ownership | Show collectable operating measures and ONE actions without a separate tooling lecture. |
+| 21 | Illustrative monthly service budgets | Show preliminary budgets for both paths at 10,000 and 100,000 questions per month; direct RAG Engine assumes Spanner Scaled in production. Exclude staffing. |
+| 22–23 | Architecture references | Show the full custom and RAG Engine service maps, including required controls and optional OCR. |
+
+The new shared-boundary diagram replaces the pair of main-path architecture explanations. Keep the RAG Engine boundary, security, knowledge, trace and evaluation assets as editable sources for research and future reference; they no longer occupy main proposal slides. Detailed metric definitions and implementation mechanics remain in speaker notes and research reports. The current Google region table still marks Singapore RAG Engine Preview, and its documented data residency control is unsupported; these are visible selection gates, not a predicted GA date. Selection after the PoC is conditional on comparable evidence. A later path switch needs re-import, reindexing and regression tests.
+
+**Local completion checklist:**
+
+- [x] Rewrite technical slides 15–21 and retain two architecture references.
+- [x] Add and visually review the icon-led shared-boundary draw.io diagram.
+- [x] Build Slidev and visually inspect all affected slides for legibility, missing images and footer collisions.
+- [x] Update the local documentation and portable source archive.
+
+**Local output and check:** [slides/slides.md](slides/slides.md) is the 23-slide editable source. The new [draw.io source](slides/public/diagrams/ask-one-proposal-boundary.drawio) and [SVG](slides/public/diagrams/ask-one-proposal-boundary.drawio.svg) use the existing icon style. Slidev built successfully. Browser review covered all 23 slides for broken images and footer overlap, with focused visual review of Slides 15–23 and representative manager slides. [slides/README.md](slides/README.md), [slide-docs.md](slide-docs.md) and the [portable source archive](deliverables/ask-one-slides-source.zip) match this revision. The Google Slides sync is recorded above; PDF and PowerPoint remain earlier snapshots.
+
+### Service-budget update — 27 September 2026
+
+Slide 21 now shows **illustrative custom-path monthly service budgets of about US$1,000 at 10,000 questions and US$2,500 at 100,000 questions**. They include planning headroom, are based on published model and Agent Retrieval rates plus explicit infrastructure allowances, and are not quotes or demand forecasts. The direct RAG Engine total remains TBC. The slide excludes staffing, one-time implementation and any Cloudflare upgrade; its notes contain the component allowances and conditions. This update supersedes the TBC-only direction for the custom path elsewhere in this plan.
+
+The local Slidev build passed. Slide 21 was inspected in a 1280 × 720 browser render: both figures, TBC status and assumptions were readable, and the caption ended above the footer. The source archive was refreshed. PDF, PowerPoint and Google Slides remain earlier snapshots.
+
+### Direct RAG Engine Scaled budget — 27 September 2026
+
+Slide 21 now also shows **illustrative direct RAG Engine monthly service budgets of about US$2,500 at 10,000 questions and US$3,500 at 100,000 questions**. It assumes Singapore Spanner Scaled at a one-node production floor, a separate small Basic non-production deployment, the same model and shared-service scenario as the custom path, and planning headroom. The published Singapore Spanner Enterprise rate is about 14% above Iowa, so the latter is not used as a same-price proxy. Singapore RAG Engine is still Preview, its actual billing terms need confirmation, and Scaled autoscaling can raise the cost. The slide explicitly tells readers to contact Google Cloud for an actual quote before using either estimate as a funding baseline. The cost report and speaker notes show the arithmetic. This update supersedes the prior RAG Engine TBC instruction in this plan.
+
+The local Slidev build passed. Slide 21 was inspected in a 1280 × 720 browser render: both scenario rows and the Scaled/Basic assumption were readable, with clear space above the footer. The supporting cost and managed-RAG research, local deck documentation and source archive were refreshed. Existing exports and the remote deck are earlier snapshots.
+
+## Previous local revision — managed evaluation and RAG Engine diagrams, 27 September 2026
+
+This section supersedes earlier local slide instructions where they conflict. The local deck has **33 slides**: manager proposal 1–14, technical overview 15, technical explanation 16–31, and reference diagrams 32–33. The technical sequence now shows the two architecture options, the custom default, and two icon-led RAG Engine diagrams before content, safety, operations, evaluation and service costs.
+
+- **Eight months of implementation** follow the separate discovery and proposed two-month PoC. Months 1–4 cover the core product, Months 5–6 hardening and the manager demo, Month 7 the limited pilot, and Month 8 a conditional staged release with stabilization starting after release. If the release or stabilization needs more time, revise the forecast; do not compress a readiness gate. These are provisional scenario markers.
+- Remove Cloud SQL, Ragas and Phoenix from all live slides and speaker notes. The custom working default uses standalone Agent Retrieval; the direct RAG Engine option uses its managed corpus and retrieval workflow. Source governance, the customer API, screening enforcement, citation checks, evaluation cases and release decisions remain ONE responsibilities in both paths.
+- Cloud Trace, Logging and Monitoring with app-owned OpenTelemetry spans are the default operating stack. Use deterministic tests and human review for quality. Google's Gen AI evaluation service is a conditional saved-case scoring option because its published region list does not include Singapore. Agent Platform agent dashboards, online monitors and quality-alert templates are not automatic for the proposed GKE application; their deployment and telemetry prerequisites require a separate test. Promptfoo remains an optional security test runner.
+- The two new RAG Engine diagrams show the ONE-to-RAG boundary and the ingest/retrieval stages in the supplied Google diagram's sequence. Their draw.io sources and SVG exports use the existing icon-led style. The quality/performance scorecards name judged Recall@k, groundedness, end-to-end latency, p50/p95, errors, tokens and costs, with collection methods and no invented thresholds.
+- Slide 31 is **Monthly service costs: TBC**, excluding staffing. Show **TBC** as each option's monthly total. Published unit rates and the dated estimate for a different retrieval stack do not provide a complete total for either current path. Reprice both full stacks using paired PoC observations and Singapore service terms.
+- Local Slidev only. Preserve existing PDF/PowerPoint exports and the remote Google Slides deck unless a separate sync/export request is made.
+
+**Local output and check:** The editable source is [slides/slides.md](slides/slides.md), with native [draw.io diagrams](slides/public/diagrams/) and the refreshed [portable source archive](deliverables/ask-one-slides-source.zip). Slidev built successfully. Browser review covered all 33 slides for broken images and content/footer overlap, with focused visual review of the eight-month roadmap, architecture choices, both new RAG Engine diagrams, evaluation/telemetry diagrams, metric scorecards, service costs and reference diagrams. PDF, PowerPoint and Google Slides were left as earlier snapshots.
+
+## Local architecture revision — 27 September 2026
+
+This update follows the two [managed RAG](reports/ask-one-managed-rag-research-2026-09-27.md) and [custom component](reports/ask-one-custom-rag-component-research-2026-09-27.md) research notes. It supersedes older references below to Cloud SQL as the main retrieval choice and to a 29-slide total; the earlier business scope and eight-month implementation scenario remain unchanged.
+
+- The local deck has **31 slides**: manager proposal 1–14, technical overview 15, technical argument 16–29, reference diagrams 30–31.
+- Slides 16–17 compare direct RAG Engine with a custom workflow and name the custom default components. Slide 18 shows the default architecture with standalone Agent Retrieval as the managed vector database. The content, security, quality and operations slides follow. Slide 29 remains the dedicated **Estimated monthly service costs** slide.
+- Singapore RAG Engine is Preview, with no published GA date in the checked Google region table. The direct RAG Engine path is a PoC challenger; future Singapore GA would trigger reassessment, not automatic selection. The working custom default uses Agent Retrieval in Singapore, subject to the same security, quality, withdrawal and cost gates. Cloud SQL/pgvector is a fallback benchmark.
+- The dated $600–1,500 and $1,200–3,000 monthly envelopes remain identifiable as the **older Cloud SQL service-cost scenario**, not a quote for either new retrieval path. Reprice the complete stacks after the PoC.
+- The architecture, security and content lifecycle diagrams now use managed-vector icons and Agent Retrieval labels while retaining the existing icon-led draw.io style. The tracing and evaluation diagrams were reviewed for consistency.
+- The user's request is local slide generation only. Do not sync Google Slides or refresh PDF/PowerPoint snapshots without a separate request.
+
+**Local output and check:** [slides/slides.md](slides/slides.md) and its [diagram assets](slides/public/diagrams/) are the editable deck; [deliverables/ask-one-slides-source.zip](deliverables/ask-one-slides-source.zip) is the portable source copy. Slidev built successfully. Browser review covered all 31 slides for slide and footer overflow, with focused visual inspection of the revised manager slides, both architecture-choice slides, all five diagrams used by the deck, and the service-cost slide. The old export snapshots and Google Slides companion were not updated.
+
+## Earlier planning update — 13 September 2026
+
+This update implements the latest user direction and supersedes older staffing displays and slide-number references below. Keep **eight months as the proposed implementation duration, excluding discovery and the PoC**. Implementation Month 1 starts after the separate PoC review and agreement to proceed. Calendar kickoff remains TBC, and discovery/PoC findings can revise the forecast. Discovery and PoC durations are additional and TBC / to be discussed. Do not replace the proposal with an unspecified implementation duration.
 
 - Slide 9: suggested roles for PoC and implementation, with every headcount and allocation **TBC / to be discussed**. No numerical team-size recommendation appears in the slides or notes.
 - New Slide 10: a separate proposed eight-week PoC after discovery. Every proposed achievement, duration, sequence and exit criterion is **TBC / to be discussed**. Weeks 1–2: journey, permitted sample and evaluation plan. Weeks 3–4: sample answers, citations, service links and fallback. Weeks 5–6: quality/search comparison, content changes, safety, response time and service costs. Weeks 7–8: demo, gaps, backlog and a revised implementation recommendation. The eight-week breakdown is discussion material, not a validated estimate.
-- Slide 11: preserve nine months for implementation only: Months 1–4 core development, Months 5–6 hardening/demo, Month 7 pilot, Month 8 conditional production release and Month 9 stabilization. Retain the known implementation outcomes and separate readiness gates. Detailed requirements and acceptance criteria remain subject to PO/PPO-led agreement.
+- Slide 11: preserve eight months for implementation only: Months 1–4 core development, Months 5–6 hardening/demo, Month 7 pilot, and Month 8 conditional production release followed by stabilization. Retain the known implementation outcomes and separate readiness gates. Detailed requirements and acceptance criteria remain subject to PO/PPO-led agreement.
 - Adapt the staged evidence structure from `../payloadcms-poc/apps/slides/slides.md`, without importing its staffing assumptions.
 - Current deck: 29 slides. Manager section 1–14, technical overview 15, core technical slides 16–27, reference diagrams 28–29. Resource quantities and role allocations appear only on Slide 9. Service costs remain separate on Slide 27.
 - Local update only. The existing Google Slides deck remains at the earlier 22-slide revision until explicitly requested to sync. Preserve PDF/PowerPoint snapshots.
 
 ## Phase sequence and presentation boundary
 
-Present discovery, a separate proposed two-month PoC (approximately eight weeks), and nine months of implementation after the PoC review and agreement to proceed. Discovery duration, PoC timing and calendar kickoff remain TBC / to be discussed. Do not present the team's internal learning, training or self-study process in slides or speaker notes, or include a separate learning month in the project timeline.
+Present discovery, a separate proposed two-month PoC (approximately eight weeks), and eight months of implementation after the PoC review and agreement to proceed. Discovery duration, PoC timing and calendar kickoff remain TBC / to be discussed. Do not present the team's internal learning, training or self-study process in slides or speaker notes, or include a separate learning month in the project timeline.
 
-Current order: resource Slide 9, PoC Slide 10, implementation Slide 11 and risks Slide 12. The manager section ends at Slide 14. Technical overview 15, core technical 16–27, references 28–29.
+Earlier order: resource Slide 9, PoC Slide 10, implementation Slide 11 and risks Slide 12. The manager section ends at Slide 14. Technical overview 15, core technical 16–27, references 28–29. The 27 September update above supersedes these technical slide numbers.
 
 ## Goal
 
@@ -41,7 +109,7 @@ The deck will propose approval to begin the Ask ONE project through the first MV
 
 Do not create a dedicated approval or call-to-action slide. Use “Project proposal: first MVP” on the cover and a short statement on the roadmap: “Proposed first-MVP project. Further PO/PPO-led research and the PoC must inform scope, cost and schedule.” Close the manager section with expected outcomes and how success will be measured, then transition to the technical section.
 
-Project approval is not an unconditional promise to release or an assertion that budget has already been approved. The nine-month implementation proposal excludes discovery and the PoC and remains provisional. Discovery and the PoC are review gates within the proposed project; their findings may require a scope change, revised funding or schedule, or a pause/stop decision. Pilot and production gates remain mandatory. The deck should support a whole-project decision without inventing a finalized budget or suggesting that a PoC result guarantees delivery.
+Project approval is not an unconditional promise to release or an assertion that budget has already been approved. The eight-month implementation proposal excludes discovery and the PoC and remains provisional. Discovery and the PoC are review gates within the proposed project; their findings may require a scope change, revised funding or schedule, or a pause/stop decision. Pilot and production gates remain mandatory. The deck should support a whole-project decision without inventing a finalized budget or suggesting that a PoC result guarantees delivery.
 
 ## Required PO/PPO involvement before finalizing the project definition
 
@@ -69,11 +137,11 @@ The slides may describe this required PO/PPO business collaboration, as explicit
 - The technical section starts after a clear section break that also acts as a technical overview. Twelve core slides explain the system in sequence, with detailed controls in notes and two reference diagrams.
 - The revised target is 29 slides: 14 manager slides including the new overview, one technical overview, twelve core technical slides and two reference diagrams. Include a dedicated resource placeholder and a separate monthly service-cost estimate. Keep the roadmap and risks on adjacent slides. Readability takes priority over an exact count.
 - Frame the proposal around beginning the whole first-MVP project, with evidence-based review gates. Do not reduce the request to one month of discovery or add a standalone approval slide.
-- Nine months is a rough estimation scenario only, not a concluded delivery plan. Further PO/PPO-led business research and technical investigation may change it before or after the PoC. All implementation month numbers are relative to implementation kickoff after the PoC review and assume timely decisions between stages.
+- Eight months is a rough estimation scenario only, not a concluded delivery plan. Further PO/PPO-led business research and technical investigation may change it before or after the PoC. All implementation month numbers are relative to implementation kickoff after the PoC review and assume timely decisions between stages.
 - A working product preview is targeted for the end of Month 4.
 - The formal manager demo is targeted for the end of Month 6. A separate readiness review determines whether the service can enter the pilot. A successful demo alone does not establish readiness.
 - A limited user pilot is targeted for Month 7.
-- The controlled production release is tentatively targeted for Month 8. Month 9 covers planned stabilization and priority fixes. It is not a full month of spare capacity.
+- The controlled production release is tentatively targeted for Month 8. Stabilization starts after the conditional Month 8 release and may extend beyond the eight-month scenario if needed.
 - The Markdown plan retains the internal staffing assumption: six developers, one technical architect or technical lead, one product owner, two QA engineers and one UI/UX designer. A second UI/UX designer can join during research, prototyping and user testing if available. Keep these earlier quantities internal only. The resource slide now uses TBC / to be discussed for both phase headcounts. Do not repeat staffing in other slides or their notes.
 - The technical architect owns the day-to-day security and privacy design as part of the technical leadership role. The resource slide may summarize this role. Detailed assignments remain internal.
 - The Markdown plan records the established working relationships with the GCP and Drupal teams. Their organizational involvement does not appear in the slides.
@@ -102,7 +170,7 @@ The manager section must use plain English, readable text and a clear visual ord
 
 Read the rendered manager section without notes: a reader must be able to explain what Ask ONE does, how it differs from a list of search results, the expected benefits for customers and ONE, the MVP boundaries, and the proposed project with its review gates. Read the technical section the same way: a technical manager must be able to explain why the approach fits, its main unresolved assumptions and how the PoC will investigate them. Successful exports and font-size checks alone do not satisfy these criteria.
 
-## Current slide order
+## Earlier slide order (technical numbers superseded on 27 September)
 
 The revised deck has 29 slides. The manager section ends at Slide 14, followed by a technical overview, twelve core technical slides and two appendix diagrams.
 
@@ -120,9 +188,9 @@ The revised deck has 29 slides. The manager section ends at Slide 14, followed b
 | 8 | Proposed first-release scope | Present the English-only, public-content, single-question MVP, visible sources and service links. Summarize exclusions. Show the detailed business specification as unfinished. Discovery, PO/PPO collaboration and the PoC define and validate this proposed release. |
 | 9 | Proposed delivery resources | Show suggested roles for PoC and implementation, with all counts and allocations TBC / to be discussed. No numerical headcount. Staffing appears on this slide only. |
 | 10 | PoC timeline and expected evidence | Eight proposed weeks with draft exit evidence, all TBC / to be discussed. Secure sample permission before kickoff. |
-| 11 | Nine-month proposal and delivery outcomes | Show the whole-project scope and rough nine-month roadmap. Include separate discovery and PoC before implementation, Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 conditional release and Month 9 stabilization. Make all month labels tentative and state that research and risk findings can revise them before or after the PoC. Use the whole-project framing without an approval banner. |
+| 11 | Eight-month proposal and delivery outcomes | Show the whole-project scope and rough eight-month roadmap. Include separate discovery and PoC before implementation, Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 conditional release followed by stabilization. Make all month labels tentative and state that research and risk findings can revise them before or after the PoC. Use the whole-project framing without an approval banner. |
 | 12 | Several risks can change scope and dates | Cover business decisions, content readiness, technical feasibility/integration and readiness testing. Pair each risk with further work or a response. Retain the permitted sample before the PoC, approved minimum content before the pilot and separate pilot/production gates. |
-| 13 | Potential extensions after the first MVP | Retain the seven customer-facing options and the visible statement that they are outside the nine-month estimate and subject to separate assessment and approval. |
+| 13 | Potential extensions after the first MVP | Retain the seven customer-facing options and the visible statement that they are outside the eight-month estimate and subject to separate assessment and approval. |
 | 14 | What success would look like | Close with useful outcomes for customers and ONE and a concise measurement approach. Compare with existing search/help, include operating cost and explain when evidence will become available. No separate approval request or invented ROI. |
 
 ## Manager explanation: what the feature does
@@ -196,28 +264,17 @@ Slide 9 is the only slide that may show staffing quantities or role allocations.
 
 No additional machine-learning engineer is planned for the first MVP. Present managed inference as an architectural choice, not proof that delivery capacity is adequate. Allocate learning, implementation experiments and evaluation work during discovery and the PoC. Managed inference avoids custom model training, but reliable retrieval, source handling and answer evaluation still need evidence. Use PoC findings to reassess scope and time rather than treating the learning effort as free or already complete. Do not add a specialist-support recommendation to the slides.
 
-## Estimated monthly service costs
+## Monthly service costs
 
-Place the baseline estimate after the tooling and metrics slides, with a concise self-hosted tooling cost note on the same slide. The resource placeholder remains in the manager section. Do not duplicate the service-cost table in the manager section.
+Slide 21 is titled **Illustrative monthly service budgets** and shows service costs only. It excludes staffing, content-owner effort, one-time implementation and total project funding. The resource placeholder remains on Slide 9.
 
-Slide 27 must use the title **Estimated monthly service costs**. These estimates cover incremental cloud/service running costs only, not resource costs, salaries, contractors, content-owner effort, one-time implementation or total project funding.
+Price the two proposed retrieval paths at the same measured usage after the PoC. The custom path needs standalone Agent Retrieval storage, read/write operations and any ANN serving. The direct RAG Engine path needs the selected Singapore Spanner tier, corpus and retrieval charges. Both paths also need application capacity, source storage, embeddings, Gemini, screening, telemetry, approved evaluation, relevant parsing/reranking, and production plus non-production environments. Show both paths' preliminary planning budgets at 10,000 and 100,000 questions per month with their assumptions and exclusions. The direct RAG figure assumes Scaled production and Basic non-production, with further validation required for autoscaling and Preview billing.
 
-Use [the dated GCP service-cost estimate](reports/ask-one-gcp-cost-estimate.md) as the auditable source. Read it before revising the figures. It records official pricing links, token calculations, infrastructure allowances, exclusions and decisions to confirm after the PoC.
+The [dated GCP cost estimate](reports/ask-one-gcp-cost-estimate.md) remains an auditable historical input for token assumptions and allowances, but its earlier retrieval design does not price either current path. The custom-path budget substitutes an Agent Retrieval allowance using current published unit rates; it is still preliminary and requires PoC sizing. Reuse existing GKE/GCP capacity only to the extent measured; additional capacity is not free. Confirm regional terms, volume, source size, model usage, required environments and any Cloudflare upgrades. Do not turn a service estimate into a total project budget.
 
-| Monthly usage example | Illustrative service budget (USD/month) |
-|---|---:|
-| 10,000 questions | $600–1,500 |
-| 100,000 questions | $1,200–3,000 |
+## Proposed eight-month implementation timeline
 
-These are planning envelopes, not measured demand, supplier quotations, spending caps or capacity guarantees. They include 25% contingency plus rounding. Assumptions: one generation call per question, 3,000 input tokens and 500 total billed output tokens including reasoning, a small text corpus, one production deployment and a small shared non-production environment.
-
-The illustrative Gemini 2.5 Flash calculation is $21.50/$215 monthly at these volumes, using published input/output rates checked on 12 September 2026. Model choice is not final. The larger budget includes additional GKE capacity, candidate Cloud SQL/pgvector retrieval and backups, GCS, optional screening, embeddings, observability, networking and routine evaluation. Clearly identify infrastructure amounts as planning allowances rather than verified regional SKU quotations.
-
-Reuse existing GKE/GCP without charging unrelated baseline spending again. Additional capacity is not free. Confirm region, availability requirements, existing headroom, database size, environment count, source volumes and actual model usage after the PoC. New service requirements, higher traffic, lengthy reasoning, extra calls or major architecture changes can exceed these ranges. Do not multiply the monthly examples by nine to present a project budget.
-
-## Proposed nine-month implementation timeline
-
-Nine months is the proposed implementation scenario after the PoC review. Discovery and PoC time are additional, with durations TBC / to be discussed. Neither the phase durations nor the end date have been validated. Business requirements, feature priorities and further research with PO/PPO remain open. The Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 release and Month 9 stabilization are tentative scenario markers, not commitments or evidence that those dates are safe. Reassess at the business-research review, after the PoC and whenever a material assumption changes. Schedule a separate bounded PoC after discovery, with its timing and achievements TBC / to be discussed. A representative sample with permission for the intended PoC use must be available before the PoC begins. Confirm its scope and duration during discovery, then reassess the remaining schedule using the PoC findings. If business decisions, the sample, feasibility work or readiness testing take longer, revise downstream dates rather than compressing validation and stabilization. More content alone does not resolve the other dependencies.
+Eight months is the proposed implementation scenario after the PoC review. Discovery and PoC time are additional, with durations TBC / to be discussed. Neither the phase durations nor the end date have been validated. Business requirements, feature priorities and further research with PO/PPO remain open. The Month 4 preview, Month 6 demo, Month 7 pilot, Month 8 release followed by stabilization are tentative scenario markers, not commitments or evidence that those dates are safe. Reassess at the business-research review, after the PoC and whenever a material assumption changes. Schedule a separate bounded PoC after discovery, with its timing and achievements TBC / to be discussed. A representative sample with permission for the intended PoC use must be available before the PoC begins. Confirm its scope and duration during discovery, then reassess the remaining schedule using the PoC findings. If business decisions, the sample, feasibility work or readiness testing take longer, revise downstream dates rather than compressing validation and stabilization. More content alone does not resolve the other dependencies.
 
 | Tentative period | Focus | Evidence or review point |
 |---|---|---|
@@ -226,10 +283,9 @@ Nine months is the proposed implementation scenario after the PoC review. Discov
 | Months 1–4 | Core product development | Build the customer journey, Drupal synchronization, feedback and minimum content-review capability. Run evaluation and security checks throughout development. Aim for a working preview at the end of Month 4. |
 | Months 5–6 | Hardening and manager demo | Expand the evaluation set, test failures and access controls, and tune performance and cost. Validate monitoring, screening, rate limits, caching and rollback. Aim for a formal manager demo at the end of Month 6, followed by a separate pilot-readiness review. |
 | Month 7 | Controlled user pilot | The team releases the service to a limited group of users. QA, content owners and platform specialists measure quality, usability, reliability and cost against the agreed criteria. |
-| Month 8 | Controlled production release | The team resolves the pilot findings, completes the production-readiness review and releases the service to production users in controlled stages. |
-| Month 9 | Stabilization | Monitor production use, resolve priority issues and improve operating procedures. Reassess the duration if the production release moves. |
+| Month 8 | Conditional production release and stabilization | The team resolves pilot findings, completes the production-readiness review and releases in stages. Stabilization starts after release; extend the forecast if the gate or follow-up work moves. |
 
-Label the roadmap “Rough estimate only. Further research required.” State that scope and dates are not finalized and may change before or after the PoC. The Month 8 release remains conditional on pilot results and content readiness. Missed gates trigger a revised forecast, potentially beyond Month 9. Do not absorb delays by assuming that stabilization can be skipped.
+Label the roadmap “Rough estimate only. Further research required.” State that scope and dates are not finalized and may change before or after the PoC. The Month 8 release remains conditional on pilot results and content readiness. Missed gates trigger a revised forecast, potentially beyond Month 8. Do not absorb delays by assuming that stabilization can be skipped.
 
 ## Agreed MVP limits and proposed capabilities
 
@@ -267,7 +323,7 @@ Keep each option to its name and one short description of customer value. Keep t
 | Follow-up questions | Clarify a question and continue the same task without starting again. | Evidence that conversation improves task completion, with session handling and evaluation across several turns. |
 | Connected customer support | Transfer an unresolved question and relevant context to support with the customer's consent. | Support workflow integration, consent, agreed context sharing and a reliable handoff process. |
 
-Use this visible qualification: “Potential extensions beyond the first MVP. Priorities and dates will depend on customer demand, feasibility and separate approval.” Keep these options outside the rough nine-month estimate. Explain that integration connects services while signed-in features enforce customer-specific permissions; these capabilities may overlap. Show GCP and eCommerce systems only where relevant to capability, without discussing partner-team involvement or staffing.
+Use this visible qualification: “Potential extensions beyond the first MVP. Priorities and dates will depend on customer demand, feasibility and separate approval.” Keep these options outside the rough eight-month estimate. Explain that integration connects services while signed-in features enforce customer-specific permissions; these capabilities may overlap. Show GCP and eCommerce systems only where relevant to capability, without discussing partner-team involvement or staffing.
 
 Keep the following additional ideas in this Markdown as a longer-term candidate list rather than crowding the slide:
 
@@ -291,7 +347,7 @@ Content readiness is one major dependency within a wider unresolved risk set. Th
 | Usability, operating cost and support readiness | Test customer journeys and support needs, estimate usage and maintenance costs, and define monitoring and operating procedures. | Simplify the experience, revise cost assumptions or defer release until acceptable evidence exists. |
 | Decision timing and delivery capacity | Confirm stakeholder review availability, dependencies and delivery assumptions. Keep staffing quantities and allocations on the dedicated resource slide only. | Publish a revised forecast when decisions or capacity change. Do not silently compress testing or stabilization. |
 
-PO/PPO should coordinate business decisions while technical and content specialists provide the relevant evidence. At each review, record the evidence, unresolved issues, decision owners and effects on scope, cost and dates. Re-estimation may extend beyond nine months. The content-specific response below remains mandatory as well.
+PO/PPO should coordinate business decisions while technical and content specialists provide the relevant evidence. At each review, record the evidence, unresolved issues, decision owners and effects on scope, cost and dates. Re-estimation may extend beyond eight months. The content-specific response below remains mandatory as well.
 
 ## Critical timeline risk: content approval
 
@@ -338,7 +394,7 @@ The production release proceeds only when:
 - production monitoring, support, fallback and rollback procedures are ready;
 - the product owner, technical architect, QA and accountable content owners approve the release.
 
-If a gate does not pass, assess the remediation work and publish a revised forecast. A release in Month 9 is one possible outcome, not an automatic fallback. Preserve time for stabilization after the actual release.
+If a gate does not pass, assess the remediation work and publish a revised forecast. A later release is possible, not an automatic fallback within the eight-month estimate. Preserve time for stabilization after the actual release.
 
 ## Internal delivery assumptions
 
@@ -423,7 +479,7 @@ The work is complete when:
 - the affected slides pass browser visual inspection, with the complete 29-slide deck checked for shared style or structural changes;
 - any explicitly requested exports succeed and pass format-specific visual inspection; otherwise no PDF or PowerPoint export is required;
 - the manager section answers the questions listed under Success criteria, including feature behavior and distinct customer/ONE benefits;
-- the timeline shows provisional milestones for a Month 4 working preview, Month 6 manager demo and separate pilot-readiness review, Month 7 limited user pilot, Month 8 controlled production release and Month 9 stabilization;
+- the timeline shows provisional milestones for a Month 4 working preview, Month 6 manager demo and separate pilot-readiness review, Month 7 limited user pilot, Month 8 controlled production release and post-release stabilization in Month 8;
 - all month labels are visibly tentative, with further PO/PPO-led research required and scope/schedule reassessment before or after the PoC as findings emerge;
 - the slides explicitly state that business requirements, feature priorities and the delivery plan are not finalized;
 - the risk slide covers business, content, technical and operational/readiness dependencies, with actions and re-estimation rather than content risk alone;
@@ -431,7 +487,7 @@ The work is complete when:
 - the content plan requires a permitted representative sample before the PoC begins;
 - the first MVP is clearly limited to English, public content and one question at a time;
 - authenticated data, transactions, multilingual support and complex integrations are clearly outside the first MVP;
-- the future-features slide explains the seven proposed extensions without dates, delivery promises or inclusion in the nine-month estimate;
+- the future-features slide explains the seven proposed extensions without dates, delivery promises or inclusion in the eight-month estimate;
 - content approval appears as a major schedule dependency requiring PO/PPO and content-owner collaboration, with proposed dates and responses to delayed approvals;
 - the Month 7 pilot and Month 8 production release use the defined go/no-go criteria;
 - staffing quantities and role allocations appear only on the dedicated resource slide as a placeholder, with no GCP/Drupal-team involvement anywhere in slide content or notes;

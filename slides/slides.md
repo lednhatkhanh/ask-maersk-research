@@ -30,7 +30,7 @@ defaults:
 
 <!--
 Ask ONE is a proposed customer experience. Formal discovery has not started.
-The proposal covers the whole first-MVP project, with review gates. Business research and detailed requirements remain open. The nine-month implementation proposal excludes discovery and the PoC. Schedule and costs remain provisional and require reassessment after the PoC. Project approval does not guarantee release or establish finalized funding.
+The proposal covers the whole first-MVP project, with review gates. Business research and detailed requirements remain open. The eight-month implementation proposal excludes discovery and the PoC. Schedule and costs remain provisional and require reassessment after the PoC. Project approval does not guarantee release or establish finalized funding.
 Sources: PLAN.md, Goal and Decisions already made.
 -->
 
@@ -209,7 +209,7 @@ Discovery and the PoC are the first phases of the whole project, not the entire 
 The MVP includes Drupal content updates/removals, feedback, evaluation, guardrails, caching and monitoring.
 Assess existing tools for source status, approval and review history. A custom review hub needs a demonstrated gap.
 Security requirements and evaluation questions start during discovery. Secure a permitted sample before the PoC.
-Source: PLAN.md, Goal, Agreed MVP limits and proposed capabilities and Proposed nine-month implementation timeline.
+Source: PLAN.md, Goal, Agreed MVP limits and proposed capabilities and Proposed eight-month implementation timeline.
 -->
 
 ---
@@ -250,7 +250,7 @@ class: deck-slide manager-slide poc-timeline-slide
 <tbody>
 <tr><td>Weeks 1–2</td><td>Agree the test scope and criteria</td><td>Confirmed priority journey and already-permitted sample, test questions and draft acceptance criteria</td></tr>
 <tr><td>Weeks 3–4</td><td>Build a sample answer flow</td><td>Sample content loaded, answers with valid source links, relevant service links and safe fallback</td></tr>
-<tr><td>Weeks 5–6</td><td>Test quality and controls</td><td>Comparison with search, content update and removal tests, safety results, response times and service costs</td></tr>
+<tr><td>Weeks 5–6</td><td>Test quality and controls</td><td>Compare the two retrieval approaches with search; test content removal, safety, response time and service costs</td></tr>
 <tr><td>Weeks 7–8</td><td>Review feasibility</td><td>Demo and findings, unresolved gaps, prioritized MVP work and revised architecture, costs and schedule</td></tr>
 </tbody>
 </table>
@@ -271,27 +271,26 @@ class: deck-slide manager-slide timeline-slide
 ---
 
 <p class="kicker">Proposed implementation after the PoC</p>
-<h1>Nine-month implementation proposal</h1>
-<p class="intro">Nine months after agreement to proceed. Discovery and PoC time are additional.</p>
+<h1>Eight-month implementation proposal</h1>
+<p class="intro">Eight months after agreement to proceed. Discovery and PoC time are additional.</p>
 <table class="timeline-table implementation-plan">
 <thead><tr><th>Proposed timing</th><th>Phase</th><th>Required delivery outcome</th></tr></thead>
 <tbody>
 <tr><td>Months 1–4</td><td>Core development</td><td>Month 4 preview: English answers, source and service links, content updates, review and feedback</td></tr>
 <tr><td>Months 5–6</td><td>Testing and refinement</td><td>Quality and security checks, monitoring and recovery. Month 6 manager demo, then a separate pilot-readiness review</td></tr>
 <tr class="milestone"><td>Month 7</td><td>Limited user pilot</td><td>Test with invited users and approved content. Measure usefulness, reliability and operating cost</td></tr>
-<tr class="milestone"><td>Month 8</td><td>Production release</td><td>Resolve blocking pilot findings. Release in stages after the production-readiness review</td></tr>
-<tr><td>Month 9</td><td>Stabilization</td><td>Monitor use, fix priority issues and complete the operational handover</td></tr>
+<tr class="milestone"><td>Month 8</td><td>Release and stabilization</td><td>Resolve blocking pilot findings; release in stages after the readiness review, then monitor and fix priority issues</td></tr>
 </tbody>
 </table>
 <p class="caption">Start date: TBC. All months are proposed implementation milestones. PoC findings may change the forecast. Pilot and production each require a readiness review.</p>
 
 <!--
-The proposed nine months cover implementation only, excluding discovery and the PoC. Month numbers are proposed milestones after the PoC review and agreement to proceed, not committed calendar dates. Kickoff remains TBC.
+The proposed eight months cover implementation only, excluding discovery and the PoC. Month numbers are proposed milestones after the PoC review and agreement to proceed, not committed calendar dates. Kickoff remains TBC.
 Implementation outcomes reflect the existing first-MVP direction. Detailed business rules, feature priorities and measurable acceptance criteria still need PO/PPO-led agreement.
 Core development includes anonymous public access, one question at a time, Drupal synchronization and the minimum content-review capability. A custom review hub remains conditional.
 Evaluation and security begin in discovery and continue through the PoC and implementation. A manager demo is separate from pilot readiness.
 Implementation Month 1 begins after the separate discovery and PoC phases and their review. A longer PoC moves the calendar kickoff; its duration is not subtracted from the nine implementation months.
-Stabilization follows the actual release and is planned work, not contingency.
+Stabilization begins after the conditional release within Month 8. If the gate or release moves, extend the forecast rather than compressing stabilization.
 Source: PLAN.md, current planning update, Agreed MVP limits and Pilot and production gates.
 -->
 
@@ -306,11 +305,11 @@ class: deck-slide manager-slide
 <tbody>
 <tr><td>Business decisions</td><td>PO/PPO must clarify requirements and feature priorities through research.</td><td>Continue research or narrow scope, then revise dates.</td></tr>
 <tr><td>Content readiness</td><td>PO/PPO and content owners must permit sample use before the PoC and approve essential content before the pilot.</td><td>Defer optional topics. If essential content is not approved, revise pilot and release dates.</td></tr>
-<tr><td>Technical feasibility</td><td>Test answer quality and content updates. Confirm access to the required systems.</td><td>Revise the design or extend the PoC and update the estimate.</td></tr>
+<tr><td>Technical feasibility</td><td>Compare retrieval options, content updates, regional terms and system access.</td><td>Revise the design or extend the PoC and update the estimate.</td></tr>
 <tr><td>Release readiness</td><td>Test security, reliability and usability. Confirm operating costs and support procedures.</td><td>Fix critical issues before starting the pilot or releasing to production.</td></tr>
 </tbody>
 </table>
-<p class="takeaway">Pilot and production each need a readiness review, even after a successful demo. Content approval delays can move both dates. Implementation may extend beyond Month 9. Allow for stabilization after the actual release.</p>
+<p class="takeaway">A demo does not clear the pilot or production gates. Unresolved content or technical risks move the dates; stabilization follows the actual release.</p>
 
 <!--
 Content approval remains a critical-path risk but is not the only schedule dependency. No listed risk is a confirmed failure.
@@ -339,7 +338,7 @@ class: deck-slide manager-slide
 <div><h2>Follow-up questions</h2><p>Clarify a question and continue the same task without starting again.</p></div>
 <div><h2>Handoff to customer support</h2><p>With the customer’s consent, pass the question and relevant details to support.</p></div>
 </div>
-<p class="takeaway">These options are outside the nine-month implementation proposal. Customer demand, feasibility and separate approval will determine priorities and dates.</p>
+<p class="takeaway">These options are outside the eight-month implementation proposal. Customer demand, feasibility and separate approval will determine priorities and dates.</p>
 
 <!--
 The order is for reading, not a committed release sequence.
@@ -378,42 +377,158 @@ Source: PLAN.md, Expected benefits for customers and ONE, Pilot and production g
 -->
 
 ---
-class: deck-slide section-slide technical-overview
+class: deck-slide section-slide technical-overview technical-choice-slide
 ---
-
-<p class="kicker">Technical overview</p>
-<h1>Technical design and controls</h1>
-<div class="technical-toc">
-<div>
-<section><span class="technical-toc-number">01</span><h2>Answer flow and system boundaries</h2><p>How the system would answer a question using approved source content.</p></section>
-<section><span class="technical-toc-number">02</span><h2>Content approval and updates</h2><p>How approved sources would enter the service and stay current.</p></section>
-<section><span class="technical-toc-number">03</span><h2>Security and usage protection</h2><p>Answer checks, data protection and usage limits.</p></section>
+<p class="kicker">Technical proposal</p>
+<h1>Two retrieval paths for Ask ONE</h1>
+<p class="section-intro">The working PoC default is a custom workflow using managed Agent Retrieval. Test direct RAG Engine on the same content and questions before selecting a path.</p>
+<div class="technical-paths">
+<section><h2>Custom workflow · working default</h2><p>ONE builds the passage pipeline. Google manages Agent Retrieval, reranking, Gemini and Model Armor.</p><p><strong>Trade-off:</strong> More application work, with direct control over approved versions and withdrawal.</p></section>
+<section><h2>Direct RAG Engine · PoC alternative</h2><p>Google manages more ingestion and retrieval. ONE still owns publishing, the customer API and answer release.</p><p><strong>Trade-off:</strong> Less pipeline code, but a later exit needs reindexing; Singapore remains Preview.</p></section>
 </div>
-<div>
-<section><span class="technical-toc-number">04</span><h2>Tools, metrics and service costs</h2><p>How proposed tools would support testing, measurement and cost control.</p></section>
-<section><span class="technical-toc-number">05</span><h2>Technical reference diagrams</h2><p>The security checks and content review process in detail.</p></section>
-</div>
-</div>
-<p class="section-detail">The PoC would provide early evidence for the design. Later testing must establish production readiness.</p>
+<p class="section-detail">Both paths require the same quality, security, content, performance and cost evidence. A future GA date alone does not select RAG Engine.</p>
 
 <!--
-Section overview. Technical slides distinguish proposed requirements, candidate components and later production validation.
-Source: PLAN.md, Technical focus.
+Technical recommendation, not a completed product decision. The custom path uses standalone Agent Retrieval as a managed vector and passage store. A later move to RAG Engine requires re-import, reindexing, metadata and withdrawal validation, plus answer regression tests. Compare implementation and operating work during the PoC; neither speed nor cost advantage has been measured.
+RAG Engine's published region table lists asia-southeast1 as Preview and no Singapore GA date. Google says RAG Engine data residency controls are unsupported. Confirm exact control requirements before either path is approved for production.
+Sources: reports/ask-one-custom-rag-component-research-2026-09-27.md; reports/ask-one-managed-rag-research-2026-09-27.md; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-overview ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/deployment-modes
 -->
+---
+class: deck-slide technical-slide boundary-slide
+---
+<p class="kicker">Shared application boundary</p>
+<h1>What ONE builds in either path</h1>
+<div class="reference-image"><img src="/diagrams/ask-one-proposal-boundary.drawio.svg" alt="Approved ONE sources enter an ONE-owned publishing flow. The PoC compares a custom workflow using Agent Retrieval with direct RAG Engine. Both supply evidence to the ONE customer API, Gemini and ONE answer checks." /></div>
+<p class="reference-caption">ONE owns source approval, the customer API, usage limits, Model Armor enforcement, citation checks and fallback. Both paths rerank retrieved evidence before Gemini.</p>
 
+<!--
+The diagram shows candidate paths, not simultaneous production systems. In the custom path ONE prepares passages and calls standalone Agent Retrieval. In the direct path RAG Engine handles a managed corpus and more of ingestion and retrieval. ONE remains responsible for source publication, versioning and withdrawal in both.
+Cloud Trace, Logging and Monitoring receive app-owned telemetry. Model Armor screening and reranking are required in the proposed design; the app enforces screening results and checks ranker failures. RAG Engine does not itself approve ONE content or guarantee citation quality.
+Sources: reports/ask-one-custom-rag-component-research-2026-09-27.md; reports/ask-one-managed-rag-research-2026-09-27.md; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-overview
+-->
+---
+class: deck-slide technical-slide content-decision-slide
+---
+<p class="kicker">ONE-owned content control</p>
+<h1>Approved content and withdrawal</h1>
+<p class="intro">Every searchable passage must lead back to an approved public source and version.</p>
+<table class="proposal-table content-control-table">
+<thead><tr><th>Stage</th><th>ONE control</th><th>PoC evidence</th></tr></thead>
+<tbody>
+<tr><td><strong>Approve</strong></td><td>Register permitted sources, owners, versions and customer links. Exclude drafts and restricted material.</td><td>The sample covers the chosen questions and citations open the approved source.</td></tr>
+<tr><td><strong>Publish changes</strong></td><td>Keep stable source IDs and a portable source snapshot; synchronize approved updates.</td><td>Changed guidance appears in retrieval and answers with the right version.</td></tr>
+<tr><td><strong>Withdraw</strong></td><td>Remove old passages and invalidate any answer cache that could reuse them.</td><td>Removed guidance stops appearing in retrieval and checked answers.</td></tr>
+</tbody>
+</table>
+<p class="takeaway">Use existing review tools where they meet these controls. A separate review hub needs evidence of a gap and a scope decision.</p>
+
+<!--
+ONE must test exact metadata, filtering, reindexing, deletion and cache behavior in each path. Public availability alone does not establish permission for ingestion or re-use. Content owners approve publication and maintain source accuracy. Human feedback does not automatically update the corpus.
+A later switch between Agent Retrieval and RAG Engine is a migration with re-import, reindexing and regression testing, not a one-click configuration change.
+Sources: PLAN.md, Agreed MVP limits and proposed capabilities; reports/ask-one-custom-rag-component-research-2026-09-27.md; reports/ask-one-managed-rag-research-2026-09-27.md.
+-->
+---
+class: deck-slide technical-slide safety-decision-slide
+---
+<p class="kicker">Release and usage controls</p>
+<h1>Answer safety and traffic protection</h1>
+<p class="intro">The ONE application enforces controls around paid AI work and before returning an answer.</p>
+<table class="proposal-table safety-control-table">
+<thead><tr><th>Control</th><th>Proposed behavior</th><th>Evidence to collect</th></tr></thead>
+<tbody>
+<tr><td><strong>Sources and answers</strong></td><td>Use approved public versions. Check citation links and source eligibility; withhold unsupported answers.</td><td>Reviewed accuracy, false refusals and unsafe-answer cases.</td></tr>
+<tr><td><strong>Screening</strong></td><td>Use Model Armor on questions and responses; the app enforces its verdict.</td><td>Missed attacks, incorrect blocks and added delay.</td></tr>
+<tr><td><strong>Traffic and spend</strong></td><td>Use Cloudflare filtering, server-validated challenges, shared quotas and a service-wide usage ceiling.</td><td>Bypass, replay, parallel-request and limit-failure tests.</td></tr>
+<tr><td><strong>Access</strong></td><td>Protect administration and the backend. Restrict pilot participation separately from anonymous public access.</td><td>Access-control and recovery tests before pilot and release.</td></tr>
+</tbody>
+</table>
+<p class="caption">A citation or automated screening result does not prove that an answer is correct. Human review remains part of release decisions.</p>
+
+<!--
+Source eligibility and citation-link checks can be deterministic. Semantic support is imperfect; use reviewed cases. Model Armor is a required proposed service, not a deployed protection; Cloudflare controls also remain proposed. For direct Model Armor calls the application must enforce the verdict. Logging may contain sensitive prompt/response material, so configure access, sampling and retention before collection. A pilot gate controls who participates without customer-account data in MVP scope.
+Enforce quotas atomically across replicas before expensive work. CAPTCHA does not establish identity. Test direct-origin attempts, invalid/replayed challenge tokens, shared IPs, quota store failure and concurrent requests. Spending alerts alone do not cap usage. Numerical limits remain TBC.
+Sources: PLAN.md, Bot, access and usage protection; https://docs.cloud.google.com/model-armor/overview ; https://docs.cloud.google.com/model-armor/configure-logging ; https://developers.cloudflare.com/turnstile/get-started/server-side-validation/
+-->
+---
+class: deck-slide technical-slide selection-gates-slide
+---
+<p class="kicker">PoC decision</p>
+<h1>Evidence that selects a retrieval path</h1>
+<p class="intro">Test both options with the same approved corpus, reviewed questions and load profile. Agree pass criteria first.</p>
+<table class="proposal-table gates-table">
+<thead><tr><th>Gate</th><th>Comparable evidence</th></tr></thead>
+<tbody>
+<tr><td><strong>Answer quality</strong></td><td>Human-reviewed answers, citations and refusal. Compare reranked results; judged Recall@k and groundedness help diagnose failures.</td></tr>
+<tr><td><strong>Content control</strong></td><td>Approved-version filtering and an update and withdrawal drill, including cached answers.</td></tr>
+<tr><td><strong>Security and region</strong></td><td>Confirm processing and access requirements. Singapore RAG Engine is Preview; its data residency control is unsupported.</td></tr>
+<tr><td><strong>Performance</strong></td><td>p95 end-to-end response time and error rate at the same tested load.</td></tr>
+<tr><td><strong>Cost and work</strong></td><td>Complete monthly service costs and the pipeline and operating work ONE would retain.</td></tr>
+</tbody>
+</table>
+<p class="takeaway">Keep the working default only if it passes. Choose RAG Engine if it also passes and reduces ONE-owned work at acceptable cost and control.</p>
+<p class="caption">Pass thresholds, sample coverage and the production decision remain TBC. A predicted GA date is not PoC evidence.</p>
+
+<!--
+A judged Recall@k measure counts labeled relevant approved passages in the first k results within a reviewed set, not exhaustive corpus recall. Groundedness measures support from supplied passages, not factual truth. Publish test-set coverage, counts and topic mix. Compare with existing search/help for customer value on the manager outcome slide.
+Google's current RAG Engine region table marks Singapore Preview; the deployment-mode document says data residency controls are unsupported. Confirm location, data handling, service terms and any feature-specific Preview limits. Even a later GA status does not automatically pass these gates. Define material pass criteria with PO/PPO, content owners and accountable technical reviewers before formal testing. The PoC informs a revised design, cost and schedule; production readiness still requires later testing and the pilot.
+Sources: PLAN.md, Pilot and production gates; reports/ask-one-managed-rag-research-2026-09-27.md; reports/ask-one-custom-rag-component-research-2026-09-27.md; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-overview ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/deployment-modes
+-->
+---
+class: deck-slide technical-slide operating-slide
+---
+<p class="kicker">Production operation</p>
+<h1>Signals and response ownership</h1>
+<p class="intro">The ONE application records protected request traces and measures service health after the PoC.</p>
+<table class="proposal-table operating-table">
+<thead><tr><th>Signal</th><th>Default GCP evidence</th><th>ONE response</th></tr></thead>
+<tbody>
+<tr><td><strong>Slow or failed answers</strong></td><td>p50 and p95 end-to-end time, errors and timeouts in Cloud Trace and Monitoring.</td><td>Find the slow stage, fix it or use fallback.</td></tr>
+<tr><td><strong>Answer quality</strong></td><td>Versioned reviewed cases, citations and user feedback. Google Gen AI Evals does not list Singapore.</td><td>Run local checks and human review; use Google Evals only after a data-location decision.</td></tr>
+<tr><td><strong>Stale guidance</strong></td><td>Time from approved update or removal to retrieval and cache change.</td><td>Stop affected answers, repair the index and retest.</td></tr>
+<tr><td><strong>Usage and safety</strong></td><td>Tokens, allocated service cost per admitted question, quota denials and screened events.</td><td>Enforce limits and investigate false blocks or bypasses.</td></tr>
+</tbody>
+</table>
+<p class="takeaway">Set alert and response thresholds before pilot. The production gate also needs support, fallback and rollback procedures.</p>
+
+<!--
+Use app-owned OpenTelemetry spans to Cloud Trace, Cloud Logging for protected errors and Cloud Monitoring for health and alerts. Agent Platform agent dashboards and online monitors require their documented deployment/telemetry prerequisites and do not automatically instrument a GKE application. Google Gen AI evaluation is an optional saved-case scorer; its published supported-region list does not include Singapore, so the data path requires approval. Promptfoo is an optional scoped security test runner.
+Time to first checked content can be recorded if streaming is used. Report p50/p95 with sample counts. Error and timeout denominator: admitted requests. Cost per question allocates complete monthly service costs to questions admitted for processing; billing is periodic. Protect raw questions and responses with sampling, redaction, access and retention rules.
+Sources: reports/ask-one-managed-rag-research-2026-09-27.md; reports/ask-one-custom-rag-component-research-2026-09-27.md; https://docs.cloud.google.com/gemini-enterprise-agent-platform/optimize/observability/overview ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/optimize/evaluation/evaluate-online ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/evaluation-overview
+-->
+---
+class: deck-slide technical-slide service-costs-slide
+---
+<p class="kicker">Service costs only</p>
+<h1>Illustrative monthly service budgets</h1>
+<p class="intro">Comparable planning scenarios for two retrieval paths at the same question volumes.</p>
+<table class="service-costs-table revised-service-costs">
+<thead><tr><th>Questions per month</th><th>Custom workflow: Agent Retrieval</th><th>Direct RAG Engine</th></tr></thead>
+<tbody>
+<tr><td>10,000</td><td><strong>~US$1,000</strong></td><td><strong>~US$2,500</strong></td></tr>
+<tr><td>100,000</td><td><strong>~US$2,500</strong></td><td><strong>~US$3,500</strong></td></tr>
+</tbody>
+</table>
+<p class="cost-assumptions">Both paths assume an existing GKE cluster, a modest corpus, Gemini 2.5 Flash, Model Armor and one reranking pass per question. OCR is optional. The custom path uses performance-optimized Agent Retrieval. RAG Engine assumes Spanner Scaled in production and Basic in small non-production use; autoscaling can raise its cost.</p>
+<p class="caption">Estimates with safety headroom, not vendor quotes or demand forecasts. Contact Google Cloud for an actual quote. Singapore RAG Engine remains Preview. Excludes staffing, one-time implementation and any Cloudflare upgrade.</p>
+
+<!--
+The custom figures are rounded planning allowances with safety headroom, not observed bills, configured quotes or spending caps. At 10,000 / 100,000 questions per month respectively, the illustrative pre-headroom component allowances are: Gemini 2.5 Flash $22 / $215; standalone Agent Retrieval $200 / $400; required reranking $10 / $100; extra GKE app capacity $300 / $600; GCS source versions, embeddings and Model Armor $39 / $95; logging, networking and routine evaluation $150 / $350. Component totals are $721 / $1,760. The scenario assumes one Gemini generation per question averaging 3,000 input and 500 total billed output tokens, a modest text corpus, performance-optimized ANN capacity, an existing shared GKE cluster, one production environment and small non-production use. Agent Retrieval and infrastructure amounts are allowances, not Singapore calculator outputs. Google lists performance-optimized Agent Retrieval capacity at $0.065 per CU-hour, with storage and operations separately metered; a storage-optimized CU or materially larger environment would change the budget.
+The direct RAG Engine figures assume Singapore Spanner Enterprise at the published on-demand rate of $1.40712 per node-hour, 730 hours/month, one Scaled production node ($1,027/month) and a separate Basic non-production project at 100 processing units ($103/month). The $1,130 combined Spanner capacity is a floor, not an autoscaling cap. At 10,000 / 100,000 questions per month respectively, the illustrative pre-headroom component allowances are: Spanner capacity $1,130 / $1,130; Spanner storage and backups $25 / $50; Gemini 2.5 Flash $22 / $215; required reranking $10 / $100; extra GKE app capacity $300 / $600; GCS source versions, embeddings and Model Armor $39 / $95; logging, networking and routine evaluation $150 / $350. Component totals are about $1,676 / $2,540, rounded up with safety headroom to about $2,500 / $3,500. Default RAG Engine parsing and fixed-size chunking are documented as free; paid parsing and OCR are not assumed. One reranking pass of up to 100 candidates per question is included at the published gross Ranking API rate. Google lists the Iowa Spanner Enterprise rate at $1.23 per node-hour; Singapore is about 14% higher. Actual RAG Engine billing in the Preview region needs confirmation, so this budgets Spanner as if charged. Basic may not meet production latency; Scaled can add nodes with load or corpus growth. A second continuously active production node adds about $1,027/month before headroom; Scaled instead of Basic for non-production adds about $924/month before headroom.
+After the PoC, price both paths at matched actual request volume, tokens, storage, retrieval and app usage, then contact Google Cloud for an actual configuration-specific quote before treating either budget as a funding baseline. Include production and non-production, backups, parsing, required reranking, screening, telemetry, approved evaluation and any Cloudflare plan change. Cloudflare upgrades are excluded from the displayed budgets. Staffing, content-owner effort and one-time implementation are also excluded. These question volumes are comparison scenarios, not demand forecasts. Cloud Billing data is periodic; cost per question is an allocated estimate.
+Sources: reports/ask-one-gcp-cost-estimate.md; reports/ask-one-managed-rag-research-2026-09-27.md; reports/ask-one-custom-rag-component-research-2026-09-27.md; https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing ; https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing ; https://cloud.google.com/security/products/model-armor ; https://cloud.google.com/spanner/pricing ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-engine-billing ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/deployment-modes
+-->
 ---
 class: deck-slide appendix-slide architecture-overview
 ---
 
 <p class="kicker">Technical approach</p>
-<h1>How a question becomes an answer</h1>
-<div class="reference-image"><img src="/diagrams/ask-one-gcp-architecture.drawio.svg" alt="Proposed architecture: Cloudflare protects the GKE application, governed content supplies retrieval, and Vertex AI generates answers. Dashed live APIs are future options." /></div>
-<p class="reference-caption">Google Kubernetes Engine (GKE) would run the app. Cloud SQL is the candidate retrieval database. Gemini models on Vertex AI would generate answers. Model Armor is the proposed screening service. Dashed API links are future scope.</p>
+<h1>Custom workflow: service map</h1>
+<div class="reference-image"><img src="/diagrams/ask-one-gcp-architecture.drawio.svg" alt="Custom path service map: ONE and Drupal sources, Cloud Storage, GKE ingestion and API, Vertex AI embeddings, Agent Retrieval, required VertexRanker and Model Armor, Gemini, Cloud Observability, optional Document AI OCR and ONE evaluation. Google Evals is not listed for Singapore." /></div>
 
 <!--
 
 GKE hosts application workloads; managed Gemini inference is separate from the cluster. RAG supplies context but does not guarantee correctness.
-Cloud SQL/pgvector is a feasibility option, not a final architecture decision. Region, access, capacity and networking still need validation.
+Standalone Agent Retrieval is the working vector-database default. Model Armor and reranking are required in this proposed design; verify ranker location and failure handling. Google Gen AI Evals does not list Singapore, so local checks and human review are the default. Region, controls, latency, cost, capacity and networking still need validation.
 Sources: PLAN.md; docs/plan.md, architecture;
 https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview
 https://cloud.google.com/vertex-ai/generative-ai/docs/overview
@@ -422,349 +537,19 @@ https://cloud.google.com/use-cases/retrieval-augmented-generation
 Sources: PLAN.md; docs/plan.md, architecture.
 Icon sources: https://cloud.google.com/icons and https://simpleicons.org/
 
-Cloud Storage retains source versions. Cloud SQL with pgvector is a candidate retrieval store. Retrieval-augmented generation supplies source context to managed Gemini inference.
+Cloud Storage retains approved source versions. Agent Retrieval holds searchable passage payloads and vectors. Retrieval supplies source context to managed Gemini inference.
 Citation eligibility checks are deterministic where possible. Semantic support assessment is imperfect and needs evaluation; the model cannot guarantee truth.
 -->
 
 ---
-class: deck-slide technical-slide
+class: deck-slide appendix-slide rag-engine-slide
 ---
 
-<p class="kicker">Approved content and review</p>
-<h1>How approved content stays current</h1>
-<p class="intro">Track the source and approved version of each passage so answers use current guidance.</p>
-<table class="lifecycle-table">
-<thead><tr><th>Stage</th><th>What the service needs to do</th><th>Proposed PoC test</th></tr></thead>
-<tbody>
-<tr><td>Collect and approve</td><td>Register permitted public sources and their owners. Exclude drafts and restricted content.</td><td>Does the sample contain enough guidance to answer the test questions?</td></tr>
-<tr><td>Prepare and index</td><td>Extract passages with source IDs, versions and links.</td><td>Can we extract useful text from tables and attachments and retain source links?</td></tr>
-<tr><td>Review and release</td><td>Record approval, test results and release history.</td><td>Can we repeat an answer test using the same approved source version?</td></tr>
-<tr><td>Update and remove</td><td>Apply Drupal content changes to searchable passages and cached answers.</td><td>Do updates and removals stop the service from using outdated guidance?</td></tr>
-</tbody>
-</table>
-<p class="takeaway">Use existing content-review tools where possible. A custom review hub requires a demonstrated need. Test scale and recovery before release.</p>
+<p class="kicker">Direct RAG Engine option</p>
+<h1>RAG Engine: service map</h1>
+<div class="reference-image"><img src="/diagrams/ask-one-rag-engine-boundary.drawio.svg" alt="Direct RAG Engine service map: ONE and Drupal sources, Cloud Storage, GKE publishing and API, RAG Engine with managed Spanner Scaled, required Ranking API and Model Armor, Gemini, Cloud Observability, optional Document AI OCR and ONE evaluation. Google Evals is not listed for Singapore." /></div>
 
 <!--
-
-Collection permission and permission to expose content to end users are separate decisions.
-Evaluate CMS body fields, structured blocks, attachments and relationships rather than indiscriminately indexing page markup.
-Documents, PDFs, tables and scans need extraction-specific checks. Public publication alone does not establish eligibility for reuse.
-Store source lineage, audience, language and effective/version dates as appropriate. Deletion must propagate to retrieval and caches.
-Sources: PLAN.md, Agreed MVP limits and proposed capabilities; docs/plan.md, content readiness and continuous improvement.
-
-The minimum content-review capability is in scope. A custom review hub is conditional on discovery and PoC findings.
-Production connectors, identity for administrative actions and operational release control require later implementation.
-User feedback does not automatically publish content or train the model.
-Source: PLAN.md, Agreed MVP limits and proposed capabilities and Technical focus.
-
-The review queue is an optional interface, not a separate committed product. Minimum workflow capabilities remain in scope.
--->
-
----
-class: deck-slide technical-slide
----
-
-<p class="kicker">Security controls</p>
-<h1>Answer safety and data protection</h1>
-<p class="intro">The service must use approved sources, protect administration and check questions and answers for unsafe content.</p>
-<div class="security-content">
-<section class="control-list">
-<div><h2>Before retrieval</h2><p>Select only approved public sources. Protect administrative actions with access controls.</p></div>
-<div><h2>During generation</h2><p>Treat source text as reference material, not instructions. Never send restricted content to the model.</p></div>
-<div><h2>Before the response</h2><p>Check source permissions and citation links. Assess whether the sources support the answer. Withhold answers that fail the checks.</p></div>
-</section>
-<section class="security-tests">
-<h2>Proposed tests from the PoC onward</h2>
-<p>Test attempts to bypass source restrictions, inject malicious instructions or produce unsupported claims.</p>
-<p>Proposed Model Armor calls screen prompts and responses. The app enforces the result. Test missed attacks, false blocks and added delay.</p>
-<p class="test-conclusion">A valid citation does not prove an answer is correct. Automated checks can miss errors, so human evaluation remains necessary.</p>
-</section>
-</div>
-
-<!--
-These are proposed controls, not a description of a deployed service. Model Armor screening complements application authorization and source eligibility.
-For direct screening calls, the application must enforce the verdict. Screening cannot guarantee that every attack is detected.
-Public MVP traffic does not require end-user login; administration does require appropriate authentication and authorization. Future authenticated customer features are separate scope.
-Source: https://docs.cloud.google.com/model-armor/overview
-Internal sources: PLAN.md; docs/plan.md, guardrails and trust.
--->
-
----
-class: deck-slide technical-slide abuse-protection-slide
----
-
-<p class="kicker">Proposed access and usage protection</p>
-<h1>Protection against bots and excessive use</h1>
-<p class="intro">Filter traffic through Cloudflare and enforce application limits before paid AI processing.</p>
-<table class="abuse-protection-table">
-<thead><tr><th>Protection</th><th>Proposed behavior</th></tr></thead>
-<tbody>
-<tr><td>Bot and traffic filtering</td><td>Use Cloudflare to filter attacks. Verify bot challenges, such as Turnstile, on the server.</td></tr>
-<tr><td>Burst and rolling limits</td><td>Limit requests per minute and questions over the preceding hour and 24 hours. Combine session and IP controls.</td></tr>
-<tr><td>Concurrency and spending</td><td>Limit active answers, tokens and retries. Enforce a service-wide usage ceiling before starting more AI work.</td></tr>
-<tr><td>Backend access</td><td>Allow backend traffic only through the approved gateway. Protect model credentials and administration.</td></tr>
-</tbody>
-</table>
-<p class="takeaway">The PoC would test gateway bypass, reused bot challenges and simultaneous requests. Tune limits as usage evidence becomes available.</p>
-<p class="caption">Restrict the pilot to invited users. Public access would not require sign-in. Bot checks do not prove identity. Show when to retry and offer a guidance link when limits apply.</p>
-
-<!--
-This slide addresses automated abuse, access and service consumption. The preceding Security controls slide addresses source restrictions, prompt injection and answer screening.
-Illustrative starting values only: one active generation per anonymous session, five questions per minute, 30 in a rolling hour and 100 in a rolling 24 hours. These are not approved product policy. Confirm with usage, accessibility and load testing.
-A rolling window counts the preceding interval at each request, rather than resetting on a clock boundary.
-Enforce shared, atomic quota/concurrency reservations across application replicas before expensive processing. Decide how failed requests and retries count. Apply cheap edge limits before challenge verification. Do not trust client counters or arbitrary forwarded IP headers.
-Server-side Turnstile validation must check success and expected hostname/action. Tokens expire after five minutes and are single-use. A successful challenge does not bypass quotas.
-Anonymous session IDs are accounting signals, not identities. Sessions can be recreated and IPs rotated. Combine layered limits with global admission controls; monitor false positives for shared networks.
-Restrict origin access so direct calls cannot bypass the gateway. CORS, hidden URLs and CAPTCHA do not establish authorization. Administration needs authentication and appropriate permissions.
-A pilot gate controls participation without adding account-specific customer data to MVP scope. Confirm its implementation during discovery.
-Bound input length, billed output including reasoning, retries and concurrent work. Budget alerts alone do not enforce spending limits. If controls fail, fall back to ordinary guidance rather than unbounded generation.
-PoC tests include absent/invalid/replayed tokens, direct-origin attempts, rapid and sustained traffic, parallel requests across replicas and limit-store failure. Later readiness testing covers distributed abuse, load, recovery and accessibility.
-Cloudflare plan entitlements and any additional service costs need confirmation. This slide does not assert that current service estimates include a plan upgrade.
-Sources:
-https://developers.cloudflare.com/turnstile/get-started/server-side-validation/
-https://developers.cloudflare.com/fundamentals/security/protect-your-origin-server/
-https://developers.cloudflare.com/use-cases/solutions/stop-malicious-bots/
-PLAN.md, Bot, access and usage protection.
--->
-
----
-class: deck-slide technical-slide quality-readiness-slide
----
-
-<p class="kicker">Evidence for release and continued operation</p>
-<h1>Quality and production readiness</h1>
-<p class="intro">Compare Ask ONE with existing search. Agree what counts as a passing result before formal testing.</p>
-<table class="quality-readiness-table">
-<thead><tr><th>Evidence</th><th>How to establish it</th></tr></thead>
-<tbody>
-<tr><td>Correct, useful answers</td><td>Check sources and permissions, then assess answers automatically and through human review. Test when the service should decline to answer.</td></tr>
-<tr><td>Reliable operation</td><td>Use Cloud Monitoring for health and alerts, Cloud Logging for errors and Cloud Trace for request timings.</td></tr>
-<tr><td>Safe changes</td><td>Track source and release versions. Repeat tests before each change and keep a way to restore the previous version.</td></tr>
-<tr><td>Readiness to release</td><td>Review pilot results, content approval and support procedures. Fix critical issues before production.</td></tr>
-</tbody>
-</table>
-<p class="takeaway">The PoC would supply early evidence. Production release depends on readiness tests and a successful limited pilot.</p>
-<p class="caption">Automated evaluation is supporting evidence. It does not replace human judgment or the separate pilot and production reviews.</p>
-
-<!--
-
-Illustrative test specification, not a passing result. No numeric thresholds or sample sizes are invented.
-Ragas faithfulness measures consistency with retrieved context, not independent factual truth. A source can be wrong even when the answer repeats it faithfully.
-Evaluation costs, repeated-run variability, false positives, dataset review and versioning require consideration.
-Sources: PLAN.md, Pilot and production gates;
-https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/
-https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/evaluate-judge-model
-
-Trace IDs identify processing events and supporting evidence, not hidden model reasoning.
-Avoid logging raw customer questions, documents or sensitive responses by default. Define access, sampling, retention and deletion rules.
-Budget alerts notify; enforcement requires application limits. Cache hits and fallback must preserve source eligibility, versions and deletion requirements.
-Use available platform observability where suitable. No existing Ask ONE deployment or measured operating costs are asserted.
-Sources: PLAN.md; docs/plan.md, caching, evaluation and operations.
-
-Phoenix, Ragas and Promptfoo are proposed PoC tools. Compare their workflow with native GCP capabilities before adoption. Judge-model scores do not prove correctness. Version evaluation datasets and investigate disagreement with human review.
-Example test aligned with the fictional manager example: enquiry preparation guidance. Expected behavior summarizes only the approved test source, cites it, and links to the enquiry service without filling or submitting forms. Test broken citations, invented requirements and ineligible sources.
--->
-
----
-class: deck-slide technical-slide tooling-slide
----
-
-<p class="kicker">Proposed tools for the PoC</p>
-<h1>Tools with distinct responsibilities</h1>
-<p class="intro">Google Cloud Platform (GCP) would host the app and AI services.</p>
-<table class="metrics-table service-roles-table">
-<thead><tr><th>Service or tool</th><th>Proposed use in Ask ONE</th></tr></thead>
-<tbody>
-<tr><td><strong>Vertex AI</strong></td><td>Gemini answer generation, text representations for search (embeddings), and AI-assisted evaluation.</td></tr>
-<tr><td><strong>Model Armor</strong></td><td>Screen model inputs and outputs. The app must block responses that fail required checks.</td></tr>
-<tr><td><strong>Cloud Monitoring / Logging / Trace</strong></td><td>Service health and alerts, error logs and request-stage timings.</td></tr>
-<tr><td><strong>Phoenix + Ragas</strong></td><td>Evaluate answer quality, inspect traces and compare test runs in our GCP environment.</td></tr>
-<tr><td><strong>Promptfoo</strong></td><td>Promptfoo Community tests attempts to bypass safety controls.</td></tr>
-</tbody>
-</table>
-<p class="takeaway">GCP already supports AI tracing and evaluation. Add Phoenix and test libraries only where they improve our workflow.</p>
-<p class="caption">Tool selection: TBC / to be discussed. Testing supports live protection and human review.</p>
-
-<!--
-GCP already offers tracing and Gen AI evaluation. Compare native workflows before committing to extra services. Phoenix is the proposed LLM review workspace, not a replacement for all Cloud Monitoring/Logging. Export relevant redacted spans and avoid duplicate scoring or full telemetry exports without a need.
-Ragas is an Apache-2.0 Python library. Phoenix self-hosting is free under ELv2 for this internal workspace use case; do not imply unrestricted hosted resale. Promptfoo Community currently lists 10k red-team probes/month. All incur infrastructure and/or model usage costs.
-Sources checked 13 September 2026:
-https://arize.com/docs/phoenix/self-hosting
-https://arize.com/docs/phoenix/integrations/evaluation-integrations/ragas
-https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/
-https://www.promptfoo.dev/pricing/
-https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-overview
-reports/ask-one-llm-tool-comparison.md
--->
-
----
-class: deck-slide technical-slide tooling-diagram-slide
----
-
-<p class="kicker">Tracing and observability</p>
-<h1>How we would investigate an answer</h1>
-<div class="tooling-diagram"><img src="/diagrams/ask-one-tooling-traces.drawio.svg" alt="Ask ONE emits redacted telemetry to GCP for operational health and Phoenix for answer investigation. Browser timing measures the customer experience separately." /></div>
-<p class="takeaway">Cloud Trace shows where a request spends time. Phoenix helps review its answer. OpenTelemetry records events with a shared request ID.</p>
-<p class="caption">Proposed self-hosted Phoenix workspace. Access, retention, sampling and hosting configuration: TBC / to be discussed.</p>
-
-<!--
-Instrument custom retrieval and screening spans. Correlate browser measurements and server events using request/trace IDs, with agreed sampling. Redact before export. Store model/prompt/source/index versions without high-cardinality metric labels. A Phoenix outage should not interrupt live answers; measure exporter drops and trace completeness.
-GCP supports GenAI tracing. The split shown is a proposed routing policy to reduce duplication, not a claim that GCP cannot inspect AI traces. No one-click integration or deployed infrastructure is asserted.
-Sources: https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-overview
-https://arize.com/docs/phoenix/self-hosting
--->
-
----
-class: deck-slide technical-slide tooling-diagram-slide
----
-
-<p class="kicker">Evaluation and security testing</p>
-<h1>How we would test a proposed change</h1>
-<div class="tooling-diagram"><img src="/diagrams/ask-one-tooling-evaluation.drawio.svg" alt="Versioned tests exercise the candidate app. Phoenix and Ragas form one quality evaluation flow alongside Promptfoo security tests. Both supply evidence for human review before release." /></div>
-<p class="takeaway">Quality evaluation and security tests inform the human review before release.</p>
-<p class="caption">Proposed workflow and passing criteria: TBC / to be discussed. Test results support the separate pilot and production gates.</p>
-
-<!--
-Ragas results can be attached to Phoenix experiments. Promptfoo reports are separate security evidence linked to the same candidate release; this diagram does not claim an automatic native Promptfoo-to-Phoenix integration. Tests target Ask ONE with its screening and source controls enabled. Managed Vertex AI models can supply judge calls. Human review calibrates automated scores.
-Use permitted representative content and version question sets, references, prompts, indexes, models and judge configurations. Run focused regressions in CI and broader campaigns at milestones. Synthetic tests extend coverage but do not prove customer value. No production traffic replay without an appropriate data-handling decision.
-Sources: https://arize.com/docs/phoenix/integrations/evaluation-integrations/ragas
-https://docs.ragas.io/en/stable/howtos/applications/vertexai_x_ragas/
-https://www.promptfoo.dev/docs/red-team/
--->
-
----
-class: deck-slide technical-slide metrics-slide
----
-
-<p class="kicker">Proposed evaluation measures</p>
-<h1>Quality checks on a reviewed sample</h1>
-<table class="metrics-table two-col">
-<thead><tr><th>Measure</th><th>How we would collect it</th></tr></thead>
-<tbody>
-<tr><td>Questions with sufficient evidence</td><td>Count test questions for which the retrieved passages contain enough guidance to answer.</td></tr>
-<tr><td>Answer and citation pass rate</td><td>Divide answers passing all accuracy, completeness and citation checks by all reviewed answers.</td></tr>
-<tr><td>Faithfulness score</td><td>Use Ragas to assess whether claims follow the source passages. Review low scores and disputed results.</td></tr>
-<tr><td>Appropriate refusal rate</td><td>Divide appropriate refusals by unanswerable test questions. Separately measure unnecessary refusals among answerable questions.</td></tr>
-</tbody>
-</table>
-<p class="takeaway">Keep a reviewed question set and its change history. Repeat the tests when content or the answer process changes.</p>
-<p class="caption">Test-set coverage and passing thresholds: TBC / to be discussed. Automated scores support human review.</p>
-
-<!--
-Collection: reviewed test cases and retrieved passages, Ragas results attached to Phoenix experiments, and manual answer/citation assessments. Useful-evidence-found rate is a per-question manual pass/fail measure, not exhaustive corpus recall. Correct fallback uses labeled unanswerable cases; false refusal uses labeled answerable cases. Publish counts and topic coverage. Do not infer population correctness from a small convenience sample. Faithfulness measures source support, not independent truth. Sources: reports/ask-one-metrics-and-gcp-baseline.md; https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/
--->
-
----
-class: deck-slide technical-slide metrics-slide
----
-
-<p class="kicker">Proposed service measurements</p>
-<h1>Response time and operating cost</h1>
-<table class="metrics-table two-col">
-<thead><tr><th>Measure</th><th>How we would collect it</th></tr></thead>
-<tbody>
-<tr><td>Time to first checked answer content</td><td>Measure from submitting a question to seeing the first answer content that passes required checks.</td></tr>
-<tr><td>Complete response time</td><td>Measure from submitting a question to seeing the full answer and citations. Investigate delays in Cloud Trace.</td></tr>
-<tr><td>Error and timeout rate</td><td>Divide failed requests by admitted requests. Count each timeout once as a failure. Track results in Cloud Monitoring.</td></tr>
-<tr><td>Tokens and cost per question</td><td>Record billed tokens from Vertex AI. Divide monthly service costs by questions accepted for processing.</td></tr>
-</tbody>
-</table>
-<p class="takeaway">Report response times at p50 and p95 with request counts. Separate model time from retrieval and screening.</p>
-<p class="caption">Targets: TBC / to be discussed. For each timing measure, p50 is the median and p95 is the 95th-percentile time.</p>
-
-<!--
-Instrument the browser for first checked answer content and full completion. If streaming is enabled, user-visible time to first token (TTFT) counts actual answer content, not a progress message. Avoid duplicate headline TTFT and first-checked-content metrics when they are identical under the chosen screening policy. Record model TTFT only as a diagnostic. Record input and total billed output tokens including reasoning without double-counting. Service cost per question uses a defined admitted-question denominator and includes shared infrastructure allocation, not only model inference. Track evaluation usage separately. Billing data is periodic; per-request token cost is an estimate. Source: reports/ask-one-metrics-and-gcp-baseline.md
--->
-
----
-class: deck-slide technical-slide metrics-slide
----
-
-<p class="kicker">Proposed tests and operational checks</p>
-<h1>Safety checks and content freshness</h1>
-<table class="metrics-table two-col">
-<thead><tr><th>Measure</th><th>How we would collect it</th></tr></thead>
-<tbody>
-<tr><td>Successful attacks in tests</td><td>Use Promptfoo to count attacks that bypass the app’s controls, grouped by attack type.</td></tr>
-<tr><td>Legitimate questions blocked</td><td>Run permitted questions through Model Armor and app checks. Review incorrect blocks.</td></tr>
-<tr><td>Update and removal delay</td><td>Measure the delay until updates appear and removed content stops appearing in retrieval results and cached answers.</td></tr>
-<tr><td>Issues that prevent release</td><td>Track unresolved data leaks, unsafe answers and failures in source or access controls.</td></tr>
-</tbody>
-</table>
-<p class="takeaway">Security test results describe the tested cases. Repeat failed cases after fixes and review blocking findings before release.</p>
-<p class="caption">Test scope and targets: TBC / to be discussed. Review blocked questions to establish whether the blocks were appropriate.</p>
-
-<!--
-Promptfoo tests the full candidate app, including Model Armor verdict enforcement. Human review validates suspected attack successes and false positives. A public-content MVP can still leak secrets from prompts or logs; test with synthetic markers and inspect retained samples. These are scoped tests and findings, not a claim to measure every production attack or data leak. Content timestamps cover index and cache propagation; run a repeatable removal test. Sources: https://www.promptfoo.dev/docs/red-team/ ; https://docs.cloud.google.com/model-armor/overview ; reports/ask-one-metrics-and-gcp-baseline.md
--->
-
----
-class: deck-slide technical-slide service-costs-slide
----
-
-<p class="kicker">Service costs only</p>
-<h1>Estimated monthly service costs</h1>
-<p class="intro">Illustrative monthly costs in USD, above existing spending, including extra GKE capacity.</p>
-<table class="service-costs-table">
-<thead><tr><th>Service component</th><th>10,000 questions monthly</th><th>100,000 questions monthly</th></tr></thead>
-<tbody>
-<tr><td>Vertex AI (Gemini 2.5 Flash example)</td><td>$22</td><td>$215</td></tr>
-<tr><td>Additional GKE capacity</td><td>$100–300</td><td>$200–600</td></tr>
-<tr><td>Cloud SQL retrieval and backups</td><td>$250–650</td><td>$350–1,000</td></tr>
-<tr><td>Storage, screening and other operations</td><td>$64–189</td><td>$155–445</td></tr>
-<tr class="cost-total"><td>Baseline budget, with contingency</td><td>$600–1,500 / month</td><td>$1,200–3,000 / month</td></tr>
-</tbody>
-</table>
-<p class="cost-assumptions">Assumes one answer-generation call per question with 3,000 input and 500 billed output tokens, plus a small test environment. Tokens are units of text billed by the model. Usage volumes are illustrative.</p>
-<p class="takeaway">Infrastructure figures are planning allowances. Totals exclude additional Phoenix, Ragas and Promptfoo hosting or evaluation costs, which remain TBC.</p>
-<p class="caption">Baseline pricing: 12 Sep 2026. Includes 25% contingency. Excludes staffing, implementation and Cloudflare upgrades. Cloudflare coverage is TBC. No paid tool licence assumed.</p>
-
-<!--
-Source and full calculation: reports/ask-one-gcp-cost-estimate.md. All prices USD, standard published rates, no negotiated discounts or tax.
-Illustrative Gemini 2.5 Flash: $0.30/M input tokens and $2.50/M output tokens including reasoning. 3,000 input + 500 total billed output = $0.00215/question; $21.50 at 10k, $215 at 100k. This model is a pricing example, not a finalized deployment choice.
-GKE and Cloud SQL are budget allowances, not regional SKU quotes. Singapore is provisional. Validate existing headroom, region, availability/HA, database size, network and environment count. Extra capacity is not free.
-Combined row at 10k: GCS $5–20 + Model Armor $4 rounded + embeddings $5–15 + logging/monitoring/network/routine evaluation $50–150 = $64–189.
-At 100k: $10–30 + $35 + $10–30 + $100–350 = $155–445. Model Armor is the proposed screening service and uses a gross rate before free entitlements. Product selection remains subject to PoC validation.
-Subtotals $436–1,161 / $920–2,260. Add 25% contingency and round to planning envelopes. These are not caps or capacity guarantees.
-Assumes a small text corpus up to 100 GiB, one production deployment and small shared non-production usage. No new cluster fee or unrelated existing platform spend is charged again.
-Excludes one-time ingestion/OCR, migration, model training, dedicated GPUs, multi-region recovery, premium support and new third-party/Cloudflare plan fees. Confirm existing coverage. Major changes require a new estimate.
-Monthly service budget is distinct from implementation and the broader operating-effort measure on the outcomes slide. Do not multiply by nine to infer a total project budget.
-Official sources checked 12 September 2026:
-https://cloud.google.com/vertex-ai/generative-ai/pricing
-https://cloud.google.com/kubernetes-engine/pricing
-https://cloud.google.com/sql/pricing
-https://cloud.google.com/storage/pricing
-https://cloud.google.com/security/products/model-armor
-https://cloud.google.com/products/observability/pricing
--->
-
----
-class: deck-slide appendix-slide
----
-
-<p class="kicker">Technical reference</p>
-<h1>Security flow</h1>
-<div class="reference-image"><img src="/diagrams/ask-one-security-chain.drawio.svg" alt="Proposed request flow with authorization, screening, retrieval, generation, answer checks and safe fallback" /></div>
-<p class="reference-caption">The application must enforce every check and withhold an answer if a required check fails. The PoC would test these failure paths. See Slide 18 for answer checks and Slide 19 for traffic limits.</p>
-
-<!--
-The application must enforce access controls and screening verdicts.
-Authorization includes source eligibility and protected administration. Customer-account access remains outside the first MVP.
-Source: https://docs.cloud.google.com/model-armor/overview
-Internal source: docs/plan.md, guardrails and trust.
--->
-
----
-class: deck-slide appendix-slide
----
-
-<p class="kicker">Technical reference</p>
-<h1>Knowledge and quality workflow</h1>
-<div class="reference-image"><img src="/diagrams/ask-one-knowledge-quality-loop.drawio.svg" alt="Proposed governed source lifecycle connecting registration, staging, evaluation, approval, release and improvement" /></div>
-<p class="reference-caption">Content changes must pass review before they affect answers. The PoC would test a content update and removal. See Slide 17 for content handling and Slide 20 for release checks.</p>
-
-<!--
-Reviewed test questions and their version history are conceptual requirements. No dataset size, passed quality score or fixed release sequence is claimed.
-Feedback returns through owner review and evaluation. It does not automatically publish new guidance.
-Sources: PLAN.md; docs/plan.md, continuous improvement and evaluation.
+RAG Engine documents ingestion, transformation, embedding, indexing and retrieval. The ranking API is required in the proposed design; its region, behavior, cost and failure path need confirmation. Google Gen AI Evals does not list Singapore, so local checks and human review remain the default. The diagram separates managed retrieval from ONE-owned generation orchestration and answer release. RAG Engine itself does not validate ONE source approval or citations.
+Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-overview ; https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/retrieval-and-ranking
 -->

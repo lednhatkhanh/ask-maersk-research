@@ -1,18 +1,59 @@
 # Ask ONE: preliminary monthly service costs
 
-Pricing checked: 12 September 2026. Status: illustrative planning estimate, not a quotation or approved budget. Re-estimate after discovery and the PoC.
+Original pricing checked: 12 September 2026. Current two-path update: 27 September 2026. Status: illustrative planning estimate, not a quotation or approved budget. Re-estimate after discovery and the PoC.
 
-## Manager summary
+## Current custom-path planning budget — 27 September 2026
+
+For the current custom workflow using **standalone Agent Retrieval**, show approximately **US$1,000/month at 10,000 questions** or **US$2,500/month at 100,000 questions** as preliminary service budgets. These include safety headroom; they are not expected bills, Singapore calculator quotes, demand forecasts or spending caps. The earlier figures below document a different retrieval design and are not the slide budgets.
+
+| Monthly component (USD) | 10,000 questions | 100,000 questions | Basis |
+| --- | ---: | ---: | --- |
+| Gemini 2.5 Flash generation | $22 | $215 | Published rates; one call with 3,000 input and 500 total billed output tokens per question. |
+| Standalone Agent Retrieval | $200 | $400 | **Allowance** for performance-optimized ANN capacity, payload storage and operations; not a saved regional calculator estimate. |
+| Required reranking | $10 | $100 | One pass of at most 100 candidates per question at the published Ranking API gross rate; verify integrated VertexRanker billing. |
+| Additional app capacity on existing GKE | $300 | $600 | **Allowance** for production and small non-production use. |
+| GCS source versions, embeddings and Model Armor | $39 | $95 | Combined storage/embedding allowances plus conservative screening arithmetic. |
+| Logging, networking and routine evaluation | $150 | $350 | **Allowance** for modest ongoing operations and review. |
+| Component subtotal before planning headroom | **$721** | **$1,760** | Sum of the rows above. |
+| **Rounded planning budget** | **~$1,000** | **~$2,500** | Includes room for sizing and usage uncertainty. |
+
+Assumptions: a modest text corpus, an existing shared GKE cluster with additional app capacity charged, performance-optimized Agent Retrieval, one production deployment plus small non-production use, one generation call and one reranking pass per question, moderate updates and routine evaluation. Google lists performance-optimized Agent Retrieval capacity at **$0.065 per CU-hour**, with payload storage and operations charged separately; **$2.30 per CU-hour** for storage-optimized capacity would require a new estimate if selected. Confirm the Singapore configuration, corpus size, peak concurrency and full usage in the PoC. Gemini model choice and its output-token consumption can change the result. [Agent Retrieval pricing](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing), [Gemini pricing](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing), [Model Armor pricing](https://cloud.google.com/security/products/model-armor).
+
+The slide figures exclude staffing, content-owner effort, one-time implementation and any Cloudflare plan upgrade. Bulk OCR/parsing, a large evaluation campaign, a new dedicated GKE cluster, high-availability expansion, more expensive models and a storage-optimized retrieval tier also need separate sizing.
+
+## Direct RAG Engine with Spanner Scaled — 27 September 2026
+
+For a **Scaled production deployment** and a separate small **Basic non-production deployment**, show approximately **US$2,500/month at 10,000 questions** or **US$3,500/month at 100,000 questions** as preliminary service budgets with safety headroom. These are for direct RAG Engine using its RAG-managed Spanner database, not Serverless mode or a separately billed vector database. The question volumes match the custom-path examples; they are not forecasts.
+
+Google states that the RAG-managed Spanner Basic tier provisions **100 processing units** and Scaled starts at **one node (1,000 processing units)**, with autoscaling to ten nodes. Selecting Singapore on Google's Spanner pricing page shows Enterprise edition at **$1.40712 per node-hour**, versus **$1.23** in Iowa, so Singapore is about **14% higher** on this compute line. At 730 hours/month, one Scaled node is about **$1,027/month** and one Basic non-production instance about **$103/month**. These are capacity floors, not a guarantee that one production node meets response-time or throughput needs. [RAG Engine billing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-engine-billing), [Spanner tiers](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/spanner-mode), [Spanner regional pricing](https://cloud.google.com/spanner/pricing).
+
+| Monthly component (USD) | 10,000 questions | 100,000 questions | Basis |
+| --- | ---: | ---: | --- |
+| Spanner Enterprise capacity: one Scaled production node plus Basic non-production | $1,130 | $1,130 | Published Singapore rate applied to 730 hours; excludes extra autoscaled nodes. |
+| Spanner storage and backups | $25 | $50 | **Allowance** for a modest corpus and retained backups. |
+| Gemini 2.5 Flash generation | $22 | $215 | Same token scenario as the custom path. |
+| Required reranking | $10 | $100 | One Ranking API pass of at most 100 candidates per question at the published gross rate. |
+| Additional app capacity on existing GKE | $300 | $600 | **Allowance** kept common for a conservative comparison. |
+| GCS source versions, embeddings and Model Armor | $39 | $95 | Same small-corpus and screening scenario as the custom path. |
+| Logging, networking and routine evaluation | $150 | $350 | **Allowance** for modest ongoing operations and review. |
+| Component subtotal before planning headroom | **$1,676** | **$2,540** | Rounded sum of the rows above. |
+| **Rounded planning budget** | **~$2,500** | **~$3,500** | Includes room for sizing and usage uncertainty. |
+
+RAG Engine's default parser and fixed-size chunking are documented as free, while model-based parsing, embeddings, generation and reranking can be billed separately; one required reranking pass is included; model-based parsing and OCR are outside this example. The published Ranking API rate is $1 per 1,000 queries, with up to 100 candidate documents per query; larger sets or multiple passes raise the charge. Verify the billable method and regional data handling. [Ranking pricing](https://cloud.google.com/generative-ai-app-builder/pricing). A second continuously active production node would add about **$1,027/month before headroom**. Making non-production Scaled instead of Basic would add about **$924/month before headroom**. Singapore RAG Engine remains **Preview**. Its overview describes managed Spanner billing for GA locations, so confirm the actual Preview billing terms; this planning figure conservatively assumes Spanner is charged. The same page says data-residency controls are unsupported, so a Singapore endpoint alone is not a data-residency assurance. [RAG Engine billing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-engine-billing), [deployment modes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/deployment-modes), [region and launch stage](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-overview).
+
+Both current paths must be repriced after the PoC with actual corpus size, peak concurrency, token use, model choice, environment count and optional services. Contact Google Cloud for an actual quote for the chosen regional configurations before using either estimate as a funding baseline. Staffing, content-owner effort, one-time implementation, Cloudflare upgrades, large OCR/parsing, heavy evaluation and a new dedicated GKE cluster are excluded from the slide figures.
+
+## Historical estimate for the previous retrieval design
 
 For an English, public-content, single-question MVP, allow approximately **US$600–1,500/month at 10,000 questions** or **US$1,200–3,000/month at 100,000 questions** for incremental cloud/service running costs under the assumptions below. These are budget envelopes, not measured demand, expected bills, capacity guarantees, or hard spending caps.
 
 This is **SERVICE COSTS ONLY**. It excludes every salary, contractor, staffing allocation and content-owner effort. It is neither the total project cost nor a nine-month implementation budget. Existing ONE application platform spending is not charged again. Additional capacity, database resources and usage attributable to Ask ONE are included as allowances.
 
-The current technical proposal includes GKE application workloads, managed Gemini inference through Vertex AI, Cloud Storage (GCS) source versions, candidate Cloud SQL PostgreSQL/pgvector retrieval, proposed Model Armor screening, and evaluation/monitoring. Counting only model tokens would materially understate the service budget.
+The earlier technical proposal included GKE application workloads, managed Gemini inference through Vertex AI, Cloud Storage (GCS) source versions, candidate Cloud SQL PostgreSQL/pgvector retrieval, proposed Model Armor screening, and evaluation/monitoring. Counting only model tokens would materially understate the service budget.
 
 ## Self-hosted tooling option — 13 September 2026
 
-The slide proposal now includes self-hosted Phoenix in GCP, Ragas evaluation jobs and Promptfoo Community test runners. No Enterprise licence fee is assumed. Phoenix uses ELv2 and Ragas uses Apache 2.0. Promptfoo Community currently lists 10,000 red-team probes/month. Sources: [Phoenix self-hosting](https://arize.com/docs/phoenix/self-hosting), [Ragas licence](https://github.com/vibrantlabsai/ragas/blob/main/LICENSE), [Promptfoo pricing](https://www.promptfoo.dev/pricing/).
+The September 13 slide proposal included self-hosted Phoenix in GCP, Ragas evaluation jobs and Promptfoo Community test runners. That design has since been superseded. No Enterprise licence fee was assumed. Phoenix uses ELv2 and Ragas uses Apache 2.0. Promptfoo Community listed 10,000 red-team probes/month. Sources: [Phoenix self-hosting](https://arize.com/docs/phoenix/self-hosting), [Ragas licence](https://github.com/vibrantlabsai/ragas/blob/main/LICENSE), [Promptfoo pricing](https://www.promptfoo.dev/pricing/).
 
 **The envelopes below remain baseline estimates, not revised totals including these new workloads.** Additional monthly service costs are TBC / to be discussed. Size Phoenix compute, database, retained traces and backups; evaluation/test runner compute; model and embedding calls; storage and network usage. Reconcile the existing telemetry/routine-evaluation allowance before adding incremental costs so the same workload is charged only once. Free licensing does not imply spare capacity or free inference. Hosting operations require effort, which remains outside this service-only estimate.
 

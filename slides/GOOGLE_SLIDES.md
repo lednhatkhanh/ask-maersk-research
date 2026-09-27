@@ -29,6 +29,10 @@ These are capture and verification helpers, not an automatic publisher. Native l
 
 Keep API snapshots, rendered assets and downloaded thumbnail URLs in ignored `.sync/`; keep credentials out of the repository. Slidev's standard PPTX export rasterizes slides and does not satisfy the editable-content requirement.
 
-## Latest verified sync — 13 September 2026
+## Latest verified sync — 27 September 2026
+
+The existing deck now matches the **23-slide** local proposal. Slides 1–14 remain the manager section, Slides 15–21 are the technical proposal, and Slides 22–23 are the custom and RAG Engine service maps. The six retired technical slides were removed. Visible text and tables remain native Google Slides objects; diagrams and logos remain images. Native speaker notes and slide order match the local source. A fresh full readback passed `google:verify` with zero failures. All 23 native thumbnails were inspected; the Slide 19 decision callout was moved below its table and re-rendered. The live editor was checked on Slides 19 and 23. Evidence is in ignored `.sync/sync23/`. PDF and PowerPoint exports remain earlier snapshots.
+
+## Previous verified sync — 13 September 2026
 
 The existing deck now matches all 29 local slides, including the separate PoC timeline, expanded technical section and removal of internal learning content. Existing slide IDs and editable objects were retained wherever practical. All native slide thumbnails were visually reviewed, with targeted live-editor checks and repairs to roadmap columns, table spacing and cost-assumption placement. The final content, notes, slide-order and media-count checks passed. Readbacks and QA images are in ignored `.sync/sync29/`. PDF and PowerPoint remain earlier snapshots.

@@ -56,7 +56,8 @@ source.forEach((s, i) => {
   }
   for (const text of actual.filter(Boolean)) failures.push(`Slide ${i + 1}: extra native text: ${text}`);
   const els = elements(slide.pageElements);
-  if (els.filter(e => e.image).length !== s.images.length) failures.push(`Slide ${i + 1}: image count differs`);
+  const decorativeImages = new Set(config.decorativeImageObjectIds || []);
+  if (els.filter(e => e.image && !decorativeImages.has(e.objectId)).length !== s.images.length) failures.push(`Slide ${i + 1}: image count differs`);
   if (els.filter(e => e.table).length !== s.tables.length) failures.push(`Slide ${i + 1}: table count differs`);
   const speakerId = slide.slideProperties?.notesPage?.notesProperties?.speakerNotesObjectId;
   const speaker = slide.slideProperties?.notesPage?.pageElements?.find(e => e.objectId === speakerId);

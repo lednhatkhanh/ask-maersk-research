@@ -2,7 +2,7 @@
 
 [Open the editable Ask ONE deck](https://docs.google.com/presentation/d/1knHzzM91yvkAoxI2M55gq7JRWaIxpgf-Rf3duWitK5I/edit).
 
-`google-slides.json` records the presentation ID and native slide IDs in local presentation order. Native IDs are stable identifiers, not current slide numbers. `minimumTextWidthsPt` records the two label widths verified in the live editor; maintain these checks when replacing those elements. Update this mapping when slides are added, removed or reordered.
+`google-slides.json` records the presentation ID and native slide IDs in local presentation order. Native IDs are stable identifiers, not current slide numbers. It also identifies the decorative gradient image on Slide 5 so media-count verification compares content images. Update this mapping when slides are added, removed or reordered.
 
 ## Completion rule
 
@@ -29,7 +29,11 @@ These are capture and verification helpers, not an automatic publisher. Native l
 
 Keep API snapshots, rendered assets and downloaded thumbnail URLs in ignored `.sync/`; keep credentials out of the repository. Slidev's standard PPTX export rasterizes slides and does not satisfy the editable-content requirement.
 
-## Latest verified sync — 27 September 2026
+## Latest verified sync — 29 September 2026
+
+The existing deck matches the **20-slide** local POC proposal, including the revised manager journey and the four technical diagrams. Text and all five tables are native, editable Google Slides elements. The architecture, QA and security diagrams, screenshots, logos and small interface icons remain images. Speaker notes and slide order match the local source. The QA checklist callout clears the table; the Ask ONE mockup has its gradient, editable input label and a button whose arrow stays on the same line in the live editor. A wrapped QA caption was also repaired. All 20 native slide thumbnails were inspected, with fresh editor checks of the repaired slides and an architecture diagram. A final native readback passed `google:verify` with zero failures. Evidence is in ignored `.sync/sync20/`. PDF and PowerPoint exports remain earlier snapshots.
+
+## Previous verified sync — 27 September 2026
 
 The existing deck now matches the **23-slide** local proposal. Slides 1–14 remain the manager section, Slides 15–21 are the technical proposal, and Slides 22–23 are the custom and RAG Engine service maps. The six retired technical slides were removed. Visible text and tables remain native Google Slides objects; diagrams and logos remain images. Native speaker notes and slide order match the local source. A fresh full readback passed `google:verify` with zero failures. All 23 native thumbnails were inspected; the Slide 19 decision callout was moved below its table and re-rendered. The live editor was checked on Slides 19 and 23. Evidence is in ignored `.sync/sync23/`. PDF and PowerPoint exports remain earlier snapshots.
 

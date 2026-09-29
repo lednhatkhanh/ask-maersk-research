@@ -1,10 +1,16 @@
 # Ask ONE: preliminary monthly service costs
 
-Original pricing checked: 12 September 2026. Current two-path update: 27 September 2026. Status: illustrative planning estimate, not a quotation or approved budget. Re-estimate after discovery and the PoC.
+Original pricing checked: 12 September 2026. Current two-path update: 28 September 2026. Status: illustrative planning estimate with added buffer, not a quotation or approved budget. Confirm the actual quote with GCP support for the selected regional service stack, then re-estimate after discovery and the PoC.
 
-## Current custom-path planning budget — 27 September 2026
+## Calculator link check — 27 September 2026
 
-For the current custom workflow using **standalone Agent Retrieval**, show approximately **US$1,000/month at 10,000 questions** or **US$2,500/month at 100,000 questions** as preliminary service budgets. These include safety headroom; they are not expected bills, Singapore calculator quotes, demand forecasts or spending caps. The earlier figures below document a different retrieval design and are not the slide budgets.
+The [shared Google Cloud estimate](https://cloud.google.com/products/calculator?e=48754805&dl=CjhDaVJtWkRGaU1UVXhOaTFoTm1aakxUUmpOREF0T0RBME1pMWhZamt4WmpGaU1HRTBOVGtRQVE9PRApGiRDOUY1MjA3My04MzZDLTRGRkYtOUMxMy04RjNFMjU5OUE4MEI&hl=en) opens a **Vector Search (2.0) / Agent Platform estimate of US$6,000.60/month**. Its saved configuration selects Exact KNN, 100,000 monthly payload-DB searches, **10,000,000 items scanned per query**, and 10 documents returned; the collection inputs display **zero items with vectors** and zero vector dimensions. The estimate summary attributes essentially all cost to the scan input. Those fields do not describe the proposed approved-chunk corpus or performance-optimized ANN deployment. The [second calculator link](https://cloud.google.com/products/calculator?e=48754805&hl=en) opens a blank estimate. Neither link contains a direct RAG Engine/Spanner configuration or the shared Gemini, GKE, screening and operations costs.
+
+**Decision:** retain the current two-path planning budgets below. Do not substitute the US$6,000.60 Vector Search-only result for either complete monthly budget or treat it as evidence that the Agent Retrieval allowance is sufficient. Once content volume, query method, scanned/returned items, index capacity, region and environment count are measured, create matched calculator configurations and reconcile the complete service stacks. Google documents a [100,000-Data-Object limit for exact KNN queries](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/query-search/query), which is another reason the saved 10-million-item scan setting cannot represent the proposed Exact KNN flow.
+
+## Current custom-path planning budget — 28 September 2026
+
+For the current custom workflow using **standalone Agent Retrieval**, show approximately **US$1,200/month at 10,000 questions** or **US$3,000/month at 100,000 questions** as preliminary service budgets. These add 20% to the previous rounded budgets for more planning buffer; the increase is an allowance, not a change in published GCP prices. They are not expected bills, Singapore calculator quotes, demand forecasts or spending caps. The earlier figures below document a different retrieval design and are not the slide budgets.
 
 | Monthly component (USD) | 10,000 questions | 100,000 questions | Basis |
 | --- | ---: | ---: | --- |
@@ -15,15 +21,16 @@ For the current custom workflow using **standalone Agent Retrieval**, show appro
 | GCS source versions, embeddings and Model Armor | $39 | $95 | Combined storage/embedding allowances plus conservative screening arithmetic. |
 | Logging, networking and routine evaluation | $150 | $350 | **Allowance** for modest ongoing operations and review. |
 | Component subtotal before planning headroom | **$721** | **$1,760** | Sum of the rows above. |
-| **Rounded planning budget** | **~$1,000** | **~$2,500** | Includes room for sizing and usage uncertainty. |
+| Previous rounded planning budget | ~$1,000 | ~$2,500 | Earlier allowance before the additional buffer. |
+| **Buffered planning budget shown on slides** | **~$1,200** | **~$3,000** | Previous rounded budget plus 20%; verify against an actual GCP quote. |
 
 Assumptions: a modest text corpus, an existing shared GKE cluster with additional app capacity charged, performance-optimized Agent Retrieval, one production deployment plus small non-production use, one generation call and one reranking pass per question, moderate updates and routine evaluation. Google lists performance-optimized Agent Retrieval capacity at **$0.065 per CU-hour**, with payload storage and operations charged separately; **$2.30 per CU-hour** for storage-optimized capacity would require a new estimate if selected. Confirm the Singapore configuration, corpus size, peak concurrency and full usage in the PoC. Gemini model choice and its output-token consumption can change the result. [Agent Retrieval pricing](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing), [Gemini pricing](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing), [Model Armor pricing](https://cloud.google.com/security/products/model-armor).
 
 The slide figures exclude staffing, content-owner effort, one-time implementation and any Cloudflare plan upgrade. Bulk OCR/parsing, a large evaluation campaign, a new dedicated GKE cluster, high-availability expansion, more expensive models and a storage-optimized retrieval tier also need separate sizing.
 
-## Direct RAG Engine with Spanner Scaled — 27 September 2026
+## Direct RAG Engine with Spanner Scaled — 28 September 2026
 
-For a **Scaled production deployment** and a separate small **Basic non-production deployment**, show approximately **US$2,500/month at 10,000 questions** or **US$3,500/month at 100,000 questions** as preliminary service budgets with safety headroom. These are for direct RAG Engine using its RAG-managed Spanner database, not Serverless mode or a separately billed vector database. The question volumes match the custom-path examples; they are not forecasts.
+For a **Scaled production deployment** and a separate small **Basic non-production deployment**, show approximately **US$3,000/month at 10,000 questions** or **US$4,200/month at 100,000 questions** as preliminary service budgets with added headroom. These add 20% to the previous rounded budgets; the increase is an allowance, not a change in published GCP prices. They are for direct RAG Engine using its RAG-managed Spanner database, not Serverless mode or a separately billed vector database. The question volumes match the custom-path examples; they are not forecasts.
 
 Google states that the RAG-managed Spanner Basic tier provisions **100 processing units** and Scaled starts at **one node (1,000 processing units)**, with autoscaling to ten nodes. Selecting Singapore on Google's Spanner pricing page shows Enterprise edition at **$1.40712 per node-hour**, versus **$1.23** in Iowa, so Singapore is about **14% higher** on this compute line. At 730 hours/month, one Scaled node is about **$1,027/month** and one Basic non-production instance about **$103/month**. These are capacity floors, not a guarantee that one production node meets response-time or throughput needs. [RAG Engine billing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-engine-billing), [Spanner tiers](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/spanner-mode), [Spanner regional pricing](https://cloud.google.com/spanner/pricing).
 
@@ -37,11 +44,12 @@ Google states that the RAG-managed Spanner Basic tier provisions **100 processin
 | GCS source versions, embeddings and Model Armor | $39 | $95 | Same small-corpus and screening scenario as the custom path. |
 | Logging, networking and routine evaluation | $150 | $350 | **Allowance** for modest ongoing operations and review. |
 | Component subtotal before planning headroom | **$1,676** | **$2,540** | Rounded sum of the rows above. |
-| **Rounded planning budget** | **~$2,500** | **~$3,500** | Includes room for sizing and usage uncertainty. |
+| Previous rounded planning budget | ~$2,500 | ~$3,500 | Earlier allowance before the additional buffer. |
+| **Buffered planning budget shown on slides** | **~$3,000** | **~$4,200** | Previous rounded budget plus 20%; verify against an actual GCP quote. |
 
 RAG Engine's default parser and fixed-size chunking are documented as free, while model-based parsing, embeddings, generation and reranking can be billed separately; one required reranking pass is included; model-based parsing and OCR are outside this example. The published Ranking API rate is $1 per 1,000 queries, with up to 100 candidate documents per query; larger sets or multiple passes raise the charge. Verify the billable method and regional data handling. [Ranking pricing](https://cloud.google.com/generative-ai-app-builder/pricing). A second continuously active production node would add about **$1,027/month before headroom**. Making non-production Scaled instead of Basic would add about **$924/month before headroom**. Singapore RAG Engine remains **Preview**. Its overview describes managed Spanner billing for GA locations, so confirm the actual Preview billing terms; this planning figure conservatively assumes Spanner is charged. The same page says data-residency controls are unsupported, so a Singapore endpoint alone is not a data-residency assurance. [RAG Engine billing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-engine-billing), [deployment modes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/deployment-modes), [region and launch stage](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-overview).
 
-Both current paths must be repriced after the PoC with actual corpus size, peak concurrency, token use, model choice, environment count and optional services. Contact Google Cloud for an actual quote for the chosen regional configurations before using either estimate as a funding baseline. Staffing, content-owner effort, one-time implementation, Cloudflare upgrades, large OCR/parsing, heavy evaluation and a new dedicated GKE cluster are excluded from the slide figures.
+Both current paths must be repriced after the PoC with actual corpus size, peak concurrency, token use, model choice, environment count and optional services. Check the actual quote for the chosen regional configuration with GCP support before using either estimate as a funding baseline. Staffing, content-owner effort, one-time implementation, Cloudflare upgrades, large OCR/parsing, heavy evaluation and a new dedicated GKE cluster are excluded from the slide figures.
 
 ## Historical estimate for the previous retrieval design
 

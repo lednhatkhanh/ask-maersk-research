@@ -50,6 +50,16 @@ function runs(el){
 function walk(el){if(!el.getBoundingClientRect().width)return;const s=css(el);if(el.tagName==='IMG'){images.push({src:el.src,alt:el.alt,rect:rect(el),...s,natural:[el.naturalWidth,el.naturalHeight]});return;}
 if(el.tagName==='TABLE'){tables.push({rect:rect(el),rows:[...el.rows].map(r=>[...r.cells].map(c=>({rect:rect(c),runs:runs(c),...css(c)})))});return;}
 if(s.background!=='rgba(0, 0, 0, 0)'||s.borders.some(b=>b.width))boxes.push({rect:rect(el),...s});
+// The floated send icon makes the input's inline span compute as a block.
+// Capture its direct label separately, then continue to the icon.
+if(el.classList.contains('poc-ui-input')){
+  for(const child of el.childNodes)if(child.nodeType===Node.TEXT_NODE&&child.textContent.trim()){
+    const range=document.createRange();range.selectNodeContents(child);const r=range.getBoundingClientRect();
+    texts.push({rect:{x:r.x-rr.x,y:r.y-rr.y,w:r.width,h:r.height},runs:[{text:child.textContent.trim(),...s}],tag:'SPAN',...s});
+  }
+  for(const ch of el.children)walk(ch);
+  return;
+}
 const hasDirect=[...el.childNodes].some(n=>n.nodeType===3&&n.textContent.trim());const blockChildren=[...el.children].some(c=>!['SPAN','B','STRONG','EM','A','SMALL','BR','I'].includes(c.tagName)||getComputedStyle(c).display==='block');
 if(hasDirect&&!blockChildren||['P','H1','H2','H3','LI'].includes(el.tagName)){texts.push({rect:rect(el),runs:runs(el),tag:el.tagName,...s});return;}
 for(const ch of el.children)walk(ch);
